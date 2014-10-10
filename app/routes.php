@@ -17,12 +17,25 @@ Route::get('/', function()
 });
 
 //Codes
-Route::post('/c', function()
+Route::post('/r/', function()
 {
-    return Redirect::to('/c/'.Input::get('code'));
+
+    $code = Input::get('code');
+    $hashids = new Hashids\Hashids(Config::get('app.key'), 8);
+    $id = $hashids->decode($code);
+
+    if(!array_key_exists(0, $id) || is_null($id[0]) || !is_int($id[0])){
+        return Redirect::to('/');
+    }
+
+    $code = Code::find($id[0]);
+    if(is_null($code) || $code->used == 1){
+        return Redirect::to('/');
+    }
+
+    return Redirect::to('/c/'.$code);
 });
 
-//Codes
 Route::get('/c/{code}', function($code)
 {
     $hashids = new Hashids\Hashids(Config::get('app.key'), 8);

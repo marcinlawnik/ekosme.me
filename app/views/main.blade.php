@@ -1,6 +1,6 @@
 Enter code:
 
-{{ Form::open(array('url' => '/c')) }}
+{{ Form::open(array('url' => '/r/')) }}
 
 {{ Form::text('code') }}
 

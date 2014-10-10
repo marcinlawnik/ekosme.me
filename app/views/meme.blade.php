@@ -1,5 +1,5 @@
-Title: {{{ $meme->name }}}
+Image: <img class="" title="{{ $meme->name }}" src="{{{ $image }}}"></a><br />
 
-Description: {{{ $meme->description }}}
+Title: {{{ $meme->name }}}<br />
 
-Image: <img class="" title="{{ $meme->name }}" src="{{{ $image }}}"></a>
+Description: {{{ $meme->description }}}<br />

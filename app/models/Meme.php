@@ -1,5 +1,9 @@
 <?php
 
 class Meme extends \Eloquent {
-	protected $fillable = ['name','filename','description'];
+	protected $fillable = [
+        'name',
+        'filename',
+        'description'
+    ];
 }
