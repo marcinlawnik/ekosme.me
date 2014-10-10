@@ -6,4 +6,8 @@ class Meme extends \Eloquent {
         'filename',
         'description'
     ];
+
+    public function codes() {
+        return $this->hasMany('Code');
+    }
 }

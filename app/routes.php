@@ -17,53 +17,13 @@ Route::get('/', function()
 });
 
 //Codes
-Route::post('/r/', function()
+Route::get('/r', function()
 {
-
     $code = Input::get('code');
-    $hashids = new Hashids\Hashids(Config::get('app.key'), 8);
-    $id = $hashids->decode($code);
-
-    if(!array_key_exists(0, $id) || is_null($id[0]) || !is_int($id[0])){
-        return Redirect::to('/');
-    }
-
-    $code = Code::find($id[0]);
-    if(is_null($code) || $code->used == 1){
-        return Redirect::to('/');
-    }
-
     return Redirect::to('/c/'.$code);
 });
 
-Route::get('/c/{code}', function($code)
-{
-    $hashids = new Hashids\Hashids(Config::get('app.key'), 8);
-    $id = $hashids->decode($code);
-    if(!array_key_exists(0, $id) || is_null($id[0]) || !is_int($id[0])){
-        return Redirect::to('/');
-    }
-    $code = Code::find($id[0]);
-    if(is_null($code) || $code->used == 1){
-        return Redirect::to('/');
-    } else {
-        $code->used = 1;
-        $code->used_time = Carbon::now();
-        $code->used_ip = Request::getClientIp();
-        $mobileDetect = new Mobile_Detect();
-        $code->used_useragent = $mobileDetect->getUserAgent();
-        $code->save();
-
-        $path = storage_path().'\memes\\'.$code->meme->filename;
-
-        // Get the image
-        $image = Image::make($path)->encode('data-url');
-
-        return View::make('meme')->withMeme($code->meme)->withImage($image);
-    }
-
-
-});
+Route::get('/c/{code}', ['uses' => 'CodesController@process']);
 
 //Views
 Route::get('/v/{hash}', function($hash)
@@ -84,4 +44,43 @@ Route::get('/v/{hash}', function($hash)
     $image = Image::make($path)->encode('data-url');
 
     return View::make('meme')->withMeme($meme)->withImage($image);
+});
+
+Route::get('/a/add', function(){
+    return View::make('admin.meme.add');
+});
+
+Route::post('/a/add', function(){
+    //przyjmij plik
+    if (!Input::hasFile('meme'))
+    {
+        dd('lol');
+        return Redirect::back();
+    }
+    //zapisz
+    //zmien nazwe
+    $filename = Helper::getRandomString().'.'.Input::file('meme')->getClientOriginalExtension();
+    Input::file('meme')->move(storage_path().'/memes/', $filename);
+
+    //dodaj do bazy
+    $meme = Meme::create([
+        'filename' => $filename,
+        'name' => Input::get('title'),
+        'description' => Input::get('description')
+    ]);
+    //wygeneruj kody
+    $codes = [];
+    foreach(range(1, Input::get('code_amount')) as $index){
+        $code = Helper::getRandomString(20);
+        $codes[$index] = $code;
+        Code::create([
+            'code' => $code,
+            'meme_id' => $meme->id,
+            'used' => 0
+        ]);
+    }
+    $hashids = new Hashids\Hashids(Config::get('app.key'), 8);
+    $id = $hashids->encode($meme->id);
+    //zwroc kody i link
+    return View::make('admin.meme.add_success')->withCodes($codes)->withId($id);
 });
