@@ -39,7 +39,7 @@ Route::get('/v/{hash}', function($hash)
         return Redirect::to('/');
     }
     $path = storage_path().'\memes\\'.$meme->filename;
-
+    dd($path);
     // Get the image
     $image = Image::make($path)->encode('data-url');
 
