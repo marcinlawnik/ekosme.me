@@ -1,11 +1,16 @@
 {
-	"name": "laravel/laravel",
-	"description": "The Laravel Framework.",
-	"keywords": ["framework", "laravel"],
+	"name": "marcinlawnik/ekosme.me",
+	"description": "The EKOS meme website",
 	"license": "MIT",
 	"type": "project",
 	"require": {
-		"laravel/framework": "4.2.*"
+		"laravel/framework": "4.2.*",
+        "barryvdh/laravel-ide-helper": "1.*",
+        "way/generators": "~2.0",
+		"hashids/hashids": "~1.0",
+        "intervention/image": "2.*",
+		"nesbot/carbon": "~1.13",
+		"mobiledetect/mobiledetectlib": "~2.8"
 	},
 	"autoload": {
 		"classmap": [
@@ -20,10 +25,12 @@
 	"scripts": {
 		"post-install-cmd": [
 			"php artisan clear-compiled",
+            "php artisan ide-helper:generate",
 			"php artisan optimize"
 		],
 		"post-update-cmd": [
 			"php artisan clear-compiled",
+            "php artisan ide-helper:generate",
 			"php artisan optimize"
 		],
 		"post-create-project-cmd": [
