@@ -17,8 +17,7 @@ class CodesController extends \BaseController {
             $code->save();
 
 
-            $path = storage_path().'\memes\\'.Meme::find($code->meme_id)->filename;
-            dd($path);
+            $path = storage_path().'/memes/'.Meme::find($code->meme_id)->filename;
             // Get the image
             $image = Image::make($path)->encode('data-url');
 
