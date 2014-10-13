@@ -12,4 +12,20 @@
 {{ Form::button('<i class="glyphicon glyphicon-play"></i>', array('class' => '')) }}
 
 {{ Form::close() }}
+
+
+<div class="container">
+	<div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <div id="imaginary_container"> 
+                <div class="input-group stylish-input-group">
+                    {{ Form::text('code') }}
+                    <span class="input-group-addon">
+                        {{ Form::button('<i class="glyphicon glyphicon-play"></i>', array('class' => '')) }}
+                    </span>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
 </body>
