@@ -4,6 +4,6 @@ Enter code:
 
 {{ Form::text('code') }}
 
-{{ Form::submit('Pokaż!') }}
+<span class="glyphicon glyphicon-play">{{ Form::submit('Pokaż!') }}</span>
 
 {{ Form::close() }}
