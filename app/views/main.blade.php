@@ -1,9 +1,11 @@
-Enter code:
+<html>
+<body>
 
 {{ Form::open(array('url' => '/r', 'method' => 'get')) }}
 
 {{ Form::text('code') }}
 
-<span class="glyphicon glyphicon-play">{{ Form::submit('Pokaż!') }}</span>
+{{ Form::submit('Pokaż!<span class="glyphicon glyphicon-search"></span>') }}
 
 {{ Form::close() }}
+</body>
