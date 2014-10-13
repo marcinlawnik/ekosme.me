@@ -5,7 +5,7 @@
 
 {{ Form::text('code') }}
 
-{{ Form::submit('Pokaż! <span class="glyphicon glyphicon-search"></span>') }}
+{{ Form::submit('Pokaż! <span class="glyphicon glyphicon-play"></span>') }}
 
 {{ Form::close() }}
 </body>
