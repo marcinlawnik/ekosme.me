@@ -47,8 +47,8 @@ Route::get('/v/{hash}', function($hash)
 
 Route::get('/a/meme/add', ['uses' => 'AdminController@getMemeAdd']);
 
-Route::post('/a//meme/add', ['uses' => 'AdminController@postMemeAdd']);
+Route::post('/a/meme/add', ['uses' => 'AdminController@postMemeAdd']);
 
-Route::get('/a/meme/list', ['uses' => 'AdminController@getMemeList']);
+//Route::get('/a/meme/list', ['uses' => 'AdminController@getMemeList']);
 
-Route::get('/a/meme/edit/{id}', ['uses' => 'AdminController@getMemeEdit']);
+//Route::get('/a/meme/edit/{id}', ['uses' => 'AdminController@getMemeEdit']);

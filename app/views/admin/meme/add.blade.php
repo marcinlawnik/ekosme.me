@@ -13,6 +13,10 @@ Opis:
 ilosc kodow:
 {{ Form::number('code_amount') }}
 <br>
+
+Opis:
+{{ Form::text('pass') }}
+<br>
 {{ Form::submit('Dodaj!') }}
 
 {{ Form::close() }}
