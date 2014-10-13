@@ -13,3 +13,12 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+
+SetEnvIfNoCase User-Agent ^$ bad_bot #leave this for blank user-agents
+SetEnvIfNoCase User-Agent "^facebookexternalhit" bad_bot
+
+<Limit GET POST HEAD>
+    Order Allow,Deny
+    Allow from all
+    Deny from env=bad_bot
+</Limit>

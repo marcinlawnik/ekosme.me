@@ -13,6 +13,7 @@ class CodesController extends \BaseController {
             $code->used_time = Carbon::now();
             $code->used_ip = Request::getClientIp();
             $mobileDetect = new Mobile_Detect();
+            //Check for facebook bots (done in robots.txt)
             $code->used_useragent = $mobileDetect->getUserAgent();
             $code->save();
 

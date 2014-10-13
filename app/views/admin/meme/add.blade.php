@@ -1,6 +1,6 @@
 Add MEME:
 
-{{ Form::open(array('url' => '/a/add', 'files' => true)) }}
+{{ Form::open(array('url' => '/a/meme/add', 'files' => true)) }}
 Plik:
 {{ Form::file('meme') }}
 <br>
