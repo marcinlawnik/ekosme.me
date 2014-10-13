@@ -5,7 +5,9 @@
 
 {{ Form::text('code') }}
 
-{{ Form::submit('<span class="glyphicon glyphicon-play"></span>') }}
+{{ Form::submit('<button type="button" class="btn btn-default btn-sm">
+  <span class="glyphicon glyphicon-play"></span> Star
+</button>') }}
 
 {{ Form::close() }}
 </body>
