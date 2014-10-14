@@ -16,7 +16,7 @@
         <div class="col-sm-6 col-sm-offset-3">
             <div id="imaginary_container"> 
                 <div class="input-group stylish-input-group">
-                    {{ Form::text('code', array('class'='form-control')) }}
+                    {{ Form::text('code', array('class'=>'form-control')) }}
                     <span class="input-group-addon">
                         {{ Form::button('<i class="glyphicon glyphicon-play"></i>', array('type' => 'submit')) }}
                     </span>
