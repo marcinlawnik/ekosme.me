@@ -5,16 +5,13 @@
 </head>
 <body>
 
-{{ Form::open(array('url' => '/r', 'method' => 'get')) }}
 
-{{ Form::text('code') }}
 
-{{ Form::button('<i class="glyphicon glyphicon-play"></i>', array('class' => '')) }}
 
-{{ Form::close() }}
 
 
 <div class="container">
+{{ Form::open(array('url' => '/r', 'method' => 'get')) }}
 	<div class="row">
         <div class="col-sm-6 col-sm-offset-3">
             <div id="imaginary_container"> 
@@ -27,5 +24,7 @@
             </div>
         </div>
 	</div>
+	{{ Form::close() }}
 </div>
+
 </body>
