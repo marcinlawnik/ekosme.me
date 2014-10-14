@@ -18,7 +18,7 @@
                 <div class="input-group stylish-input-group">
                     {{ Form::text('code', '', ['class'=>'form-control']) }}
                     <span class="input-group-addon">
-{{Form::button('<i class="glyphicon glyphicon-play"></i>', array('type' => 'submit', 'class' => ''))}}
+{{Form::button('<i class="glyphicon glyphicon-play"></i>','', array('type' => 'submit','' 'class' => ''))}}
                     </span>
                 </div>
             </div>
