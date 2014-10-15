@@ -9,6 +9,11 @@ class CodesController extends \BaseController {
         if(is_null($code) || $code->used == 1){
             return Redirect::to('/');
         } else {
+
+            //Snapchatty functions
+            //Refresh(disappear) after 6 seconds
+            header("Refresh: " . 6);
+
             $code->used = 1;
             $code->used_time = Carbon::now();
             $code->used_ip = Request::getClientIp();
@@ -20,7 +25,9 @@ class CodesController extends \BaseController {
 
             $path = storage_path().'/memes/'.Meme::find($code->meme_id)->filename;
             // Get the image
-            $image = Image::make($path)->encode('data-url');
+            $image = Image::make($path)->widen(600, function ($constraint) {
+                $constraint->upsize();
+            })->encode('data-url');
 
             return View::make('meme')->withMeme($code->meme)->withImage($image);
         }
