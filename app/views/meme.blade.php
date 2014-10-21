@@ -1,5 +1,19 @@
 <html>
+
 <head>
+
+    <style>
+    
+    IMG.displayed
+    {
+       display: block;
+       margin-left: auto;
+       margin-right: auto 
+      
+    }
+    
+    </style>
+    
 <script type="text/javascript">
 
 
