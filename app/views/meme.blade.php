@@ -7,7 +7,7 @@ img {
         border-radius: 1em;
         padding: 2em;
         position: absolute;
-        top: 60%;
+        top: 20%;
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%, -50%) }
