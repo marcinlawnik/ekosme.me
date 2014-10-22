@@ -5,9 +5,9 @@ img {
         background: lightgrey;
         color: white;
         border-radius: 1em;
-        padding: 2em;
+        padding: 1em;
         position: absolute;
-        top: 20%;
+        top: 60%;
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%, -50%) }
