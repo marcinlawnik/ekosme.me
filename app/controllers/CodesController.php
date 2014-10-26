@@ -11,8 +11,8 @@ class CodesController extends \BaseController {
         } else {
 
             //Snapchatty functions
-            //Refresh(disappear) after 4 seconds
-            header("Refresh: " . 4);
+            //Refresh(disappear) after 7 seconds
+            header("Refresh: " . 7);
 
             $code->used = 1;
             $code->used_time = Carbon::now();
