@@ -2,11 +2,11 @@
 
 return array(
 
-    'base_url'   => 'logviewer',
+    'base_url'   => 'a/logviewer',
     'filters'    => array(
-        'global' => array(),
-        'view'   => array(),
-        'delete' => array()
+        'global' => array('before' => 'l4-lock.auth'),
+        'view'   => array('before' => 'l4-lock.auth'),
+        'delete' => array('before' => 'l4-lock.auth')
     ),
     'log_dirs'   => array('app' => storage_path().'/logs'),
     'log_order'  => 'desc', // Change to 'desc' for the latest entries first

@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e66bd2aaecdc2492980f8a5e8fbe06fc",
+    "hash": "177bacd9dda9003aa6aa0004181cf009",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -115,6 +115,42 @@
                 "preload"
             ],
             "time": "2014-03-12 00:05:31"
+        },
+        {
+            "name": "codenamegary/l4-lock",
+            "version": "v0.2.2-beta",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codenamegary/l4-lock.git",
+                "reference": "c53e67d05f127167cbcd27d34d256cb691053667"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codenamegary/l4-lock/zipball/c53e67d05f127167cbcd27d34d256cb691053667",
+                "reference": "c53e67d05f127167cbcd27d34d256cb691053667",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "~4.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "codenamegary\\Lock\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gary Saunders",
+                    "email": "gary@codenamegary.com"
+                }
+            ],
+            "description": "A Laravel 4 package to lock down a site and require a simple username/password BEFORE auth is executed. Useful for doing things like locking down a site so a client can test before going live while without interfering with auth and other stock framework options.",
+            "time": "2014-06-02 18:45:43"
         },
         {
             "name": "d11wtq/boris",
@@ -2103,7 +2139,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "codenamegary/l4-lock": 10
+    },
     "prefer-stable": false,
     "platform": [],
     "platform-dev": []

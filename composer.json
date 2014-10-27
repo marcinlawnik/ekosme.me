@@ -12,7 +12,8 @@
 		"nesbot/carbon": "~1.13",
 		"mobiledetect/mobiledetectlib": "~2.8",
         "pda/pheanstalk": "~2.0",
-        "kmd/logviewer": "1.2.*"
+        "kmd/logviewer": "1.2.*",
+        "codenamegary/l4-lock": "v0.2.2-beta"
 	},
 	"autoload": {
 		"classmap": [

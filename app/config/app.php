@@ -124,7 +124,8 @@ return array(
         'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
         'Way\Generators\GeneratorsServiceProvider',
         'Intervention\Image\ImageServiceProvider',
-        'Kmd\Logviewer\LogviewerServiceProvider'
+        'codenamegary\Lock\LockServiceProvider',
+        'Kmd\Logviewer\LogviewerServiceProvider',
 
 	),
 

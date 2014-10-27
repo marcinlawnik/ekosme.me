@@ -138,23 +138,27 @@ Route::get('subscribe/confirm/{code}', function($code){
 
 
 //Admin pages
-Route::get('/a/meme/add', ['uses' => 'AdminController@getMemeAdd']);
 
-Route::post('/a/meme/add', ['uses' => 'AdminController@postMemeAdd']);
+Route::group(['prefix' => 'a', 'before' => 'l4-lock.auth'], function(){
+    Route::get('meme/add', ['uses' => 'AdminController@getMemeAdd']);
 
-Route::get('a/subscribers/activate/{code}', function($code){
-    if(Subscriber::where('activation_code', '=', $code)->exists() === false){
-        //Throw error
-        return View::make('subscribe')->with('error', 'Konto zostało już zatwierdzone!');
-    }
-    $subscriber = Subscriber::where('activation_code', '=', $code)->first();
-    $subscriber->active = 1;
-    $subscriber->activation_code = null;
-    $subscriber->save();
+    Route::post('meme/add', ['uses' => 'AdminController@postMemeAdd']);
 
-    return View::make('subscribe')->with('message', 'Użytkownik potwierdzony!');
+    Route::get('subscribers/activate/{code}', function($code){
+        if(Subscriber::where('activation_code', '=', $code)->exists() === false){
+            //Throw error
+            return View::make('subscribe')->with('error', 'Konto zostało już zatwierdzone!');
+        }
+        $subscriber = Subscriber::where('activation_code', '=', $code)->first();
+        $subscriber->active = 1;
+        $subscriber->activation_code = null;
+        $subscriber->save();
+
+        return View::make('subscribe')->with('message', 'Użytkownik potwierdzony!');
+    });
+
+    //Route::get('meme/list', ['uses' => 'AdminController@getMemeList']);
+
+    //Route::get('meme/edit/{id}', ['uses' => 'AdminController@getMemeEdit']);
 });
 
-//Route::get('/a/meme/list', ['uses' => 'AdminController@getMemeList']);
-
-//Route::get('/a/meme/edit/{id}', ['uses' => 'AdminController@getMemeEdit']);
