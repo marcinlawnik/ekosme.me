@@ -97,10 +97,10 @@ Route::post('subscribe', function(){
     Queue::push('SendEmail', [
         'view' => 'emails.confirm',
         'recipient' => $subscriber->email,
+        'subject' => 'Potwierdzenie konta ekosme.me',
         'data' => [
             'firstName' => $firstName,
-            'confirmationCode' => $confirmationCode,
-            'subject' => 'Potwierdzenie konta ekosme.me'
+            'confirmationCode' => $confirmationCode
         ]
     ]);
     //Return success view
@@ -126,10 +126,10 @@ Route::get('subscribe/confirm/{code}', function($code){
     Queue::push('SendEmail', [
         'view' => 'emails.admin.activate',
         'recipient' => 'marcin@lawniczak.me',
+        'subject' => 'Potwierdzenie konta ekosme.me',
         'data' => [
             'subscriberEmail' => $subscriber->email,
             'activationCode' => $subscriber->activation_code,
-            'subject' => 'Potwierdzenie konta ekosme.me'
         ]
     ]);
     //Display success view
