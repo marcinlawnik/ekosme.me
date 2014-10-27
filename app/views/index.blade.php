@@ -16,6 +16,10 @@
 {
    float: right;
 }
+#subscribe
+{
+    margin-top: 3%;
+}
 </style>
 @endsection
 
@@ -37,7 +41,7 @@
         </div>
         <div id="subscribe_container">
             <a href="{{ URL::to('subscribe') }}">
-                <button type="button" class="btn btn-lg btn-success">Zasubskrybuj!</button>
+                <button id="subscribe" type="button" class="btn btn-lg btn-success">Zasubskrybuj!</button>
             </a>
         </div>
     </div>
