@@ -3,8 +3,9 @@
 class SendEmail {
     public function fire($job, $data){
         $recipient = $data['recipient'];
-        Mail::send($data['view'], $data['data'], function($message) use ($recipient){
-            $message->to($recipient)->subject('Nowy mem od ekosme.me!');
+        $subject = $data['subject'];
+        Mail::send($data['view'], $data['data'], function($message) use ($recipient, $subject){
+            $message->to($recipient)->subject($subject);
         });
         $job->delete();
     }

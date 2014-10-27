@@ -99,7 +99,8 @@ Route::post('subscribe', function(){
         'recipient' => $subscriber->email,
         'data' => [
             'firstName' => $firstName,
-            'confirmationCode' => $confirmationCode
+            'confirmationCode' => $confirmationCode,
+            'subject' => 'Potwierdzenie konta ekosme.me'
         ]
     ]);
     //Return success view
@@ -127,7 +128,8 @@ Route::get('subscribe/confirm/{code}', function($code){
         'recipient' => 'marcin@lawniczak.me',
         'data' => [
             'subscriberEmail' => $subscriber->email,
-            'activationCode' => $subscriber->activation_code
+            'activationCode' => $subscriber->activation_code,
+            'subject' => 'Potwierdzenie konta ekosme.me'
         ]
     ]);
     //Display success view
