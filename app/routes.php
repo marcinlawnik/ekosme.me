@@ -113,7 +113,7 @@ Route::get('subscribe/confirm/{code}', function($code){
     //Find if subscriber with code does not exist
     if(Subscriber::where('confirmation_code', '=', $code)->exists() === false){
         //Throw error
-        return View::make('confirm')->with('error', 'Konto zostało już aktywowane lub podano błędny kod!');
+        return View::make('subscribe')->with('error', 'Konto zostało już aktywowane lub podano błędny kod!');
     }
     //Else
     //Activate
@@ -133,7 +133,7 @@ Route::get('subscribe/confirm/{code}', function($code){
         ]
     ]);
     //Display success view
-    return View::make('confirm')->with('message', 'E-mail potwierdzony! Wyślemy wiadomość, gdy administrator potwierdzi twoje konto!');
+    return View::make('subscribe')->with('message', 'E-mail potwierdzony! Wyślemy wiadomość, gdy administrator potwierdzi twoje konto!');
 });
 
 
@@ -145,14 +145,14 @@ Route::post('/a/meme/add', ['uses' => 'AdminController@postMemeAdd']);
 Route::get('a/subscribers/activate/{code}', function($code){
     if(Subscriber::where('activation_code', '=', $code)->exists() === false){
         //Throw error
-        return View::make('confirm')->with('error', 'Konto zostało już zatwierdzone!');
+        return View::make('subscribe')->with('error', 'Konto zostało już zatwierdzone!');
     }
     $subscriber = Subscriber::where('activation_code', '=', $code)->first();
     $subscriber->active = 1;
     $subscriber->activation_code = null;
     $subscriber->save();
 
-    return View::make('confirm')->with('message', 'Użytkownik potwierdzony!');
+    return View::make('subscribe')->with('message', 'Użytkownik potwierdzony!');
 });
 
 //Route::get('/a/meme/list', ['uses' => 'AdminController@getMemeList']);

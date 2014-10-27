@@ -1,11 +1,11 @@
-Hej {{ $firstName }},\r\n
-\r\n
-Dzięki za rejestrację w naszym serwisie ekosme.me.\r\n
-Najnowsze memy zaczniesz otrzymywać po potwierdzeniu adresu konta e-mail.\r\n
-\r\n
-Kliknij w link poniżej:\r\n
-\r\n
-{{ URL::to('subscribe/confirm/' . $confirmationCode) }}\r\n
-\r\n
-Pozdrawiamy,\r\n
+Hej {{ $firstName }},<br>
+<br>
+Dzięki za rejestrację w naszym serwisie ekosme.me.<br>
+Najnowsze memy zaczniesz otrzymywać po potwierdzeniu adresu konta e-mail.<br>
+<br>
+Kliknij w link poniżej:<br>
+<br>
+{{ URL::to('subscribe/confirm/' . $confirmationCode) }}<br>
+<br>
+Pozdrawiamy,<br>
 Zespół ekosme.me
