@@ -1,32 +1,48 @@
 @extends('main')
 @section('head')
-    <style>
-        img {
-            background: lightgrey;
-            color: white;
-            border-radius: 1em;
-            padding: 1em;
-            position: absolute;
-            top: 60%;
-            left: 50%;
-            margin-right: -50%;
-            transform: translate(-50%, -50%)
-        }
-        p.blocktext {
-            margin-left: auto;
-            margin-right: auto;
-            width: 10em
-        }
-    </style>
+<style>
+.row
+{
+    margin-top: 5%;
+}
+#meme
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#progress
+{
+    margin-top: 1%;
+}
+</style>
 @endsection
 
 @section('content')
-    <h3>
-        <p class="blocktext">{{{ $meme->name }}}</p>
-    </h3>
-    <br />
-    <img class="" title="{{ $meme->name }}" src="{{{ $image }}}"></a>
-    <br />
 
-    <p class="blocktext">{{{ $meme->description }}}</p>
+<div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+        <div class="jumbotron">
+            <div class="page-header">
+                <h1>
+                    {{{ $meme->name }}} <small><small>{{{ $meme->description }}}</small></small>
+                </h1>
+            </div>
+            <div class="">
+                <img id="meme" class="img-responsive img-thumbnail" title="{{ $meme->name }}" src="{{{ $image }}}">
+                <div id="progress" class="progress">
+                    <div class="progress-bar progress-bar-danger" style="width: 12.5%">
+                        <span class="sr-only">35% Complete (success)</span>
+                    </div>
+                    <div class="progress-bar progress-bar-warning" style="width: 37.5%">
+                        <span class="sr-only">20% Complete (warning)</span>
+                    </div>
+                    <div class="progress-bar progress-bar-success" style="width: 50%">
+                        <span class="sr-only">10% Complete (danger)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
