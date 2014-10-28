@@ -1,3 +1,6 @@
+@extends('admin.main')
+
+@section('content')
 <table style="width:100%">
 
   <tr>
@@ -22,8 +25,9 @@
     <td>{{ $info[$meme->id]['code_used'] }}</td>
     <td>{{ $info[$meme->id]['code_sent'] }}</td>
     <td>{{ $info[$meme->id]['code_unused'] }}</td>
-    <td>EDYTUJ</td>
+    <td>{{ URL::to('a/meme/edit/'.$meme->id) }}</td>
   </tr>
 @endforeach
 
 </table>
+@endsection

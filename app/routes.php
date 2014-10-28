@@ -157,8 +157,12 @@ Route::group(['prefix' => 'a', 'before' => 'l4-lock.auth'], function(){
         return View::make('subscribe')->with('message', 'Użytkownik potwierdzony!');
     });
 
-    //Route::get('meme/list', ['uses' => 'AdminController@getMemeList']);
+    Route::get('/', ['uses' => 'AdminController@getindex']);
 
-    //Route::get('meme/edit/{id}', ['uses' => 'AdminController@getMemeEdit']);
+    Route::get('meme/list', ['uses' => 'AdminController@getMemeList']);
+
+    Route::get('meme/edit/{id}', ['uses' => 'AdminController@getMemeEdit']);
+
+    Route::post('meme/edit', ['uses' => 'AdminController@postMemeEdit']);
 });
 

@@ -1,3 +1,7 @@
+@extends('admin.main')
+
+@section('content')
+
 Add MEME:
 
 {{ Form::open(array('url' => '/a/meme/add', 'files' => true)) }}
@@ -9,14 +13,9 @@ Tytuł:
 <br>
 Opis:
 {{ Form::text('description') }}
-<br>
-ilosc kodow:
-{{ Form::number('code_amount') }}
-<br>
 
-Opis:
-{{ Form::text('pass') }}
 <br>
 {{ Form::submit('Dodaj!') }}
 
 {{ Form::close() }}
+@endsection
