@@ -140,33 +140,13 @@ Route::get('subscribe/confirm/{code}', function($code){
 //Admin pages
 
 Route::group(['prefix' => 'a', 'before' => 'l4-lock.auth'], function(){
+    Route::get('/', ['uses' => 'AdminController@getIndex']);
+
     Route::get('meme/add', ['uses' => 'AdminController@getMemeAdd']);
 
     Route::post('meme/add', ['uses' => 'AdminController@postMemeAdd']);
 
-    Route::get('subscribers/activate/{code}', function($code){
-        if(Subscriber::where('activation_code', '=', $code)->exists() === false){
-            //Throw error
-            return View::make('subscribe')->with('error', 'Konto zostało już zatwierdzone!');
-        }
-        $subscriber = Subscriber::where('activation_code', '=', $code)->first();
-        $subscriber->active = 1;
-        $subscriber->activation_code = null;
-        $subscriber->save();
-
-        //Send email to subscriber taht account was confirmed
-        Queue::push('SendEmail', [
-            'view' => 'emails.confirmed',
-            'recipient' => $subscriber->email,
-            'subject' => 'Potwierdzenie konta ekosme.me',
-            'data' => [
-            ]
-        ]);
-
-        return View::make('subscribe')->with('message', 'Użytkownik potwierdzony!');
-    });
-
-    Route::get('/', ['uses' => 'AdminController@getindex']);
+    Route::get('subscribers/activate/{code}', ['uses' => 'AdminController@getConfirmSubscribe']);
 
     Route::get('meme/list', ['uses' => 'AdminController@getMemeList']);
 

@@ -90,4 +90,26 @@ class AdminController extends \BaseController {
 
         return View::make('admin.meme.edit')->withMeme($meme)->withImage($image)->with('message', 'Zapisano zmiany!');
     }
+
+    function getConfirmSubscribe($code){
+        if(Subscriber::where('activation_code', '=', $code)->exists() === false){
+            //Throw error
+            return View::make('subscribe')->with('error', 'Konto zostało już zatwierdzone!');
+        }
+        $subscriber = Subscriber::where('activation_code', '=', $code)->first();
+        $subscriber->active = 1;
+        $subscriber->activation_code = null;
+        $subscriber->save();
+
+        //Send email to subscriber taht account was confirmed
+        Queue::push('SendEmail', [
+            'view' => 'emails.confirmed',
+            'recipient' => $subscriber->email,
+            'subject' => 'Potwierdzenie konta ekosme.me',
+            'data' => [
+            ]
+        ]);
+
+        return View::make('subscribe')->with('message', 'Użytkownik potwierdzony!');
+    }
 }
