@@ -4,7 +4,7 @@
 {{ Form::open() }}
 Wyślij mema:<br>
 
-{{ Form::text('meme_id', $id) }}<br>
+{{ Form::number('meme_id', $id) }}<br>
 <br>
 Emaile?<br>
 

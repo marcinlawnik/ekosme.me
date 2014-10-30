@@ -12,10 +12,12 @@ class MemeController extends \BaseController {
         //Get subscribers
         $subscribers = Subscriber::confirmed()->get();
 
-        //Get the meme
-        $meme = Meme::find(Input::get('meme_id'))->first();
-        //Do the sending
+        $memeId = (int)Input::get('meme_id');
 
+        //Get the meme
+        $meme = Meme::where('id', '=', $memeId)->first();
+
+        //Do the sending
         foreach($subscribers as $subscriber){
             $memeCode = Helper::getRandomString(20);
 
