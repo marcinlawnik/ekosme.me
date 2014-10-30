@@ -25,22 +25,21 @@
 			"app/database/seeds",
 			"app/tests/TestCase.php",
             "app/helpers",
-            "app/jobs",
-            "app/Memes"
+            "app/jobs"
 		]
 	},
 	"scripts": {
 		"post-install-cmd": [
 			"php artisan clear-compiled",
             "php artisan ide-helper:generate",
-            "php artisan ide-helper:models -N",
+            "php artisan ide-helper:models -W",
             "php artisan asset:publish kmd/logviewer",
 			"php artisan optimize"
 		],
 		"post-update-cmd": [
 			"php artisan clear-compiled",
             "php artisan ide-helper:generate",
-            "php artisan ide-helper:models -N",
+            "php artisan ide-helper:models -W",
 			"php artisan optimize"
 		],
 		"post-create-project-cmd": [

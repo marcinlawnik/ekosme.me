@@ -95,9 +95,9 @@ Route::post('subscribe', function(){
 
     //Send activation mail
     Queue::push('SendEmail', [
-        'view' => 'emails.confirm',
+        'view' => 'emails.activate',
         'recipient' => $subscriber->email,
-        'subject' => 'Potwierdzenie konta ekosme.me',
+        'subject' => 'Potwierdzenie adresu e-mail ekosme.me',
         'data' => [
             'firstName' => $firstName,
             'confirmationCode' => $confirmationCode
@@ -126,7 +126,7 @@ Route::get('subscribe/confirm/{code}', function($code){
     Queue::push('SendEmail', [
         'view' => 'emails.admin.activate',
         'recipient' => 'marcin@lawniczak.me',
-        'subject' => 'Potwierdzenie konta ekosme.me',
+        'subject' => 'Potwierdzenie konta ekosme.me - '.$subscriber->email,
         'data' => [
             'subscriberEmail' => $subscriber->email,
             'activationCode' => $subscriber->activation_code,
@@ -153,6 +153,15 @@ Route::group(['prefix' => 'a', 'before' => 'l4-lock.auth'], function(){
         $subscriber->active = 1;
         $subscriber->activation_code = null;
         $subscriber->save();
+
+        //Send email to subscriber taht account was confirmed
+        Queue::push('SendEmail', [
+            'view' => 'emails.confirmed',
+            'recipient' => $subscriber->email,
+            'subject' => 'Potwierdzenie konta ekosme.me',
+            'data' => [
+            ]
+        ]);
 
         return View::make('subscribe')->with('message', 'Użytkownik potwierdzony!');
     });
