@@ -24,6 +24,13 @@
  * @method static \Illuminate\Database\Query\Builder|\Subscriber whereCreatedAt($value) 
  * @method static \Illuminate\Database\Query\Builder|\Subscriber whereUpdatedAt($value) 
  */
+
 class Subscriber extends \Eloquent {
 	protected $fillable = ['email', 'level', 'description', 'active', 'conformed', 'activation_code', 'confirmation_code'];
+
+    public static function scopeConfirmed($query){
+
+        return $query->where('confirmed', '=', 1);
+
+    }
 }

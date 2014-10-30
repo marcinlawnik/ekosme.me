@@ -35,7 +35,8 @@ class Code extends \Eloquent {
         'description',
         'used_time',
         'used_ip',
-        'used_useragent'
+        'used_useragent',
+        'subscriber_id'
     ];
 
     public function meme() {

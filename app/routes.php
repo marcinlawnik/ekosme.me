@@ -142,16 +142,31 @@ Route::get('subscribe/confirm/{code}', function($code){
 Route::group(['prefix' => 'a', 'before' => 'l4-lock.auth'], function(){
     Route::get('/', ['uses' => 'AdminController@getIndex']);
 
-    Route::get('meme/add', ['uses' => 'AdminController@getMemeAdd']);
+    Route::group(['prefix' => 'subscribers'], function(){
 
-    Route::post('meme/add', ['uses' => 'AdminController@postMemeAdd']);
+        Route::get('/', ['uses' => 'SubscribersController@getIndex']);
+        Route::get('activate/{code}', ['uses' => 'AdminController@getConfirmSubscribe']);
 
-    Route::get('subscribers/activate/{code}', ['uses' => 'AdminController@getConfirmSubscribe']);
+    });
 
-    Route::get('meme/list', ['uses' => 'AdminController@getMemeList']);
+    Route::group(['prefix' => 'meme'], function(){
 
-    Route::get('meme/edit/{id}', ['uses' => 'AdminController@getMemeEdit']);
+        Route::get('list', ['uses' => 'AdminController@getMemeList']);
 
-    Route::post('meme/edit', ['uses' => 'AdminController@postMemeEdit']);
+        Route::get('add', ['uses' => 'AdminController@getMemeAdd']);
+
+        Route::post('add', ['uses' => 'AdminController@postMemeAdd']);
+
+        Route::get('edit/{id}', ['uses' => 'AdminController@getMemeEdit']);
+
+        Route::post('edit', ['uses' => 'AdminController@postMemeEdit']);
+
+        Route::get('send', ['uses' => 'MemeController@getSend']);
+
+        Route::get('send/{id}', ['uses' => 'MemeController@getSend']);
+
+        Route::post('send', ['uses' => 'MemeController@postSend']);
+    });
+
 });
 

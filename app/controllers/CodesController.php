@@ -7,7 +7,7 @@ class CodesController extends \BaseController {
         $code = Code::where('code', '=', $code)->first();
 
         if(is_null($code) || $code->used == 1){
-            return Redirect::to('/')->with('error', 'Nie znaleziono!');
+            return Redirect::to('/');
         } else {
 
             //Snapchatty functions
