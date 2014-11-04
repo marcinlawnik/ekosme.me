@@ -32,6 +32,6 @@ Add MEME:
         
     </div>
     </div>
-    {{ Form::submit('Dodaj!) }}
+    {{ Form::submit('Dodaj!') }}
     {{ Form::close() }}
 @endsection
