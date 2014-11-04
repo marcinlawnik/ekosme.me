@@ -12,7 +12,7 @@ Add MEME:
             <div class="col-lg-6">
                 <div class="input-group">
                     <span class="input-group-addon">Tytuł</span>
-                    {{ Form::text('title' , '' , array('id' => 'inputsm')) }}
+                    {{ Form::text('title' , '' , array('id' => 'inputsm' , 'class' => 'form-control')) }}
                 </div>
             </div>
         </div>
