@@ -4,20 +4,7 @@
 
 Add MEME:
 
-{{ Form::open(array('url' => '/a/meme/add', 'files' => true)) }}
-Plik:
-{{ Form::file('meme') }}
-<br>
-Tytuł:
-{{ Form::text('title') }}
-<br>
-Opis:
-{{ Form::text('description') }}
 
-<br>
-{{ Form::submit('Dodaj!') }}
-
-{{ Form::close() }}
 
 <div class="container">
     <div class="row">
@@ -46,4 +33,5 @@ Opis:
     </div>
     </div>
     {{ Form::submit('Dodaj! , array('class' => 'btn btn-success')) }}
+    {{ Form::close() }}
 @endsection
