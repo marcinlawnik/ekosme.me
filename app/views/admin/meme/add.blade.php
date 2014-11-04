@@ -45,5 +45,5 @@ Opis:
         
     </div>
     </div>
-    {{ Form::submit('Dodaj! , array('class' => 'btn btn-success') }}
+    {{ Form::submit('Dodaj! , array('class' => 'btn btn-success')) }}
 @endsection
