@@ -25,7 +25,7 @@ Add MEME:
             <div class="col-lg-6">
                 <div class="input-group">
                     <span class="input-group-addon">Opis </span>
-                    {{ Form::text('description' , '' , array( 'id' => 'inputsm')) }}
+                    {{ Form::text('description' , '' , array( 'id' => 'inputsm' , 'class' => 'form-control')) }}
                 </div>
             </div>
         </div>
