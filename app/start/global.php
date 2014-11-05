@@ -53,7 +53,7 @@ App::error(function(Exception $exception, $code)
 	Log::error($exception);
     if(App::environment('production'))
     {
-        //return Redirect::to('/')->with('error', 'Nie znaleziono!');
+        return Redirect::to('/')->with('error', 'Nie znaleziono!');
     }
 });
 
