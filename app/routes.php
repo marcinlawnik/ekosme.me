@@ -170,6 +170,6 @@ Route::group(['prefix' => 'a', 'before' => 'l4-lock.auth'], function(){
 
 });
 
-Route::get('test', function{
+Route::get('test', function(){
 	return View::make('admin.mail.main');
 });
