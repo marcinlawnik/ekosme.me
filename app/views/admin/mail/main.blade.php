@@ -35,7 +35,7 @@
             <!-- Form actions -->
             <div class="form-group">
               <div class="col-md-12 text-right">
-                <button type="submit" class="btn btn-primary btn-lg">wyślij</button>
+                <button type="submit" class="btn btn-success btn-lg">wyślij</button>
               </div>
             </div>
           </fieldset>
