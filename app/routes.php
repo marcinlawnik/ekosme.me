@@ -149,6 +149,14 @@ Route::group(['prefix' => 'a', 'before' => 'l4-lock.auth'], function(){
 
     });
 
+    Route::group(['prefix' => 'mail'], function(){
+
+        Route::get('send', ['uses' => 'EmailController@getSend']);
+
+        Route::post('send', ['uses' => 'EmailController@postSend']);
+
+    });
+
     Route::group(['prefix' => 'meme'], function(){
 
         Route::get('list', ['uses' => 'AdminController@getMemeList']);
