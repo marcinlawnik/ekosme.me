@@ -6,7 +6,6 @@ Add MEME:
 
 {{ Form::open(array('url' => '/a/meme/add', 'files' => true)) }}
 
-@endsection
 {{ Form::file('meme') }}
 <div class="container">
 <div class="row">
