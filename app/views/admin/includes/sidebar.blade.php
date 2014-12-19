@@ -1,8 +1,11 @@
 <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
 <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav side-nav">
-        <li class="active">
+        <li class="">
             <a href="{{ URL::to('a') }}"><i class="fa fa-fw fa-dashboard"></i> Strona główna</a>
+        </li>
+        <li class="">
+            <a href="{{ URL::to('a/mail/send') }}"><i class="fa fa-fw fa-dashboard"></i> Wyślij maila!</a>
         </li>
         <li>
             <a href="javascript:;" data-toggle="collapse" data-target="#subs"><i class="fa fa-fw fa-arrows-v"></i> Subskrypcje <i class="fa fa-fw fa-caret-down"></i></a>
