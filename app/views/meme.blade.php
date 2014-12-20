@@ -30,16 +30,11 @@
             </div>
             <div class="">
                 <img id="meme" class="img-responsive img-thumbnail" title="{{ $meme->name }}" src="{{{ $image }}}">
-                <div id="progress" class="progress">
-                    <div class="progress-bar progress-bar-danger" style="width: 12.5%">
-                        <span class="sr-only">35% Complete (success)</span>
-                    </div>
-                    <div class="progress-bar progress-bar-warning" style="width: 37.5%">
-                        <span class="sr-only">20% Complete (warning)</span>
-                    </div>
-                    <div class="progress-bar progress-bar-success" style="width: 50%">
-                        <span class="sr-only">10% Complete (danger)</span>
-                    </div>
+                <div class="panel-footer text-center">
+
+                    <a href="{{ URL::to('vote/'.$code.'/1') }}" class="btn btn-success btn-lg" >Spoko</a>
+                    <a href="{{ URL::to('vote/'.$code.'/0') }}" class="btn btn-danger btn-lg" >Suchar</a>
+
                 </div>
             </div>
         </div>
