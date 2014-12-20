@@ -51,10 +51,10 @@ Log::useDailyFiles(storage_path().'/logs/'.$logFile);
 App::error(function(Exception $exception, $code)
 {
 	Log::error($exception);
-    //if(App::environment('production'))
-    //{
-    //    return Redirect::to('/')->with('error', 'Nie znaleziono!');
-    //}
+    if(App::environment('production') && !Config::get('app.debug'))
+    {
+        return Redirect::to('/')->with('error', 'Nie znaleziono!');
+    }
 });
 
 /*
@@ -87,7 +87,7 @@ App::down(function()
 require app_path().'/filters.php';
 
 App::missing(function(){
-//     if(App::environment('production')){
-//         return Redirect::to('/')->with('error', 'Nie znaleziono!');
-//     }
+     if(App::environment('production') && !Config::get('app.debug')){
+         return Redirect::to('/')->with('error', 'Nie znaleziono!');
+     }
 });
