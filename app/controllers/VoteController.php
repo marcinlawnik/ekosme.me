@@ -16,7 +16,7 @@ class VoteController extends \BaseController {
 			->widen(600, function ($constraint) {
 				$constraint->upsize();
 			})
-			->blur(15)
+			->blur()
 			->encode('data-url');
 
 		return View::make('meme')
