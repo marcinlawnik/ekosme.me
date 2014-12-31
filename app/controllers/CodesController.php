@@ -7,7 +7,7 @@ class CodesController extends \BaseController {
         $code = Code::where('code', '=', $code)->first();
 
         if(is_null($code) || $code->used == 1){
-            return Redirect::to('/');
+            return Redirect::to('/vote/'.$code->code);
         } else {
 
             //Snapchatty functions
@@ -23,16 +23,18 @@ class CodesController extends \BaseController {
             $code->save();
 
 
-            $path = storage_path().'/memes/'.Meme::find($code->meme_id)->filename;
+            $path = storage_path().'/memes/'.$code->meme->filename;
             // Get the image
             $image = Image::make($path)->widen(600, function ($constraint) {
                 $constraint->upsize();
             })->encode('data-url');
 
-            return View::make('meme')->withMeme($code->meme)->withImage($image);
+            return View::make('meme')
+                ->withCode($code->code)
+                ->withMeme($code->meme)
+                ->withImage($image);
         }
 
     }
-
 
 }

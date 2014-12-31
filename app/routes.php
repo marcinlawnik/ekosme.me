@@ -25,6 +25,12 @@ Route::get('/r', function()
 
 Route::get('/c/{code}', ['uses' => 'CodesController@process']);
 
+//Voting
+
+Route::get('/vote/{code}', ['uses' => 'VoteController@getVote']);
+
+Route::get('/vote/{code}/{vote}', ['uses' => 'VoteController@postVote']);
+
 //View of memes
 Route::get('/v/{hash}', function($hash)
 {
@@ -176,8 +182,4 @@ Route::group(['prefix' => 'a', 'before' => 'l4-lock.auth'], function(){
         Route::post('send', ['uses' => 'MemeController@postSend']);
     });
 
-});
-
-Route::get('test', function(){
-	return View::make('admin.mail.main');
 });
