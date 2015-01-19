@@ -13,7 +13,23 @@
 
 Route::get('/', function()
 {
-	return View::make('index');
+
+    $latestMeme = Meme::all()->last();
+
+    $stats = [
+        'meme_title' => $latestMeme->name,
+        'memes_sent' => $latestMeme->codes->count(),
+        'memes_opened' => $latestMeme->codes()->where('used', '=', '1')->count(),
+        'votes' => $latestMeme->codes()->where('vote', '!=', 'NULL')->count(),
+        'votes_like' => $latestMeme->codes()->where('vote', '=', 1)->count(),
+        'votes_dislike' => $latestMeme->codes()->where('vote', '=', 0)->count()
+    ];
+    $stats['memes_opened_percentage'] = round($stats['memes_opened'] / $stats['memes_sent'] * 100, 1);
+    $stats['voted_percentage'] = round($stats['votes'] / $stats['memes_opened'] * 100, 1);
+    $stats['votes_like_percentage'] = round($stats['votes_like'] / $stats['votes'] * 100, 1);
+    $stats['votes_dislike_percentage'] = round($stats['votes_dislike'] / $stats['votes'] * 100, 1);
+
+    return View::make('index')->withStats($stats);
 });
 
 //Codes
