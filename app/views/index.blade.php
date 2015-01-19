@@ -44,14 +44,15 @@
                 <button id="subscribe" type="button" class="btn btn-lg btn-success">Zasubskrybuj!</button>
             </a>
         </div>
+        <br />
         <div id="stats_container">
             <p class="alert alert-info col-sm-12">
                 Nasz ostatni mem, <strong>"{{ $stats['meme_title'] }}"</strong>,
-                obejrzało {{ $stats['memes_opened'] }} z {{ $stats['memes_sent'] }}
+                obejrzało <strong>{{ $stats['memes_opened'] }}</strong> z <strong>{{ $stats['memes_sent'] }}</strong>
                 ({{ $stats['memes_opened_percentage'] }}%).
-                Zagłosowało {{ $stats['votes'] }} z {{ $stats['memes_opened'] }} ({{ $stats['voted_percentage'] }}%).
-                Podobało się <strong>{{ $stats['votes_like'] }}</strong> ({{ $stats['votes_like_percentage'] }}%).
-                Nie podobało się <strong>{{ $stats['votes_dislike'] }}</strong> ({{ $stats['votes_dislike_percentage'] }}%).
+                Zagłosowało: {{ $stats['votes'] }} z {{ $stats['memes_opened'] }} ({{ $stats['voted_percentage'] }}%).
+                Podobało się: <strong>{{ $stats['votes_like'] }}</strong> ({{ $stats['votes_like_percentage'] }}%).
+                Nie podobało się: <strong>{{ $stats['votes_dislike'] }}</strong> ({{ $stats['votes_dislike_percentage'] }}%).
             </p>
         </div>
     </div>
