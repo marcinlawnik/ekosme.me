@@ -44,9 +44,8 @@
                 <button id="subscribe" type="button" class="btn btn-lg btn-success">Zasubskrybuj!</button>
             </a>
         </div>
-        <br />
         <div id="stats_container">
-            <p class="alert alert-info col-sm-12">
+            <p class="alert alert-info col-sm-12" style="margin-top: 2%">
                 Nasz ostatni mem, <strong>"{{ $stats['meme_title'] }}"</strong>,
                 obejrzało <strong>{{ $stats['memes_opened'] }}</strong> z <strong>{{ $stats['memes_sent'] }}</strong>
                 ({{ $stats['memes_opened_percentage'] }}%).
