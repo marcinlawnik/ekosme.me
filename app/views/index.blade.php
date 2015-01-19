@@ -46,10 +46,10 @@
         </div>
         <div id="stats_container">
             <p class="alert alert-info col-sm-12">
-                Nasz ostatni mem, <strong>{{ $stats['meme_title'] }}</strong>,
+                Nasz ostatni mem, <strong>"{{ $stats['meme_title'] }}"</strong>,
                 obejrzało {{ $stats['memes_opened'] }} z {{ $stats['memes_sent'] }}
                 ({{ $stats['memes_opened_percentage'] }}%).
-                Zagłosowało {{ $stats['votes'] }} ({{ $stats['voted_percentage'] }}%).
+                Zagłosowało {{ $stats['votes'] }} z {{ $stats['memes_opened'] }} ({{ $stats['voted_percentage'] }}%).
                 Podobało się <strong>{{ $stats['votes_like'] }}</strong> ({{ $stats['votes_like_percentage'] }}%).
                 Nie podobało się <strong>{{ $stats['votes_dislike'] }}</strong> ({{ $stats['votes_dislike_percentage'] }}%).
             </p>
