@@ -50,7 +50,7 @@
                 Nasz ostatni mem, <strong>"{{ $stats['meme_title'] }}"</strong>,
                 obejrzało <strong>{{ $stats['memes_opened'] }}</strong> z <strong>{{ $stats['memes_sent'] }}</strong>
                 ({{ $stats['memes_opened_percentage'] }}%).
-                Zagłosowało: {{ $stats['votes'] }} z {{ $stats['memes_opened'] }} ({{ $stats['voted_percentage'] }}%).
+                Zagłosowało: <strong>{{ $stats['votes'] }}</strong> z <strong>{{ $stats['memes_opened'] }}</strong> ({{ $stats['voted_percentage'] }}%).
                 Podobało się: <strong>{{ $stats['votes_like'] }}</strong> ({{ $stats['votes_like_percentage'] }}%).
                 Nie podobało się: <strong>{{ $stats['votes_dislike'] }}</strong> ({{ $stats['votes_dislike_percentage'] }}%).
             </p>
