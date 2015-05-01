@@ -12,12 +12,14 @@
     margin-left: auto;
     margin-right: auto;
 }
-#subscribe_container
+#button_container
 {
    float: right;
 }
-#subscribe
-{
+#subscribe {
+    margin-top: 3%;
+}
+#skins {
     margin-top: 3%;
 }
 </style>
@@ -39,7 +41,10 @@
             </div>
             {{ Form::close() }}
         </div>
-        <div id="subscribe_container">
+        <div id="button_container">
+            <a href="{{ URL::to('skins') }}">
+                <button id="skins" type="button" class="btn btn-lg btn-info">Skiny do dziennika</button>
+            </a>
             <a href="{{ URL::to('subscribe') }}">
                 <button id="subscribe" type="button" class="btn btn-lg btn-success">Zasubskrybuj!</button>
             </a>

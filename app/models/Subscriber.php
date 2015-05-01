@@ -23,7 +23,7 @@
  * @method static \Illuminate\Database\Query\Builder|\Subscriber whereConfirmationCode($value)
  * @method static \Illuminate\Database\Query\Builder|\Subscriber whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\Subscriber whereUpdatedAt($value)
- * @method static \Subscriber confirmed() 
+ * @method static \Subscriber confirmed()
  */
 
 class Subscriber extends \Eloquent {
