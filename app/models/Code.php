@@ -27,7 +27,7 @@
  * @method static \Illuminate\Database\Query\Builder|\Code whereUpdatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\Code whereSubscriberId($value)
  * @property integer $vote
- * @method static \Illuminate\Database\Query\Builder|\Code whereVote($value) 
+ * @method static \Illuminate\Database\Query\Builder|\Code whereVote($value)
  */
 class Code extends \Eloquent {
 	protected $fillable = [

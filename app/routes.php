@@ -42,6 +42,12 @@ Route::get('/', function()
     return View::make('index')->withStats($stats);
 });
 
+//Static pages
+
+Route::get('/skins', function(){
+    return View::make('static.skins');
+});
+
 //Codes
 Route::get('/r', function()
 {
