@@ -48,6 +48,30 @@ Route::get('/skins', function(){
     return View::make('static.skins');
 });
 
+Route::group(['prefix' => 'hs'], function(){
+
+    Route::get('/', function(){
+        return View::make('hs.index');
+    });
+
+    Route::get('rules', function(){
+        return View::make('hs.rules');
+    });
+
+    Route::get('ranks', function(){
+        return View::make('hs.ranks');
+    });
+
+    Route::get('register', function(){
+        return View::make('hs.register');
+    });
+
+    Route::get('contact', function(){
+        return View::make('hs.contact');
+    });
+
+});
+
 //Codes
 Route::get('/r', function()
 {
