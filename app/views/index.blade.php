@@ -43,7 +43,7 @@
         </div>
         <div id="button_container">
             <a href="{{ URL::to('hs') }}">
-                <button id="hs" type="button" class="btn btn-lg btn-warning">Turniej HS</button>
+                <button id="hs" type="button" class="btn btn-lg btn-info">Turniej HS</button>
             </a>
             <a href="{{ URL::to('skins') }}">
                 <button id="skins" type="button" class="btn btn-lg btn-info">Skiny do dziennika</button>
