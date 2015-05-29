@@ -18,8 +18,8 @@
         <div class="title">Zasady turnieju</div>
         <h4>Interakcja</h4>
             <ul>
-                <li>Zabrania sie spamowania emotikonami w grze.</li>
-                <li>Lub demotowywania, obrażania lub jakiejkolwiek formy negatywnego kontaku(poprzez czat i inne komunikatory).</li>
+                <li>Zabrania się spamowania emotikonami w grze.</li>
+                <li>Zabrania się także demotowywania, obrażania lub jakiejkolwiek formy negatywnego kontaku (poprzez czat i inne komunikatory).</li>
                 <li>Osoba oglądająca mecz nie może wysyłać jakichkolwiek informacji lub wiadomości do żadnego z graczy.</li>
             </ul>
         <h4>Ogólne</h4>
