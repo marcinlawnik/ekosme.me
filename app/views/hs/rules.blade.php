@@ -50,13 +50,13 @@
                 <li>Sędziami są gracze bioracy udział w pojedynku i każda osoba(nawet spoza turnieju) obserwująca dany mecz turniejowy.</li>
                 <ul>
                     <li>Obserwujący i gracz może wysłać screenshota lub film do organizatora, gdy któryś z graczy łamie zasady.</li>
-                    <li>Obserwujący i gracz musi wysłać screenshota lub film z wynikiem meczu(ekran wygranej/przegranej).</li>
+                    <li>Obserwujący i gracz musi wysłać screenshota lub film z wynikiem meczu (ekran wygranej/przegranej).</li>
                     <li>Najlepiej, aby pojedynek oglądały dwie osoby: jedna od jednego gracza, a druga od drugiego. Nie jest to jednak wymagane.</li>
                 </ul>
                 <li>Wolno tylko raz zagrać jednym bohaterem z jednym graczem.</li>
                 <li>Przed meczem każdy z graczy przedstawia do jakich bohaterów posiada talię, a gracz przeciwny wybiera dwóch bohaterów, których przeciwnik nie będzie mógł użyć w pojedynku.</li>
                 <li>Nie można oskarżyć przeciwnika o oszukiwanie, bez niepodważalnych dowodów (screenshot lub film).</li>
-                <li>Wszystkie mecze(oprócz finałów) są rozgrywane w formacie BO3.</li>
+                <li>Wszystkie mecze (oprócz finałów) są rozgrywane w formacie BO3.</li>
                 <li>Mecz finałowy rozgrywany jest w formacie <b>BO5</b>.</li>
             </ul>
         </div>
