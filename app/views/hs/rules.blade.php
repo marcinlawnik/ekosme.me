@@ -24,11 +24,11 @@
             </ul>
         <h4>Ogólne</h4>
             <ul>
-                <li>Turniej organizują: MŁ, KM, MR.</li>
+                <li>Turniej organizują: Marcin Ławniczak, Kuba Marszakiewicz, Michał Roszak.</li>
                 <li>Wszystkie wątpliwości rozstrzygane są niepodważalną decyzją organizatora.</li>
-                <li>Nie wolno używać cheatów i haków.</li>
-                <li>W turnieju mogą brać udział tylko uczniowie i pracownicy ekosu.</li>
-                <li>Terminy meczy ustala organizator, ale, gdy któryś nie odpowiada graczowi, może on ulec zmianie na pasujący obydwu graczom.</li>
+                <li>Nie wolno używać programów wspomagajcych dajcych nieuczciw przewagę.</li>
+                <li>W turnieju mogą brać udział tylko uczniowie EKOSu.</li>
+                <li>Terminy meczy ustala organizator, ale, w przypadku braku czasu, może on ulec zmianie na pasujący obydwu graczom.</li>
             </ul>
         <h4>Talie</h4>
             <ul>
@@ -37,11 +37,10 @@
                 <br/>
                 <ul>
                     <li>2 karty legendarne,</li>
-                    <li>6 kart epickich,</li>
-                    <li>12 kart rzadkich,</li>
-                    <li>20 kart podstawowych.</li>
+                    <li>8 kart epickich,</li>
+                    <li>15 kart rzadkich,</li>
+                    <li>30 kart podstawowych.</li>
                 </ul>
-                <li>Zabronione jest korzystanie z talii typu Face Hunter.</li>
             </ul>
         <h4>Rozgrywka</h4>
             <ul>
@@ -55,10 +54,10 @@
                     <li>Najlepiej, aby pojedynek oglądały dwie osoby: jedna od jednego gracza, a druga od drugiego. Nie jest to jednak wymagane.</li>
                 </ul>
                 <li>Wolno tylko raz zagrać jednym bohaterem z jednym graczem.</li>
-                <li>Przed meczem każdy z graczy przedstawia do jakich bohaterów posiada talię, a gracz przeciwny wybiera dwóch bohaterów, których przeciwnika nie będzie mógł użyć w pojedynku.</li>
-                <li>Nie można oskarżyć przeciwnika o oszukiwanie, bez niepodważalnych dowodów(screenshot lub film).</li>
+                <li>Przed meczem każdy z graczy przedstawia do jakich bohaterów posiada talię, a gracz przeciwny wybiera dwóch bohaterów, których przeciwnik nie będzie mógł użyć w pojedynku.</li>
+                <li>Nie można oskarżyć przeciwnika o oszukiwanie, bez niepodważalnych dowodów (screenshot lub film).</li>
                 <li>Wszystkie mecze(oprócz finałów) są rozgrywane w formacie BO3.</li>
-                <li>Mecz finałowy rozgrywany jest w formacie <b>Bo5</b>.</li>
+                <li>Mecz finałowy rozgrywany jest w formacie <b>BO5</b>.</li>
             </ul>
         </div>
         @include('hs.footer')
