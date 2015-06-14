@@ -10,6 +10,7 @@
 
 @section('content')
     @include('hs.nav')
+    @include('messages')
     <div class="container">
         <img src="http://upload.wikimedia.org/wikipedia/en/1/1c/Hearthstone_Logo.png">
         <p>RANKING</p>

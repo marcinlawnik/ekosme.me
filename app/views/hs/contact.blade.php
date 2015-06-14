@@ -10,6 +10,7 @@
 
 @section('content')
     @include('hs.nav')
+    @include('messages')
     <div class="container">
 
         <p>Marcin Ławniczak: <a href="mailto:marcin@lawniczak.me">marcin@lawniczak.me</a> - sprawy organizacyjne</p>

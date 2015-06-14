@@ -63,7 +63,7 @@ Route::group(['prefix' => 'hs'], function(){
     });
 
     Route::get('register', function(){
-        return View::make('hs.register');
+        return View::make('hs.register')->with('error', 'Trzeba być zalogowanym w domenie ekos.edu.pl, aby zobaczyć formularz!');
     });
 
     Route::get('contact', function(){
