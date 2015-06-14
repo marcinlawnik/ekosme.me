@@ -59,7 +59,7 @@ Route::group(['prefix' => 'hs'], function(){
     });
 
     Route::get('ranks', function(){
-        return View::make('hs.ranks');
+        return View::make('hs.ranks')->with('message', 'Tabela rozgrywek pojawi się 18.06.2015r.');
     });
 
     Route::get('register', function(){

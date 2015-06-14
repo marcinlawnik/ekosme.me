@@ -30,6 +30,7 @@
                 <li>Nie wolno używać programów wspomagajcych dajcych nieuczciwą przewagę.</li>
                 <li>W turnieju mogą brać udział tylko uczniowie EKOSu.</li>
                 <li>Terminy meczy ustala organizator, ale, w przypadku braku czasu, termin meczu może ulec zmianie na pasujący obydwu graczom.</li>
+                <li>Organizatorzy zastrzegają sobiw prawo do modyfikowania zasad podczas trwania turnieju.</li>
             </ul>
         <h4>Talie</h4>
             <ul>
@@ -59,7 +60,6 @@
                 <li>Nie można oskarżyć przeciwnika o oszukiwanie, bez niepodważalnych dowodów (screenshot lub film).</li>
                 <li>Wszystkie mecze (oprócz finałów) są rozgrywane w formacie BO3.</li>
                 <li>Mecz finałowy rozgrywany jest w formacie <b>BO5</b>.</li>
-                <li>Organizatorzy zastrzegają sobiw prawo do modyfikowania zasad podczas trwania turnieju.</li>
             </ul>
         </div>
         @include('hs.footer')
