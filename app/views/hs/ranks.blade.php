@@ -14,17 +14,7 @@
     <div class="container">
         <img src="http://upload.wikimedia.org/wikipedia/en/1/1c/Hearthstone_Logo.png">
         <p>RANKING</p>
-
-        <table class="table">
-            <thead>
-                <td>Imie</td>
-                <td>Nazwisko</td>
-                <td>MeczeWygrane</td>
-                <td>MeczePrzegrane</td>
-                <td>EmailRejestracji</td>
-            </thead>
-        </table>
-
+            <iframe src="https://docs.google.com/spreadsheets/d/1tDrspJY6s_0eCeLfocPVH77MgqDei8XKdKcH-SQ8tsE/pubhtml?gid=719055177&single=true&widget=true&headers=false"></iframe>
         <hr>
         @include('hs.footer')
     </div>

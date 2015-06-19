@@ -30,7 +30,8 @@
                 <li>Nie wolno używać programów wspomagajcych dajcych nieuczciwą przewagę.</li>
                 <li>W turnieju mogą brać udział tylko uczniowie EKOSu.</li>
                 <li>Terminy meczy ustala organizator, ale, w przypadku braku czasu, termin meczu może ulec zmianie na pasujący obydwu graczom.</li>
-                <li>Organizatorzy zastrzegają sobiw prawo do modyfikowania zasad podczas trwania turnieju.</li>
+                <li>Organizatorzy zastrzegają sobie prawo do modyfikowania zasad podczas trwania turnieju.</li>
+                <li>Organizator może brać udział w turnieju, ale na czas uczestnictwa traci swoje przywileje i jest postrzegany jak każdy inny gracz.</li>
             </ul>
         <h4>Talie</h4>
             <ul>
