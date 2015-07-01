@@ -87,7 +87,7 @@ App::down(function()
 require app_path().'/filters.php';
 
 App::missing(function(){
-     if(App::environment('production') && !Config::get('app.debug')){
+     if(!Config::get('app.debug')){
          return Redirect::to('/')->with('error', 'Nie znaleziono!');
      }
 });
