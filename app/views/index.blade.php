@@ -16,13 +16,7 @@
 {
    float: right;
 }
-#subscribe {
-    margin-top: 3%;
-}
-#skins {
-    margin-top: 3%;
-}
-#hs {
+.menu-button {
     margin-top: 3%;
 }
 </style>
@@ -45,14 +39,17 @@
             {{ Form::close() }}
         </div>
         <div id="button_container">
+            <a href="{{ URL::to('top') }}">
+                <button id="top" type="button" class="btn btn-lg btn-error menu-button">Najlepsze memy</button>
+            </a>
             <a href="{{ URL::to('skins') }}">
-                <button id="skins" type="button" class="btn btn-lg btn-info">Skiny do dziennika</button>
+                <button id="skins" type="button" class="btn btn-lg btn-info  menu-button">Skiny do dziennika</button>
             </a>
             <a href="{{ URL::to('hs') }}">
-                <button id="hs" type="button" class="btn btn-lg btn-warning">Turniej HS</button>
+                <button id="hs" type="button" class="btn btn-lg btn-warning  menu-button">Turniej HS</button>
             </a>
             <a href="{{ URL::to('subscribe') }}">
-                <button id="subscribe" type="button" class="btn btn-lg btn-success">Zasubskrybuj!</button>
+                <button id="subscribe" type="button" class="btn btn-lg btn-success  menu-button">Zasubskrybuj!</button>
             </a>
         </div>
         <div id="stats_container">

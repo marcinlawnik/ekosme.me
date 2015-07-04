@@ -42,6 +42,21 @@ Route::get('/', function()
     return View::make('index')->withStats($stats);
 });
 
+//Top memes display
+
+Route::get('/top', ['uses' => 'TopController@getIndex']);
+
+//Display of images on request
+
+
+Route::get('images/{image}', function($image = null)
+{
+    $path = storage_path().'/memes/' . $image;
+    if (file_exists($path)) {
+        return Response::download($path);
+    }
+});
+
 //Static pages
 
 Route::get('/skins', function(){
