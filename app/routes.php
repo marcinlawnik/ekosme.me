@@ -42,6 +42,21 @@ Route::get('/', function()
     return View::make('index')->withStats($stats);
 });
 
+//Top memes display
+
+Route::get('/top', ['uses' => 'TopController@getIndex']);
+
+//Display of images on request
+
+
+Route::get('images/{image}', function($image = null)
+{
+    $path = storage_path().'/memes/' . $image;
+    if (file_exists($path)) {
+        return Response::download($path);
+    }
+});
+
 //Static pages
 
 Route::get('/skins', function(){
@@ -63,7 +78,7 @@ Route::group(['prefix' => 'hs'], function(){
     });
 
     Route::get('register', function(){
-        return View::make('hs.register');
+        return View::make('hs.register')->with('error', 'Trzeba być zalogowanym w domenie ekos.edu.pl, aby zobaczyć formularz!');
     });
 
     Route::get('contact', function(){
