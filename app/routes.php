@@ -63,7 +63,7 @@ Route::get('images/{image}', function($image = null)
 
 });
 
-Route::get('download/reports/{report}', function($report = null)
+Route::get('/download/reports/{report}', function($report = null)
 {
     $path = storage_path().'/reports/' . $report;
     if (file_exists($path)) {
