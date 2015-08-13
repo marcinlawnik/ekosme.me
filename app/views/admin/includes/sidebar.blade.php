@@ -29,6 +29,9 @@
                 </li>
             </ul>
         </li>
+        <li class="">
+            <a href="{{ URL::to('a/reports') }}"><i class="fa fa-fw fa-dashboard"></i> Raporty</a>
+        </li>
     </ul>
 </div>
 <!-- /.navbar-collapse -->

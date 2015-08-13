@@ -24,6 +24,7 @@
  * @method static \Illuminate\Database\Query\Builder|\Subscriber whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\Subscriber whereUpdatedAt($value)
  * @method static \Subscriber confirmed()
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Code[] $codes
  */
 
 class Subscriber extends \Eloquent {
@@ -33,5 +34,9 @@ class Subscriber extends \Eloquent {
 
         return $query->where('confirmed', '=', 1);
 
+    }
+
+    public function codes() {
+        return $this->hasMany('Code');
     }
 }
