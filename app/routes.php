@@ -55,6 +55,12 @@ Route::get('images/{image}', function($image = null)
     if (file_exists($path)) {
         return Response::download($path);
     }
+
+    $path = storage_path().'/images/' . $image;
+    if (file_exists($path)) {
+        return Response::download($path);
+    }
+
 });
 
 //Static pages
@@ -252,5 +258,11 @@ Route::group(['prefix' => 'a', 'before' => 'l4-lock.auth'], function(){
 
         Route::post('send', ['uses' => 'MemeController@postSend']);
     });
+
+    Route::get('reports/{subscriberId}', ['uses' => 'ReportController@getIndex']);
+
+    Route::get('reports/charts/meme/{memeid}/subscriber/{subscriberId}',
+        ['uses' => 'ReportController@getChart']
+    )->where(['memeid' => '[0-9]+', 'userid' => '[0-9]+']);
 
 });
