@@ -107,7 +107,7 @@ class ReportController extends \BaseController {
 
             $myPicture->setFontProperties(
                 [
-                    "FontName" => "forgotte.ttf",
+                    "FontName" => "Forgotte.ttf",
                     "FontSize" => 16
                 ]
             );
