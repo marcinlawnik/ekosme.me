@@ -63,6 +63,8 @@ Route::get('images/{image}', function($image = null)
 
 });
 
+//Download of reports
+
 Route::get('/download/reports/{report}', function($report = null)
 {
     $path = storage_path().'/reports/' . $report;
