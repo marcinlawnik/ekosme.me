@@ -77,7 +77,7 @@ class SuggestController extends \BaseController {
         ]);
 
         //Tell user everything is okay
-        return Redirect::to('suggest')->with('message', 'Dzięki za propozycję, odezwiemy się do Ciebie!');
+        return Redirect::to('/suggest')->with('message', 'Dzięki za propozycję, odezwiemy się do Ciebie!');
     }
 
 }
