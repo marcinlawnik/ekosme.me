@@ -46,6 +46,12 @@ Route::get('/', function()
 
 Route::get('/top', ['uses' => 'TopController@getIndex']);
 
+//Upload of memes for users
+
+Route::get('/suggest', ['uses' => 'SuggestController@getIndex']);
+
+Route::post('/suggest', ['uses' => 'SuggestController@postIndex']);
+
 //Display of images on request
 
 
@@ -62,6 +68,8 @@ Route::get('images/{image}', function($image = null)
     }
 
 });
+
+//Download of reports
 
 Route::get('/download/reports/{report}', function($report = null)
 {
