@@ -4,7 +4,12 @@
         Zaproponuj mema!
     </title>
     <style>
-
+        .jumbotron {
+            margin-top: 10% !important;
+        }
+        .content {
+            margin-bottom: 5%;
+        }
     </style>
 @endsection
 
@@ -19,23 +24,26 @@
                         Zaproponuj mema!
                     </h1>
                 </div>
-                <div class="">
+                <div class="content">
                     <p>
-                        Tutaj możesz zaproponować nowego mema do ekosme.me:
+                        Tutaj możesz zaproponować nowego mema (Musi to być obrazek do 5MB):
                     </p>
 
                     {{ Form::open(array('url' => '/suggest', 'files' => true)) }}
 
                     {{ Form::file('meme') }}
+                    <br>
                     <div class="input-group">
                         <span class="input-group-addon">Email (nieobowiązkowy)</span>
                         {{ Form::email('email' , '' , array('id' => 'inputsm' , 'class' => 'form-control')) }}
                     </div>
+                    <br>
                     <div class="input-group">
                         <span class="input-group-addon">Opis (nieobowiązkowy)</span>
                         {{ Form::text('description' , '' , array( 'id' => 'inputsm' , 'class' => 'form-control')) }}
                     </div>
-                    {{ Form::submit('Zaproponuj!' , array( 'class' => 'btn btn-success')) }}
+                    <br>
+                    {{ Form::submit('Zaproponuj!' , array( 'class' => 'btn btn-success pull-right')) }}
                     {{ Form::close() }}
                 </div>
             </div>
