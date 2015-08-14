@@ -25,7 +25,7 @@
         <div class="jumbotron">
             <div class="page-header">
                 <h1>
-                    {{{ $meme->name }}} <small><small>{{{ $meme->description }}}</small></small>
+                    {{ $meme->name }} <small><small>{{ $meme->description }}</small></small>
                 </h1>
             </div>
             <div class="">
