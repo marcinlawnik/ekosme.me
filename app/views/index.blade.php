@@ -65,7 +65,7 @@
                 Nie podobało się: <strong>{{ $stats['votes_dislike'] }}</strong> ({{ $stats['votes_dislike_percentage'] }}%).
             </p>
         </div>
-        <div id="ads_container" class="alert alert-info">
+        <div id="ads_container" class="">
             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <!-- main page ekosme.me -->
             <ins class="adsbygoogle"
