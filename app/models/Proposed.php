@@ -2,15 +2,15 @@
 /**
  * Proposed
  *
- * @property integer $id 
- * @property string $filename 
- * @property string $name 
- * @property string $email 
- * @property string $useragent 
- * @property string $description 
- * @property string $ip 
- * @property \Carbon\Carbon $created_at 
- * @property \Carbon\Carbon $updated_at 
+ * @property integer $id
+ * @property string $filename
+ * @property string $name
+ * @property string $email
+ * @property string $useragent
+ * @property string $description
+ * @property string $ip
+ * @property \Carbon\Carbon $created_at
+ * @property \Carbon\Carbon $updated_at
  * @method static \Illuminate\Database\Query\Builder|\Proposed whereId($value)
  * @method static \Illuminate\Database\Query\Builder|\Proposed whereFilename($value)
  * @method static \Illuminate\Database\Query\Builder|\Proposed whereName($value)
