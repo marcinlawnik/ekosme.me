@@ -42,7 +42,7 @@ class MemeController extends \BaseController {
             ]);
         }
 
-        PushBullet::all()->note('Mem wys³any', $meme->name);
+        PushBullet::all()->note('Mem wysÅ‚any', $meme->name);
 
     }
 
