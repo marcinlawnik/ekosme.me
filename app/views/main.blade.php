@@ -10,5 +10,6 @@
         <div class="container">
             @yield('content')
         </div>
+        @include('analytics')
     </body>
 </html>

@@ -46,6 +46,12 @@ Route::get('/', function()
 
 Route::get('/top', ['uses' => 'TopController@getIndex']);
 
+//Upload of memes for users
+
+Route::get('/suggest', ['uses' => 'SuggestController@getIndex']);
+
+Route::post('/suggest', ['uses' => 'SuggestController@postIndex']);
+
 //Display of images on request
 
 
@@ -62,6 +68,8 @@ Route::get('images/{image}', function($image = null)
     }
 
 });
+
+//Download of reports
 
 Route::get('/download/reports/{report}', function($report = null)
 {
@@ -195,6 +203,9 @@ Route::post('subscribe', function(){
             'confirmationCode' => $confirmationCode
         ]
     ]);
+
+    PushBullet::all()->note('Nowa subskrybcja', $subscriber->email);
+
     //Return success view
     return View::make('subscribe')->with('message', 'Dodano! Potwierdź adres e-mail, aby zacząć otrzymywać memy!');
 
@@ -273,5 +284,10 @@ Route::group(['prefix' => 'a', 'before' => 'l4-lock.auth'], function(){
     Route::get('reports/charts/meme/{memeid}/subscriber/{subscriberId}',
         ['uses' => 'ReportController@getChart']
     )->where(['memeid' => '[0-9]+', 'userid' => '[0-9]+']);
+
+    Route::get('push', function(){
+        PushBullet::all()->note('ekosme.me PushBullet test', 'Testing...');
+        return Redirect::to('/')->with('message', 'Testowa wiadomość wysłana');
+    });
 
 });

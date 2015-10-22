@@ -15,7 +15,8 @@
         "kmd/logviewer": "1.2.*",
         "codenamegary/l4-lock": "v0.2.2-beta",
         "doctrine/dbal": "~2.4",
-        "szymach/c-pchart": "1.*"
+        "szymach/c-pchart": "1.*",
+        "lahaxearnaud/laravel-pushbullet": "~0.1"
     },
     "autoload": {
         "classmap": [

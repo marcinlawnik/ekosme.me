@@ -126,6 +126,7 @@ return array(
         'Intervention\Image\ImageServiceProvider',
         'codenamegary\Lock\LockServiceProvider',
         'Kmd\Logviewer\LogviewerServiceProvider',
+		'Lahaxearnaud\LaravelPushbullet\LaravelPushbulletServiceProvider',
 
 	),
 
@@ -195,6 +196,7 @@ return array(
 		'View'              => 'Illuminate\Support\Facades\View',
         'Image'             => 'Intervention\Image\Facades\Image',
         'Carbon'            => 'Carbon\Carbon',
+        'PushBullet'        => 'Lahaxearnaud\LaravelPushbullet\LaravelPushbulletFacade',
 
 	),
 
