@@ -18,31 +18,22 @@ class AdminController extends \BaseController {
             return Redirect::to('/a/meme/add')->with('error', 'Nie dodano pliku!');
         }
 
-        //zapisz
-        //zmien nazwe
+        //Change name
         $filename = Helper::getRandomString().'.'.Input::file('meme')->getClientOriginalExtension();
+
+        //Save
         Input::file('meme')->move(storage_path().'/memes/', $filename);
 
-        //dodaj do bazy
+        //Add to database
         $meme = Meme::create([
             'filename' => $filename,
             'name' => Input::get('title'),
             'description' => Input::get('description')
         ]);
-        //wygeneruj kody
-//        $codes = [];
-//        foreach(range(1, Input::get('code_amount')) as $index){
-//            $code = Helper::getRandomString(20);
-//            $codes[$index] = $code;
-//            Code::create([
-//                'code' => $code,
-//                'meme_id' => $meme->id,
-//                'used' => 0
-//            ]);
-//        }
+
         $hashids = new Hashids\Hashids(Config::get('app.key'), 8);
         $id = $hashids->encode($meme->id);
-        //zwroc link
+        //Return link
         return View::make('admin.meme.add')->with('message', 'Dodano! Mem dostępny pod adresem '.URL::to('v/'.$id));
     }
 
