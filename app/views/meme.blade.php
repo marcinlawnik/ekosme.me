@@ -25,11 +25,11 @@
         <div class="jumbotron">
             <div class="page-header">
                 <h1>
-                    {{ $meme->name }} <small><small>{{ $meme->description }}</small></small>
+                    {{ $meme->name }} <small><small>{{ $meme->description }}, ID: {{ $meme->id }}</small></small>
                 </h1>
             </div>
             <div class="">
-                <img id="meme" class="img-responsive img-thumbnail" title="{{ $meme->name }}" src="{{{ $image }}}">
+                <img id="meme" class="img-responsive img-thumbnail" title="{{ $meme->name }}" src="{{ $image }}">
                 @if(isset($code))
                 <div class="panel-footer text-center">
 

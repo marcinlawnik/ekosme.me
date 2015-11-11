@@ -138,9 +138,9 @@ Route::get('/v/{hash}', function($hash)
     if(is_null($meme)){
         return Redirect::to('/');
     }
-    $path = storage_path().'/memes/'.$meme->filename;
-    // Get the image
-    $image = Image::make($path)->encode('data-url');
+
+    //Create image path
+    $image = '/images/'.$meme->filename;
 
     return View::make('meme')->withMeme($meme)->withImage($image);
 });
