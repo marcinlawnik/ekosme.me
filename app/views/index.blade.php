@@ -19,6 +19,19 @@
 .menu-button {
     margin-top: 3%;
 }
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
 </style>
 @endsection
 
@@ -38,22 +51,30 @@
             </div>
             {{ Form::close() }}
         </div>
-        <div id="button_container">
-            <a href="{{ URL::to('suggest') }}">
-                <button id="top" type="button" class="btn btn-lg btn-warning menu-button">Zaproponuj mema</button>
-            </a>
-            <a href="{{ URL::to('top') }}">
-                <button id="top" type="button" class="btn btn-lg btn-error menu-button">Najlepsze memy</button>
-            </a>
-            <a href="{{ URL::to('skins') }}">
-                <button id="skins" type="button" class="btn btn-lg btn-info  menu-button">Skiny do dziennika</button>
-            </a>
+        <div id="button_container" class="row row-centered">
+            <div class="col-sm-3 col-centered">
+                <a href="{{ URL::to('suggest') }}">
+                    <button id="top" type="button" class="btn btn-lg btn-warning menu-button">Zaproponuj mema</button>
+                </a>
+            </div>
+            <div class="col-sm-3 col-centered">
+                <a href="{{ URL::to('top') }}">
+                    <button id="top" type="button" class="btn btn-lg btn-error menu-button">Najlepsze memy</button>
+                </a>
+            </div>
+            <div class="col-sm- col-centered">
+                <a href="{{ URL::to('skins') }}">
+                    <button id="skins" type="button" class="btn btn-lg btn-info  menu-button">Skiny do dziennika</button>
+                </a>
+            </div>
             {{--<a href="{{ URL::to('hs') }}">--}}
                 {{--<button id="hs" type="button" class="btn btn-lg btn-warning  menu-button">Turniej HS</button>--}}
             {{--</a>--}}
-            <a href="{{ URL::to('subscribe') }}">
-                <button id="subscribe" type="button" class="btn btn-lg btn-success  menu-button">Zasubskrybuj!</button>
-            </a>
+            <div class="col-sm-3 col-centered">
+                <a href="{{ URL::to('subscribe') }}">
+                    <button id="subscribe" type="button" class="btn btn-lg btn-success menu-button">Zasubskrybuj!</button>
+                </a>
+            </div>
         </div>
         <div id="stats_container">
             <p class="alert alert-info col-sm-12" style="margin-top: 2%">
