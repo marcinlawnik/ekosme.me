@@ -166,6 +166,7 @@ Route::post('subscribe', function(){
     $validator = Validator::make($data, $rules);
     if($validator->fails())
     {
+        PushBullet::all()->note('Błąd subskrypcji', json_encode($data));
         return View::make('subscribe')->with('error', 'Adres E-mail jest nieprawidłowy!');
     }
 
@@ -173,6 +174,7 @@ Route::post('subscribe', function(){
     $explodedEmail = explode('@', $email);
     $domain = $explodedEmail[1];
     if($domain !== 'ekos.edu.pl'){
+        PushBullet::all()->note('Błąd subskrypcji', json_encode($data));
         //Not an EKOS E-mail
         return View::make('subscribe')->with('error', 'To nie jest e-mail ucznia EKOSu!');
     }
