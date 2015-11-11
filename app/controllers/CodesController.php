@@ -5,6 +5,9 @@ class CodesController extends \BaseController {
 	public function process($code)
 	{
         $code = Code::where('code', '=', $code)->first();
+        if(is_null($code) || $code->exists == false || !is_null($code->vote)){
+            return Redirect::to('/')->with('error', 'Nie ma takiego kodu lub został użyty');
+        }
 
         if(is_null($code) || $code->used == 1){
             return Redirect::to('/vote/'.$code->code);
