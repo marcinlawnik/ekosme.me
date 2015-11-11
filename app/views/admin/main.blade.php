@@ -24,6 +24,9 @@
     <!-- Custom Fonts -->
     <link href="/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <!-- Lightbox Gallery CSS -->
+    <link href="/css/lightbox.css" rel="stylesheet">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -65,6 +68,8 @@
     <script src="/js/plugins/morris/morris.min.js"></script>
     <script src="/js/plugins/morris/morris-data.js"></script>
 
+    <!-- Lightbox JavaScript -->
+    <script src="/js/lightbox.js"></script>
 </body>
 
 </html>

@@ -222,3 +222,10 @@ ul.alert-dropdown {
 .panel-yellow a:hover {
     color: #df8a13;
 }
+
+/* Custom css for ekosme.me */
+
+.meme-thumbnail {
+    width: 30%;
+    height: auto;
+}

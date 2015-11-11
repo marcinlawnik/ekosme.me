@@ -44,12 +44,14 @@ class AdminController extends \BaseController {
             return Redirect::to('a')->with('error', 'Nie ma jeszcze memów!');
         }
 
-        foreach($memes as $meme){
-            $path = storage_path().'/memes/'.$meme->filename;
+        $hashids = new Hashids\Hashids(Config::get('app.key'), 8);
 
-            $images[$meme->id] = Image::make($path)->heighten('100')->encode('data-url');
+        foreach($memes as $meme){
+            $images[$meme->id] = '/images/'.$meme->filename;
 
             $codeInfo[$meme->id] = [
+                //hash for the view function
+                'hash' => $hashids->encode($meme->id),
                 //wszystkie kody
                 'code_amount' => $meme->codes()->count(),
                 //kody zużyte
