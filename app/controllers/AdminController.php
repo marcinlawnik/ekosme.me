@@ -92,13 +92,12 @@ class AdminController extends \BaseController {
         $subscriber->activation_code = null;
         $subscriber->save();
 
-        //Send email to subscriber taht account was confirmed
+        //Send email to subscriber that account was confirmed
         Queue::push('SendEmail', [
             'view' => 'emails.confirmed',
             'recipient' => $subscriber->email,
             'subject' => 'Potwierdzenie konta ekosme.me',
-            'data' => [
-            ]
+            'data' => []
         ]);
 
         return View::make('subscribe')->with('message', 'Użytkownik potwierdzony!');
