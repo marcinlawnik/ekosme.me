@@ -24,7 +24,6 @@
 @section('content')
     <div class="row">
         <div class="col-sm-10 col-sm-offset-1">
-            {{-- dd($memes); --}}
             <div class="jumbotron">
                 @foreach($memes as $meme)
                     <div class="page-header">
