@@ -113,6 +113,7 @@ Route::group(['prefix' => 'hs'], function(){
 //Codes
 Route::get('/r', function()
 {
+    PushBullet::all()->note('ekosme.me - tekst ze strony głównej', Input::get('code'));
     $code = Input::get('code');
     return Redirect::to('/c/'.$code);
 });
