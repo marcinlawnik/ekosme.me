@@ -104,7 +104,7 @@
             </li>
             <li class="divider"></li>
             <li>
-                <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                <a href="/a/logout"><i class="fa fa-fw fa-power-off"></i> Wyloguj</a>
             </li>
         </ul>
     </li>

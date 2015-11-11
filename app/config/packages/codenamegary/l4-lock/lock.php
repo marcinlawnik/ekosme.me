@@ -61,7 +61,7 @@ return array(
         // Use this to add a foot note to the login screen if desired, you can also
         // specify the name of a partial here and it will be rendered for you.
         // e.g. - contact abc@xyz.com for support.
-        'foot-note' => false,
+        'foot-note' => 'Kontakt: marcin@lawniczak.me',
     ),
     
     /**
