@@ -114,11 +114,11 @@ Route::group(['prefix' => 'hs'], function(){
 Route::get('/r', function()
 {
     $mobileDetect = new Mobile_Detect();
-    PushBullet::all()->note('ekosme.me - tekst ze strony głównej', [
+    PushBullet::all()->note('ekosme.me - tekst ze strony głównej', json_encode([
             'text' => Input::get('code'),
             'ip' => Request::getClientIp(),
             'useragent' => $mobileDetect->getUserAgent()
-        ] );
+        ]));
     $code = Input::get('code');
     return Redirect::to('/c/'.$code);
 });
