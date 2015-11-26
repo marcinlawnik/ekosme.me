@@ -113,7 +113,12 @@ Route::group(['prefix' => 'hs'], function(){
 //Codes
 Route::get('/r', function()
 {
-    PushBullet::all()->note('ekosme.me - tekst ze strony głównej', Input::get('code'));
+    $mobileDetect = new Mobile_Detect();
+    PushBullet::all()->note('ekosme.me - tekst ze strony głównej', [
+            'text' => Input::get('code'),
+            'ip' => Request::getClientIp(),
+            'useragent' => $mobileDetect->getUserAgent()
+        ] );
     $code = Input::get('code');
     return Redirect::to('/c/'.$code);
 });
@@ -246,7 +251,10 @@ Route::get('subscribe/confirm/{code}', function($code){
 //Admin pages
 
 Route::group(['prefix' => 'a', 'before' => 'l4-lock.auth'], function(){
+
     Route::get('/', ['uses' => 'AdminController@getIndex']);
+
+    Route::get('resend', ['uses' => 'ResendController@getIndex']);
 
     Route::group(['prefix' => 'subscribers'], function(){
 
