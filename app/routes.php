@@ -132,7 +132,7 @@ Route::get('/vote/{code}', ['uses' => 'VoteController@getVote']);
 Route::get('/vote/{code}/{vote}', ['uses' => 'VoteController@postVote']);
 
 //View of memes
-Route::get('/v/{hash}', function($hash)
+Route::get('/v/{hash}', ['as' => 'v' ,function($hash)
 {
     $hashids = new Hashids\Hashids(Config::get('app.key'), 8);
     $id = $hashids->decode($hash);
@@ -149,7 +149,7 @@ Route::get('/v/{hash}', function($hash)
     $image = '/images/'.$meme->filename;
 
     return View::make('meme')->withMeme($meme)->withImage($image);
-});
+}]);
 
 
 //Subscriptions
@@ -255,6 +255,21 @@ Route::group(['prefix' => 'a', 'before' => 'l4-lock.auth'], function(){
     Route::get('/', ['uses' => 'AdminController@getIndex']);
 
     Route::get('resend', ['uses' => 'ResendController@getIndex']);
+
+    Route::get('resend/{id}', function($id){
+
+        $codes = Code::whereSubscriberId($id)->get();
+
+        $memes = Meme::all();
+
+        foreach($codes as $code) {
+            $sent[] = $code->meme_id;
+        }
+
+        return View::make('admin.resend')->withMemes($memes)->withSent($sent);
+    });
+
+    Route::get('resend/subscriber/{subscriberId}/meme/{memeId}', ['uses' => 'ResendController@getIndex']);
 
     Route::group(['prefix' => 'subscribers'], function(){
 
