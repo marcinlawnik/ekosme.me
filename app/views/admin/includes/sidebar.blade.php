@@ -30,6 +30,9 @@
             </ul>
         </li>
         <li class="">
+            <a href="{{ URL::to('a/resend') }}"><i class="fa fa-fw fa-dashboard"></i> Wyślij ponownie kody</a>
+        </li>
+        <li class="">
             <a href="{{ URL::to('a/reports') }}"><i class="fa fa-fw fa-dashboard"></i> Raporty</a>
         </li>
     </ul>
