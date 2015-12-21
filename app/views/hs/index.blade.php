@@ -12,7 +12,7 @@
     @include('hs.nav')
     @include('messages')
     <div class="container">
-    <img src="http://upload.wikimedia.org/wikipedia/en/1/1c/Hearthstone_Logo.png">
+    <img src="https://upload.wikimedia.org/wikipedia/en/1/1c/Hearthstone_Logo.png">
     <h2>Witaj,<br/>
             Czy chcesz zagrać w ekosowym turnieju hearthstone'a?<br/>
             Jeśli tu jesteś to chyba tak?<br/>
