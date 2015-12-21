@@ -14,7 +14,7 @@
 }
 #button_container
 {
-   float: right;
+
 }
 .menu-button {
     margin-top: 3%;
@@ -51,29 +51,37 @@
             </div>
             {{ Form::close() }}
         </div>
-        <div id="button_container" class="row row-centered">
-            <div class="col-sm-3 col-centered">
-                <a href="{{ URL::to('suggest') }}">
-                    <button id="top" type="button" class="btn btn-lg btn-warning menu-button">Zaproponuj mema</button>
-                </a>
+        <div class="container-fluid">
+            {{-- top row of buttons --}}
+            <div id="button_container" class="row row-centered">
+                <div class="col-sm-4 col-centered">
+                    <a href="{{ URL::to('suggest') }}">
+                        <button id="top" type="button" class="btn btn-lg btn-warning menu-button btn-block">Zaproponuj mema</button>
+                    </a>
+                </div>
+                <div class="col-sm-4 col-centered">
+                    <a href="{{ URL::to('top') }}">
+                        <button id="top" type="button" class="btn btn-lg btn-error menu-button btn-block">Najlepsze memy</button>
+                    </a>
+                </div>
+                <div class="col-sm-4 col-centered">
+                    <a href="{{ URL::to('skins') }}">
+                        <button id="skins" type="button" class="btn btn-lg btn-info menu-button btn-block">Skiny do dziennika</button>
+                    </a>
+                </div>
             </div>
-            <div class="col-sm-3 col-centered">
-                <a href="{{ URL::to('top') }}">
-                    <button id="top" type="button" class="btn btn-lg btn-error menu-button">Najlepsze memy</button>
-                </a>
-            </div>
-            <div class="col-sm- col-centered">
-                <a href="{{ URL::to('skins') }}">
-                    <button id="skins" type="button" class="btn btn-lg btn-info  menu-button">Skiny do dziennika</button>
-                </a>
-            </div>
-            {{--<a href="{{ URL::to('hs') }}">--}}
-                {{--<button id="hs" type="button" class="btn btn-lg btn-warning  menu-button">Turniej HS</button>--}}
-            {{--</a>--}}
-            <div class="col-sm-3 col-centered">
-                <a href="{{ URL::to('subscribe') }}">
-                    <button id="subscribe" type="button" class="btn btn-lg btn-success menu-button">Zasubskrybuj!</button>
-                </a>
+            {{-- lower row of buttons --}}
+            <div id="button_container" class="row row-centered">
+                <div class="col-sm-6 col-centered">
+                    <a href="{{ URL::to('hs') }}">
+                        <button id="hs" type="button" class="btn btn-lg btn-primary menu-button btn-block">Turniej HS</button>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-centered">
+                    <a href="{{ URL::to('subscribe') }}">
+                        <button id="subscribe" type="button" class="btn btn-lg btn-success menu-button btn-block">Zasubskrybuj!</button>
+                    </a>
+                </div>
             </div>
         </div>
         <div id="stats_container">

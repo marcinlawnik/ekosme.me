@@ -27,7 +27,7 @@
             <ul>
                 <li>Turniej organizują: Marcin Ławniczak, Kuba Marszałkiewicz, Michał Roszak.</li>
                 <li>Wszystkie wątpliwości rozstrzygane są niepodważalną decyzją organizatora.</li>
-                <li>Nie wolno używać programów wspomagajcych dajcych nieuczciwą przewagę.</li>
+                <li>Nie wolno używać programów wspomagajcych dających nieuczciwą przewagę.</li>
                 <li>W turnieju mogą brać udział tylko uczniowie EKOSu.</li>
                 <li>Terminy meczy ustala organizator, ale, w przypadku braku czasu, termin meczu może ulec zmianie na pasujący obydwu graczom.</li>
                 <li>Organizatorzy zastrzegają sobie prawo do modyfikowania zasad podczas trwania turnieju.</li>
@@ -40,10 +40,11 @@
                 <br/>
                 <ul>
                     <li>2 karty legendarne,</li>
-                    <li>8 kart epickich,</li>
+                    <li>10 kart epickich,</li>
                     <li>15 kart rzadkich,</li>
                     <li>30 kart podstawowych.</li>
                 </ul>
+                <li>Talie można modyfikować pomiędzy meczami.</li>
             </ul>
         <h4>Rozgrywka</h4>
             <ul>
@@ -60,7 +61,7 @@
                 <li>Przed meczem każdy z graczy przedstawia do jakich bohaterów posiada talię, a gracz przeciwny wybiera dwóch bohaterów, których przeciwnik nie będzie mógł użyć w pojedynku. (nie dotyczy finałów)</li>
                 <li>Nie można oskarżyć przeciwnika o oszukiwanie, bez niepodważalnych dowodów (screenshot lub film).</li>
                 <li>Wszystkie mecze (oprócz finałów) są rozgrywane w formacie BO3.</li>
-                <li>Mecz finałowy rozgrywany jest w formacie <b>BO5</b>.</li>
+                <li>Mecz finałowy rozgrywany jest w formacie BO5.</li>
             </ul>
         </div>
         @include('hs.footer')

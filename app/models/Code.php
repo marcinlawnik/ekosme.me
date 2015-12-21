@@ -44,4 +44,8 @@ class Code extends \Eloquent {
     public function meme() {
         return $this->belongsTo('Meme');
     }
+
+    public function subscriber() {
+        return $this->belongsTo('Subscriber');
+    }
 }

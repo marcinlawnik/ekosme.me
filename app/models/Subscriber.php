@@ -26,17 +26,26 @@
  * @method static \Subscriber confirmed()
  * @property-read \Illuminate\Database\Eloquent\Collection|\Code[] $codes
  */
+class Subscriber extends \Eloquent
+{
+    protected $fillable = ['email', 'level', 'description', 'active', 'conformed', 'activation_code', 'confirmation_code'];
 
-class Subscriber extends \Eloquent {
-	protected $fillable = ['email', 'level', 'description', 'active', 'conformed', 'activation_code', 'confirmation_code'];
-
-    public static function scopeConfirmed($query){
+    public static function scopeConfirmed($query)
+    {
 
         return $query->where('confirmed', '=', 1);
 
     }
 
-    public function codes() {
+    public function codes()
+    {
         return $this->hasMany('Code');
+    }
+
+    protected $appends = array('code_count');
+
+    public function getCodeCountAttribute()
+    {
+        return $this->codes->count();
     }
 }
