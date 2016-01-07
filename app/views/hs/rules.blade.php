@@ -39,7 +39,7 @@
                 <li>Każda talia może zawierać maksymalnie:
                 <br/>
                 <ul>
-                    <li>2 karty legendarne,</li>
+                    <li>3 karty legendarne,</li>
                     <li>10 kart epickich,</li>
                     <li>15 kart rzadkich,</li>
                     <li>30 kart podstawowych.</li>
@@ -58,6 +58,7 @@
                     <li>Najlepiej, aby pojedynek oglądały dwie osoby: jedna od jednego gracza, a druga od drugiego. Nie jest to jednak wymagane.</li>
                 </ul>
                 <li>Wolno tylko raz zagrać jednym bohaterem z jednym graczem.</li>
+                <li>Z tym samym graczem można grać tym samym bohaterem (tą samą talią) jeśli przegrałeś z tym graczem tym bohaterem (tą talią).</li>
                 <li>Przed meczem każdy z graczy przedstawia do jakich bohaterów posiada talię, a gracz przeciwny wybiera dwóch bohaterów, których przeciwnik nie będzie mógł użyć w pojedynku. (nie dotyczy finałów)</li>
                 <li>Nie można oskarżyć przeciwnika o oszukiwanie, bez niepodważalnych dowodów (screenshot lub film).</li>
                 <li>Wszystkie mecze (oprócz finałów) są rozgrywane w formacie BO3.</li>
