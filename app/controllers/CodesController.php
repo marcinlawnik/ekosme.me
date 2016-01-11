@@ -6,7 +6,8 @@ class CodesController extends \BaseController {
 	{
         $code = Code::where('code', '=', $code)->first();
         if(is_null($code) || $code->exists == false || !is_null($code->vote)){
-            return Redirect::to('/')->with('error', 'Nie ma takiego kodu lub został użyty');
+            return Redirect::to('/')
+                ->with('message', 'Jak miał to być kod do mema, to niestety nie działa lub został użyty,a jak wiadomość to została przekazana.');
         }
 
         if(is_null($code) || $code->used == 1){

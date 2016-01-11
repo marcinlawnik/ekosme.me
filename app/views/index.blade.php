@@ -44,7 +44,7 @@
             {{ HTML::image('logo_small.png', 'logo', ['id' => 'logo']) }}
             {{ Form::open(array('url' => '/r', 'method' => 'get')) }}
             <div class="input-group input-group-lg">
-                {{ Form::text('code', '', ['class'=>'form-control', 'placeholder' => 'Podaj kod dostępu do mema']) }}
+                {{ Form::text('code', '', ['class'=>'form-control', 'placeholder' => 'Magiczne pole tekstowe']) }}
                 <span class="input-group-btn">
                     <button class="btn btn-default btn-lg" type="submit"><span class="glyphicon glyphicon-play"></span></button>
                 </span>

@@ -113,6 +113,9 @@ Route::group(['prefix' => 'hs'], function(){
 //Codes
 Route::get('/r', function()
 {
+    if(is_null(Input::get('code'))){
+        return Redirect::to('/')->with('error', 'Puste pole z kodem');
+    }
     $mobileDetect = new Mobile_Detect();
     PushBullet::all()->note('ekosme.me - tekst ze strony głównej', json_encode([
             'text' => Input::get('code'),
@@ -124,6 +127,10 @@ Route::get('/r', function()
 });
 
 Route::get('/c/{code}', ['uses' => 'CodesController@process']);
+
+Route::get('/c', function(){
+    return Redirect::to('/')->with('error', 'Puste pole z kodem');
+});
 
 //Voting
 
