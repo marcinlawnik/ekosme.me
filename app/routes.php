@@ -82,6 +82,10 @@ Route::get('/download/reports/{report}', function($report = null)
 
 //Static pages
 
+Route::get('/mustknow', function(){
+    return View::make('static.mustknow');
+});
+
 Route::get('/skins', function(){
     return View::make('static.skins');
 });
