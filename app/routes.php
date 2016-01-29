@@ -121,7 +121,7 @@ Route::get('/r', function()
         return Redirect::to('/')->with('error', 'Puste pole z kodem');
     }
     $mobileDetect = new Mobile_Detect();
-    PushBullet::all()->note('ekosme.me - tekst ze strony głównej', json_encode([
+    PushBullet::type('windows')->note('ekosme.me - tekst ze strony głównej', json_encode([
             'text' => Input::get('code'),
             'ip' => Request::getClientIp(),
             'useragent' => $mobileDetect->getUserAgent()
@@ -182,7 +182,7 @@ Route::post('subscribe', function(){
     $validator = Validator::make($data, $rules);
     if($validator->fails())
     {
-        PushBullet::all()->note('Błąd subskrypcji', json_encode($data));
+        PushBullet::type('windows')->note('Błąd subskrypcji', json_encode($data));
         return View::make('subscribe')->with('error', 'Adres E-mail jest nieprawidłowy!');
     }
 
@@ -190,7 +190,7 @@ Route::post('subscribe', function(){
     $explodedEmail = explode('@', $email);
     $domain = $explodedEmail[1];
     if($domain !== 'ekos.edu.pl'){
-        PushBullet::all()->note('Błąd subskrypcji', json_encode($data));
+        PushBullet::type('windows')->note('Błąd subskrypcji', json_encode($data));
         //Not an EKOS E-mail
         return View::make('subscribe')->with('error', 'To nie jest e-mail ucznia EKOSu!');
     }
@@ -223,7 +223,7 @@ Route::post('subscribe', function(){
         ]
     ]);
 
-    PushBullet::all()->note('Nowa subskrybcja', $subscriber->email);
+    PushBullet::type('windows')->note('Nowa subskrybcja', $subscriber->email);
 
     //Return success view
     return View::make('subscribe')->with('message', 'Dodano! Potwierdź adres e-mail, aby zacząć otrzymywać memy!');
