@@ -19,6 +19,7 @@
         </script>
         <noscript><p><img src="//stats.lawniczak.me/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
         <!-- End Piwik Code -->
+        <title>ekosme.me</title>
         @yield('head')
     </head>
     <body>
