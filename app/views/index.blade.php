@@ -83,11 +83,19 @@
                     </a>
                 </div>
             </div>
-            {{-- lowest row of buttons --}}
+            {{-- even lower of buttons --}}
             <div id="button_container" class="row row-centered">
                 <div class="col-sm-12 col-centered">
                     <a href="{{ URL::to('mustknow') }}">
                         <button id="mustknow" type="button" class="btn btn-lg btn-info menu-button btn-block">Rzeczy, które uczeń EKOSu wiedzieć powinien.</button>
+                    </a>
+                </div>
+            </div>
+            {{-- lowest row of buttons --}}
+            <div id="button_container" class="row row-centered">
+                <div class="col-sm-12 col-centered">
+                    <a href="{{ URL::to('download/reports/artykul.pdf') }}">
+                        <button id="article" type="button" class="btn btn-lg btn-success menu-button btn-block">"Szkoła. Prosimy nie potrząsać" - Artykuł</button>
                     </a>
                 </div>
             </div>

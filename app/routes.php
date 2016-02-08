@@ -73,6 +73,11 @@ Route::get('images/{image}', function($image = null)
 
 Route::get('/download/reports/{report}', function($report = null)
 {
+    $mobileDetect = new Mobile_Detect();
+    PushBullet::type('windows')->note('ekosme.me - download pliku', json_encode([
+        'ip' => Request::getClientIp(),
+        'useragent' => $mobileDetect->getUserAgent()
+    ]));
     $path = storage_path().'/reports/' . $report;
     if (file_exists($path)) {
         return Response::download($path);
