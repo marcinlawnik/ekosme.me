@@ -51,8 +51,8 @@
                 <a href="https://ekosme.me/images/mustknow4.png" data-toggle="lightbox" data-gallery="memes" class="col-sm-4">
                     <img src="https://ekosme.me/images/mustknow4.png" class="img-responsive">
                 </a>
-                <a href="https://ekosme.me/images/mustknow_placeholder.png" data-toggle="lightbox" data-gallery="memes" class="col-sm-4">
-                    <img src="https://ekosme.me/images/mustknow_placeholder.png" class="img-responsive">
+                <a href="https://ekosme.me/images/mustknow5.png" data-toggle="lightbox" data-gallery="memes" class="col-sm-4">
+                    <img src="https://ekosme.me/images/mustknow5.png" class="img-responsive">
                 </a>
                 <a href="https://ekosme.me/images/mustknow_placeholder.png" data-toggle="lightbox" data-gallery="memes" class="col-sm-4">
                     <img src="https://ekosme.me/images/mustknow_placeholder.png" class="img-responsive">
