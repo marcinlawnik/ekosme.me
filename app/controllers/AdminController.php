@@ -64,8 +64,6 @@ class AdminController extends \BaseController {
             ];
         }
 
-
-
         return View::make('admin.meme.list')->withMemes($memes)->withImages($images)->withInfo($codeInfo);
     }
 
