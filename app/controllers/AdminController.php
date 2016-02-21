@@ -4,7 +4,11 @@ class AdminController extends \BaseController {
 
     function getIndex()
     {
-        return View::make('admin.index');
+        $meme = Meme::all()->last();
+
+        $stats = MemeHelper::getMemeStats($meme);
+
+        return View::make('admin.index')->withMeme($meme)->withStats($stats);
     }
 
     function getMemeAdd(){
