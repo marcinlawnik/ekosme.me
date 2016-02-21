@@ -28,6 +28,7 @@
  * @method static \Illuminate\Database\Query\Builder|\Code whereSubscriberId($value)
  * @property integer $vote
  * @method static \Illuminate\Database\Query\Builder|\Code whereVote($value)
+ * @property-read \Subscriber $subscriber 
  */
 class Code extends \Eloquent {
 	protected $fillable = [
