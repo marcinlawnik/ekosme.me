@@ -39,7 +39,7 @@ class AdminController extends \BaseController {
         $id = $hashids->encode($meme->id);
         //Return link
         return View::make('admin.meme.add')
-            ->with('message', 'Dodano! Mem numer '.$id.' dostępny pod adresem <a href="'.URL::to('v/'.$id).'">'.URL::to('v/'.$id).'</a>');
+            ->with('message', 'Dodano! Mem numer '.$meme->id.' dostępny pod adresem <a href="'.URL::to('v/'.$id).'">'.URL::to('v/'.$id).'</a>');
     }
 
     function getMemeList(){
