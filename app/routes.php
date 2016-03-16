@@ -323,11 +323,12 @@ Route::group(['prefix' => 'a', 'before' => 'l4-lock.auth'], function(){
 
         Route::get('email', function(){
             Queue::push('SendEmail', [
-                'view' => 'emails.blank',
+                'view' => 'emails.meme',
                 'recipient' => 'marcin@lawniczak.me',
-                'subject' => 'Testowy mail - ekosme.me!',
+                'subject' => 'Nowy mem od ekosme.me - "TESTOWY"!',
                 'data' => [
-                    'contents' => 'Testowymail'
+                    'memeCode' => 'TEST',
+                    'memeName' => 'TEST'
                 ]
             ]);
             return Redirect::to('/')->with('message', 'Test maila wykonany!');

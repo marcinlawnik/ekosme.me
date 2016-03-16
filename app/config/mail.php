@@ -54,7 +54,10 @@ return array(
 	|
 	*/
 
-	'from' => $_ENV['app.email.from'],
+	'from' => [
+        'address' => $_ENV['app.email.from.address'],
+        'name' => $_ENV['app.email.from.name']
+    ],
 
 	/*
 	|--------------------------------------------------------------------------
