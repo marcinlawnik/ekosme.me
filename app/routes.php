@@ -332,6 +332,10 @@ Route::group(['prefix' => 'a', 'before' => 'l4-lock.auth'], function(){
             ]);
             return Redirect::to('/')->with('message', 'Test maila wykonany!');
         });
+
+        Route::get('env', function(){
+            dd($_ENV);
+        });
     });
 
 
