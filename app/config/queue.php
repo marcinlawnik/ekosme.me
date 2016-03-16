@@ -15,7 +15,7 @@ return array(
 	|
 	*/
 
-	'default' => 'sync',
+	'default' => $_ENV['app.queue.driver'],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -36,9 +36,9 @@ return array(
 
 		'beanstalkd' => array(
 			'driver' => 'beanstalkd',
-			'host'   => 'localhost',
-			'queue'  => 'default',
-			'ttr'    => 60,
+			'host'   => $_ENV['app.queue.host'],
+			'queue'  => $_ENV['app.queue.queue'],
+			'ttr'    => $_ENV['app.queue.ttr'],
 		),
 
 		'sqs' => array(
