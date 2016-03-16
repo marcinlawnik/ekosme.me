@@ -311,4 +311,13 @@ Route::group(['prefix' => 'a', 'before' => 'l4-lock.auth'], function(){
         return Redirect::to('/')->with('message', 'Testowa wiadomość wysłana');
     });
 
+    Route::get('queuepush', function(){
+        Queue::push(function($job){
+            PushBullet::all()->note('ekosme.me PushBullet queue test', 'Testing the queue...');
+            $job->delete();
+        });
+
+        return Redirect::to('/')->with('message', 'Testowa wiadomość wysłana');
+    });
+
 });
