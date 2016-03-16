@@ -298,6 +298,7 @@ Route::group(['prefix' => 'a', 'before' => 'l4-lock.auth'], function(){
         Route::get('send/{id}', ['uses' => 'MemeController@getSend']);
 
         Route::post('send', ['uses' => 'MemeController@postSend']);
+
     });
 
     Route::get('reports/{subscriberId}', ['uses' => 'ReportController@getIndex']);
@@ -306,18 +307,32 @@ Route::group(['prefix' => 'a', 'before' => 'l4-lock.auth'], function(){
         ['uses' => 'ReportController@getChart']
     )->where(['memeid' => '[0-9]+', 'userid' => '[0-9]+']);
 
-    Route::get('push', function(){
-        PushBullet::all()->note('ekosme.me PushBullet test', 'Testing...');
-        return Redirect::to('/')->with('message', 'Testowa wiadomość wysłana');
-    });
-
-    Route::get('queuepush', function(){
-        Queue::push(function($job){
-            PushBullet::all()->note('ekosme.me PushBullet queue test', 'Testing the queue...');
-            $job->delete();
+    Route::group(['prefix' => 'test'], function(){
+        Route::get('push', function(){
+            PushBullet::all()->note('ekosme.me PushBullet test', 'Testing...');
+            return Redirect::to('/')->with('message', 'Testowa wiadomość wysłana');
         });
 
-        return Redirect::to('/')->with('message', 'Testowa wiadomość wysłana');
+        Route::get('queue', function(){
+            Queue::push(function($job){
+                PushBullet::all()->note('ekosme.me PushBullet queue test', 'Testing the queue...');
+                $job->delete();
+            });
+            return Redirect::to('/')->with('message', 'Test kolejki wykonany');
+        });
+
+        Route::get('email', function(){
+            Queue::push('SendEmail', [
+                'view' => 'emails.blank',
+                'recipient' => 'marcin@lawniczak.me',
+                'subject' => 'Testowy mail - ekosme.me!',
+                'data' => [
+                    'contents' => 'Testowymail'
+                ]
+            ]);
+            return Redirect::to('/')->with('message', 'Test maila wykonany!');
+        });
     });
+
 
 });
