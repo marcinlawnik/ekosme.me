@@ -40,7 +40,7 @@
 <div class="row">
     <div id="imaginary_container">
         {{ HTML::image('logo_small.png', 'logo', ['id' => 'logo']) }}
-    <div class="input-field col s8 offset-s3">
+    <div class="input-field col s6 offset-s3">
          @include('messages')
             {{ Form::open(array('url' => '/r', 'method' => 'get')) }}
             <input id="placeholder" type="text" class="validate">
