@@ -44,12 +44,11 @@
          @include('messages')
             {{ Form::open(array('url' => '/r', 'method' => 'get')) }}
             <input id="placeholder" type="text" class="validate">
-             <div class="btn" type="submit">
+            <label for="icon_prefix">WERSJA DEWELOPERSKA</label>
+           <div class="btn" type="submit">
             <span><i class="medium material-icons">play_arrow</i></span>
             </div>
             </div>
-            <label for="icon_prefix">First Name</label>
-           
             {{ Form::close() }}
         </div>
         <div class="container-fluid">
