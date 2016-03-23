@@ -38,7 +38,7 @@
 @section('content')
 
 <div class="row">
-    <div class="input-field col s8 offset-s2">
+    <div class="input-field col s6 offset-s3">
         <div id="imaginary_container">
             @include('messages')
             {{ HTML::image('logo_small.png', 'logo', ['id' => 'logo']) }}
