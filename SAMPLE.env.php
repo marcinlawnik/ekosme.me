@@ -26,5 +26,6 @@ return [
     'app.queue.host' => '',
     'app.queue.queue' => 'default',
     'app.queue.ttr' => '',
-
+    'lock.username' => 'test',
+    'lock.password' => 'test'
 ];

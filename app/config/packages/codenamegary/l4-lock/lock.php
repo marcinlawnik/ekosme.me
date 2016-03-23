@@ -41,7 +41,7 @@ return array(
      * Valid username and password combinations used by the default validator.
      */
     'users' => array(
-        'admin' => 'passwort',
+        $_ENV['lock.username'] => $_ENV['lock.password'],
     ),
     
     /**
