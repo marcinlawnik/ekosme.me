@@ -38,9 +38,11 @@
 @section('content')
 
 <div class="row">
+    <div id="imaginary-container">
+        {{ HTML::image('logo_small.png', 'logo', ['id' => 'logo']) }}
+    </div>
     <div class="input-field col s6 offset-s3">
          @include('messages')
-            {{ HTML::image('logo_small.png', 'logo', ['id' => 'logo']) }}
             {{ Form::open(array('url' => '/r', 'method' => 'get')) }}
             <input id="placeholder" type="text" class="validate">
             <label for="icon_prefix">First Name</label>
