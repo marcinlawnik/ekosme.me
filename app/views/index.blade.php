@@ -53,7 +53,7 @@
             {{ Form::close() }}
         </div>
         </div>
-        <div class="container-fluid">
+        <div class="container">
             {{-- top row of buttons --}}
             <div id="button_container" class="row row-centered">
                 <div class="col-sm-4 col-centered">
