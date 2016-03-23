@@ -37,6 +37,7 @@
 
 @section('content')
 
+<div class="container">
 <div class="row">
     <div id="imaginary_container">
         {{ HTML::image('logo_small.png', 'logo', ['id' => 'logo']) }}
@@ -50,6 +51,7 @@
             </div>
             </div>
             {{ Form::close() }}
+        </div>
         </div>
         <div class="container-fluid">
             {{-- top row of buttons --}}
