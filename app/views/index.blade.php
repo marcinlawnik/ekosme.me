@@ -37,7 +37,6 @@
 
 @section('content')
 
-<div class="container">
 <div class="row">
     <div id="imaginary_container">
         {{ HTML::image('logo_small.png', 'logo', ['id' => 'logo']) }}
@@ -46,10 +45,9 @@
             {{ Form::open(array('url' => '/r', 'method' => 'get')) }}
             <input id="placeholder" type="text" class="validate">
             <label for="icon_prefix">WERSJA DEWELOPERSKA</label>
-            <div class="btn" type="submit">
-            <span><i class="medium material-icons">play_arrow</i></span>
-            </div>
-            </div>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+            </button>
             {{ Form::close() }}
         </div>
         </div>
@@ -114,7 +112,7 @@
         </div>
         <div id="ads_container" class="">
         </div>
-    </div>
+ 
 
 
 @endsection
