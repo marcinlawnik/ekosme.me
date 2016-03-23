@@ -114,7 +114,7 @@
         </div>
         <div id="ads_container" class="">
         </div>
- 
+ </div>
 
 
 @endsection
