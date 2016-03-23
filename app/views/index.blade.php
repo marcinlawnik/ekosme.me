@@ -51,7 +51,6 @@
             </div>
             {{ Form::close() }}
         </div>
-        </div>
         <div class="container-fluid">
             {{-- top row of buttons --}}
             <div id="button_container" class="row row-centered">
@@ -114,6 +113,6 @@
         <div id="ads_container" class="">
         </div>
     </div>
-</div>
+
 
 @endsection
