@@ -43,14 +43,14 @@
             @include('messages')
             {{ HTML::image('logo_small.png', 'logo', ['id' => 'logo']) }}
             {{ Form::open(array('url' => '/r', 'method' => 'get')) }}
-            <div class="input-group input-group-lg">
+            <label class="active" for="meme_link">
                 {{ Form::text('code', '', ['class'=>'form-control', 'placeholder' => 'WERSJA DEWELOPERSKA']) }}
             <div class="btn" type="submit">
             <span><i class="medium material-icons">play_arrow</i></span>
+            </label>
             </div>
             </div>
             {{ Form::close() }}
-        </div>
         </div>
         <div class="container-fluid">
             {{-- top row of buttons --}}
