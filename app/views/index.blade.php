@@ -45,9 +45,9 @@
             {{ Form::open(array('url' => '/r', 'method' => 'get')) }}
             <div class="input-group input-group-lg">
                 {{ Form::text('code', '', ['class'=>'form-control', 'placeholder' => 'WERSJA DEWELOPERSKA']) }}
-                <span class="input-group-btn">
-                    <button class="btn btn-default btn-lg" type="submit"><span class="glyphicon glyphicon-play"></span></button>
-                </span>
+            <div class="btn" type="submit">
+            <span><i class="medium material-icons">play_arrow</i></span>
+            </div>
             </div>
             {{ Form::close() }}
         </div>
