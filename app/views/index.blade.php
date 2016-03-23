@@ -41,16 +41,15 @@
     <div id="imaginary_container">
         {{ HTML::image('logo_small.png', 'logo', ['id' => 'logo']) }}
     <div class="input-field col s5 offset-s3">
+        <div class="btn">
+        <span> <i class="material-icons right">send</i></span>
+      </div>
          @include('messages')
             {{ Form::open(array('url' => '/r', 'method' => 'get')) }}
             <input id="placeholder" type="text" class="validate">
             <label for="icon_prefix">WERSJA DEWELOPERSKA</label>
             {{ Form::close() }}
         </div>
-         <div class="col s1">
-            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-            <i class="material-icons right">send</i>
-            </button>
             </div>
         </div>
         <div class="container">
