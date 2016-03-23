@@ -45,10 +45,12 @@
             {{ Form::open(array('url' => '/r', 'method' => 'get')) }}
             <input id="placeholder" type="text" class="validate">
             <label for="icon_prefix">WERSJA DEWELOPERSKA</label>
+            <div class="s2">
             <button class="btn waves-effect waves-light" type="submit" name="action">Submit
             <i class="material-icons right">send</i>
             </button>
             {{ Form::close() }}
+        </div>
         </div>
         </div>
         <div class="container-fluid">
