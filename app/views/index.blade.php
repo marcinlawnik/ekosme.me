@@ -45,11 +45,12 @@
             {{ Form::open(array('url' => '/r', 'method' => 'get')) }}
             <input id="placeholder" type="text" class="validate">
             <label for="icon_prefix">WERSJA DEWELOPERSKA</label>
-           <div class="btn" type="submit">
+            <div class="btn" type="submit">
             <span><i class="medium material-icons">play_arrow</i></span>
             </div>
             </div>
             {{ Form::close() }}
+        </div>
         </div>
         <div class="container-fluid">
             {{-- top row of buttons --}}
