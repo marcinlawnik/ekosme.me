@@ -251,18 +251,7 @@ Route::group(['prefix' => 'a', 'before' => 'l4-lock.auth'], function(){
 
     Route::get('resend', ['uses' => 'ResendController@getIndex']);
 
-    Route::get('resend/{id}', function($id){
-
-        $codes = Code::whereSubscriberId($id)->get();
-
-        $memes = Meme::all();
-
-        foreach($codes as $code) {
-            $sent[] = $code->meme_id;
-        }
-
-        return View::make('admin.resend')->withMemes($memes)->withSent($sent);
-    });
+    Route::get('resend/{id}', ['uses' => 'ResendController@getSubscriber']);
 
     Route::get('resend/subscriber/{subscriberId}/meme/{memeId}', ['uses' => 'ResendController@getIndex']);
 
