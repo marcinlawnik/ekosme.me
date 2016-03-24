@@ -43,7 +43,7 @@ div#formsend{
 @section('content')
 
 <div class="row">
-    <div class="col s5 offset-s3">
+    <div class="col s4 offset-s4">
         <div class="responsive-img">
         {{ HTML::image('logo_small.png', 'logo', ['id' => 'logo']) }}
     </div>
@@ -56,7 +56,7 @@ div#formsend{
         <input id="placeholder" type="text" class="validate">
         <label for="icon_prefix">WERSJA DEWELOPERSKA</label>
     </div>
-    <div class="btn" id="formsend">
+    <div class="btn col s1" id="formsend">
         <i class="material-icons suffix">send</i>
     </div>
      {{ Form::close() }}
