@@ -32,6 +32,11 @@
     /* inline-block space fix */
     margin-right:-4px;
 }
+div#formsend{
+    margin-top: 15%;
+    
+}
+
 </style>
 @endsection
 
@@ -42,18 +47,16 @@
         {{ HTML::image('logo_small.png', 'logo', ['id' => 'logo']) }}
     </div>
     <div class="input-field col s5 offset-s3">
-        
-         @include('messages')
-            {{ Form::open(array('url' => '/r', 'method' => 'get')) }}
-            <input id="placeholder" type="text" class="validate">
-            <label for="icon_prefix">WERSJA DEWELOPERSKA</label>
-            {{ Form::close() }}
-             </div>
-            <div class="btn">
+        @include('messages')
+        {{ Form::open(array('url' => '/r', 'method' => 'get')) }}
+        <input id="placeholder" type="text" class="validate">
+        <label for="icon_prefix">WERSJA DEWELOPERSKA</label>
+        {{ Form::close() }}
+    </div>
+    <div class="btn" id="formsend">
         <i class="material-icons suffix">send</i>
-      </div>
-       
-            </div>
+    </div>
+</div>
         </div>
         <div class="container">
             {{-- top row of buttons --}}
