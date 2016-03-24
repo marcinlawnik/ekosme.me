@@ -34,9 +34,13 @@
     margin-right:-4px;
 }
 div#formsend{
-    margin-top: 2%;
+   
     
 }
+div#form{
+    margin-top: 0;
+}
+
 
 </style>
 @endsection
@@ -50,7 +54,7 @@ div#formsend{
     </div>
     </div>
     </div>
-    <div class="row">
+    <div class="row" id="form">
     <div class="input-field col s5 offset-s3">
         @include('messages')
         {{ Form::open(array('url' => '/r', 'method' => 'get')) }}
