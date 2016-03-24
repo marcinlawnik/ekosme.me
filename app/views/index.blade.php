@@ -48,6 +48,8 @@ div#formsend{
         {{ HTML::image('logo_small.png', 'logo', ['id' => 'logo']) }}
     </div>
     </div>
+    </div>
+    <div class="row">
     <div class="input-field col s5 offset-s3">
         @include('messages')
         {{ Form::open(array('url' => '/r', 'method' => 'get')) }}
@@ -59,7 +61,7 @@ div#formsend{
     </div>
      {{ Form::close() }}
 </div>
-        </div>
+
         <div class="container">
             {{-- top row of buttons --}}
             <div id="button_container" class="row row-centered">
