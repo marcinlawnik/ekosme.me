@@ -6,7 +6,7 @@
 {
     margin-top: 15%;
 }
-#logo
+div.responsive-img
 {
     display: block;
     margin-left: auto;
