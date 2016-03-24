@@ -5,6 +5,7 @@
 #dyrkoimg
 {
     margin-top: 15%;
+    margin-bottom: 0;
 }
 #logo
 {
