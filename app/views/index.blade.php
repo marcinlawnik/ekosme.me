@@ -2,11 +2,11 @@
 
 @section('head')
 <style>
-#imaginary_container
+#dyrkoimg
 {
     margin-top: 15%;
 }
-div.responsive-img
+#logo
 {
     display: block;
     margin-left: auto;
@@ -44,7 +44,7 @@ div#formsend{
 
 <div class="row">
     <div class="col s4 offset-s4">
-        <div class="responsive-img">
+        <div class="responsive-img" id="dyrkoimg">
         {{ HTML::image('logo_small.png', 'logo', ['id' => 'logo']) }}
     </div>
     </div>
