@@ -40,6 +40,7 @@
 <div class="row">
     <div id="imaginary_container">
         {{ HTML::image('logo_small.png', 'logo', ['id' => 'logo']) }}
+    </div>
     <div class="input-field col s5 offset-s3">
         
          @include('messages')
@@ -47,10 +48,11 @@
             <input id="placeholder" type="text" class="validate">
             <label for="icon_prefix">WERSJA DEWELOPERSKA</label>
             {{ Form::close() }}
+             </div>
             <div class="btn">
-        <span> <i class="material-icons right">send</i></span>
+        <i class="material-icons suffix">send</i>
       </div>
-        </div>
+       
             </div>
         </div>
         <div class="container">
