@@ -51,11 +51,11 @@ div#formsend{
         {{ Form::open(array('url' => '/r', 'method' => 'get')) }}
         <input id="placeholder" type="text" class="validate">
         <label for="icon_prefix">WERSJA DEWELOPERSKA</label>
-        {{ Form::close() }}
     </div>
     <div class="btn" id="formsend">
         <i class="material-icons suffix">send</i>
     </div>
+     {{ Form::close() }}
 </div>
         </div>
         <div class="container">
