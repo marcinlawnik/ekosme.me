@@ -43,8 +43,10 @@ div#formsend{
 @section('content')
 
 <div class="row">
-    <div id="imaginary_container">
+    <div class="col s5 offset-s3">
+        <div class="responsive-img">
         {{ HTML::image('logo_small.png', 'logo', ['id' => 'logo']) }}
+    </div>
     </div>
     <div class="input-field col s5 offset-s3">
         @include('messages')
@@ -120,6 +122,7 @@ div#formsend{
         <div id="ads_container" class="">
         </div>
  </div>
+ 
 
 
 @endsection
