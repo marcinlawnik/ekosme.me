@@ -35,12 +35,11 @@
 }
 div#formsend{
    
-    
+    margin-top: 2%;
 }
-div#form{
-    margin-top: 0;
+#topimg{
+    margin-bottom: 0;
 }
-
 
 </style>
 @endsection
@@ -48,7 +47,7 @@ div#form{
 @section('content')
 
 <div class="row">
-    <div class="col s4 offset-s4">
+    <div class="col s4 offset-s4" id="topimg">
         <div class="responsive-img" id="dyrkoimg">
         {{ HTML::image('logo_small.png', 'logo', ['id' => 'logo']) }}
     </div>
