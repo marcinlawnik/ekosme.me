@@ -7,13 +7,7 @@
     margin-top: 15%;
     margin-bottom: 0;
 }
-#logo
-{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-#button_container
+ton_container
 {
 
 }
