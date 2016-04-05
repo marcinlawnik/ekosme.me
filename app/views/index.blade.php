@@ -7,10 +7,18 @@
     margin-top: 15%;
     margin-bottom: 0;
 }
-div.container
-{
-    text-align: center;
-}
+-/* centered columns styles */
+ -.row-centered {
+ -    text-align:center;
+ -}
+ -.col-centered {
+ -    display:inline-block;
+ -    float:none;
+ -    /* reset the text-align */
+ -    text-align:left;
+ -    /* inline-block space fix */
+ -    margin-right:-4px;
+ -}
 .menu-button {
     margin-top: 3%;
 }
