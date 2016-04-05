@@ -47,13 +47,13 @@ div#formsend{
 {{-- top row of buttons --}}
 
 <div class="row">
-		<a class="waves-affeect waves-light btn" href="{{ URL::to('suggest') }}">
+		<a class="waves-effect waves-light btn" href="{{ URL::to('suggest') }}">
 			Zaproponuj mema
 		</a>
-		 <a class="waves-affeect waves-light btn" href="{{ URL::to('top') }}">
+		 <a class="waves-effect waves-light btn" href="{{ URL::to('top') }}">
 			Najlepsze memy
 		</a>
-		 <a class="waves-affeect waves-light btn" href="{{ URL::to('skins') }}">
+		 <a class="waves-effect waves-light btn" href="{{ URL::to('skins') }}">
 			Skiny do dziennika
 		</a>
 </div>
@@ -61,10 +61,10 @@ div#formsend{
 {{-- lower row of buttons --}}
 
 <div class="row">
-	<a class="waves-affeect waves-light btn" href="{{ URL::to('hs') }}">
+	<a class="waves-effect waves-light btn" href="{{ URL::to('hs') }}">
 			Turniej HS
 		</a>
-		<a class="waves-affeect waves-light btn" href="{{ URL::to('subscribe') }}">
+		<a class="waves-effect waves-light btn" href="{{ URL::to('subscribe') }}">
 			Zasubskrybuj!
 		</a>
 </div>
@@ -72,7 +72,7 @@ div#formsend{
 {{-- even lower of buttons --}}
 
 <div class="row">
-		<a class="waves-affeect waves-light btn" href="{{ URL::to('mustknow') }}">
+		<a class="waves-effect waves-light btn" href="{{ URL::to('mustknow') }}">
 			Rzeczy, które uczeń EKOSu wiedzieć powinien.
 		</a>
 </div>
@@ -80,7 +80,7 @@ div#formsend{
 {{-- lowest row of buttons --}}
 
 <div class="row">
-	<a class="waves-affeect waves-light btn" href="{{ URL::to('download/reports/artykul.pdf') }}">
+	<a class="waves-effect waves-light btn" href="{{ URL::to('download/reports/artykul.pdf') }}">
 		"Szkoła. Prosimy nie potrząsać" - Artykuł
 	</a>
 </div>
