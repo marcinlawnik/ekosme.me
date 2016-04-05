@@ -6,6 +6,7 @@
 {
     margin-top: 15%;
     margin-bottom: 0;
+    text-align: center;
 }
 ton_container
 {
