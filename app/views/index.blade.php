@@ -7,9 +7,9 @@
     margin-top: 15%;
     margin-bottom: 0;
 }
-ton_container
+div.container
 {
-
+    text-align: center;
 }
 .menu-button {
     margin-top: 3%;
