@@ -2,6 +2,9 @@
 
 @section('head')
 <style>
+div.row{
+	text-align: center;
+}
 #dyrkoimg
 {
     margin-top: 15%;
