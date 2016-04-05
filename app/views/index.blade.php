@@ -6,7 +6,6 @@
 {
     margin-top: 15%;
     margin-bottom: 0;
-    text-align: center;
 }
 ton_container
 {
@@ -16,18 +15,6 @@ ton_container
     margin-top: 3%;
 }
 
-/* centered columns styles */
-.row-centered {
-    text-align:center;
-}
-.col-centered {
-    display:inline-block;
-    float:none;
-    /* reset the text-align */
-    text-align:left;
-    /* inline-block space fix */
-    margin-right:-4px;
-}
 div#formsend{
    
     margin-top: 2%;
@@ -47,8 +34,6 @@ div#formsend{
         {{ HTML::image('logo_small.png', 'logo', ['id' => 'logo']) }}
     </div>
     </div>
-    </div>
-    <div class="row" id="form">
     <div class="input-field col s5 offset-s3">
         @include('messages')
         {{ Form::open(array('url' => '/r', 'method' => 'get')) }}
