@@ -28,7 +28,7 @@
     <!-- Project One -->
     <div class="row">
         <div class="col-md-7">
-            <a href="#">
+            <a href="https://chrome.google.com/webstore/detail/chromedzienniksimpleskin/bohghidmmhgihlcndmhjkcicbdpjlbab">
                 <img class="img-responsive" src="../simple_skin.png" alt="">
             </a>
         </div>
@@ -47,6 +47,26 @@
     <hr>
 
     <!-- Project Two -->
+    <div class="row">
+        <div class="col-md-7">
+            <a href="https://chrome.google.com/webstore/detail/chromedziennikunicornskin/bndheocniiokibdckkcmnegfgolkdlfb">
+                <img class="img-responsive" src="../unicorn_skin.png" alt="">
+            </a>
+        </div>
+        <div class="col-md-5">
+            <h3>Unicorn Skin</h3>
+            <h4>Jednorożce!</h4>
+            <p>Zmienia stronę logowania na taką różową, z jednorożcami. <br>
+            Nie wpływa na resztę dziennika.
+            </p>
+            <a class="btn btn-primary" href="https://chrome.google.com/webstore/detail/chromedziennikunicornskin/bndheocniiokibdckkcmnegfgolkdlfb">Pobierz <span class="glyphicon glyphicon-chevron-right"></span></a>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Project Three -->
     <div class="row">
         <div class="col-md-7">
             <a href="#">
