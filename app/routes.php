@@ -296,6 +296,10 @@ Route::group(['prefix' => 'a', 'before' => 'l4-lock.auth'], function(){
         ['uses' => 'ReportController@getChart']
     )->where(['memeid' => '[0-9]+', 'userid' => '[0-9]+']);
 
+    Route::get('backup', function(){
+
+    });
+
     Route::group(['prefix' => 'test'], function(){
         Route::get('push', function(){
             PushBullet::all()->note('ekosme.me PushBullet test', 'Testing...');

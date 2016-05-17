@@ -127,6 +127,7 @@ return array(
         'codenamegary\Lock\LockServiceProvider',
         'Kmd\Logviewer\LogviewerServiceProvider',
 		'Lahaxearnaud\LaravelPushbullet\LaravelPushbulletServiceProvider',
+		BackupManager\Laravel\Laravel4ServiceProvider::class,
 
 	),
 

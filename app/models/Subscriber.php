@@ -25,7 +25,7 @@
  * @method static \Illuminate\Database\Query\Builder|\Subscriber whereUpdatedAt($value)
  * @method static \Subscriber confirmed()
  * @property-read \Illuminate\Database\Eloquent\Collection|\Code[] $codes
- * @property-read mixed $code_count 
+ * @property-read mixed $code_count
  */
 class Subscriber extends \Eloquent
 {

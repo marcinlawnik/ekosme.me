@@ -27,5 +27,10 @@ return [
     'app.queue.queue' => 'default',
     'app.queue.ttr' => '',
     'lock.username' => 'test',
-    'lock.password' => 'test'
+    'lock.password' => 'test',
+    'dropbox.key' => '',
+    'dropbox.secret' => '',
+    'dropbox.token' => '',
+    'dropbox.app' => '',
+    'dropbox.folder' => 'ekosmeme'
 ];
