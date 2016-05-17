@@ -1,6 +1,6 @@
 <?php
 
-use CpChart\Services\pChartFactory;
+use CpChart\Factory\Factory;
 
 class ReportController extends \BaseController {
 
@@ -68,7 +68,7 @@ class ReportController extends \BaseController {
         try {
             // create a factory class - it will load necessary files automatically,
             // otherwise you will need to add them on your own
-            $factory = new pChartFactory();
+            $factory = new Factory();
 
             // create and populate the pData class
             $memeData = $factory->newData([
