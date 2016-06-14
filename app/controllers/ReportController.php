@@ -10,7 +10,7 @@ class ReportController extends \BaseController {
 
         $subscriber = Subscriber::where('id', '=', $subscriberId)->first();
 
-        $memes = Meme::where('id', '>', 44])->get();
+        $memes = Meme::where('id', '>', 44)->get();
 
         foreach($memes as $meme){
             // Check if user received meme -> not -> break "didnt receive meme"
