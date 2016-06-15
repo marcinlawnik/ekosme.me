@@ -8,10 +8,10 @@ Plik:
 <img class="" title="{{ $meme->name }}" src="{{ $image }}">
 <br>
 Tytuł:
-{{ Form::text('title') }}
+{{ Form::text('title', $meme->name) }}
 <br>
 Opis:
-{{ Form::text('description') }}
+{{ Form::text('description', $meme->description) }}
 <br>
 Edycja Kodów
 <br>
