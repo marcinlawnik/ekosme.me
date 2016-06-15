@@ -4,7 +4,14 @@ use CpChart\Factory\Factory;
 
 class ReportController extends \BaseController {
 
-    public function getIndex($subscriberId = '1'){
+    public function getIndex(){
+        
+        $subscribers = Subscriber::whereActive(1)->get();
+        return View::make('admin.reports.index')->withSubscribers($subscribers);
+        
+    }
+
+    public function getUser($subscriberId = '1'){
 
         //Get the necessary data
 

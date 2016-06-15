@@ -290,7 +290,9 @@ Route::group(['prefix' => 'a', 'before' => 'l4-lock.auth'], function(){
 
     });
 
-    Route::get('reports/{subscriberId}', ['uses' => 'ReportController@getIndex']);
+    Route::get('reports', ['uses' => 'ReportController@getIndex']);
+
+    Route::get('reports/{subscriberId}', ['uses' => 'ReportController@getUser']);
 
     Route::get('reports/charts/meme/{memeid}/subscriber/{subscriberId}',
         ['uses' => 'ReportController@getChart']
