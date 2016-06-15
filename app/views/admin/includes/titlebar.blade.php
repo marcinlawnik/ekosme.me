@@ -6,7 +6,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="index.html">SB Admin</a>
+    <a class="navbar-brand" href="index.html">ekosme.me</a>
 </div>
 <!-- Top Menu Items -->
 <ul class="nav navbar-right top-nav">
@@ -20,7 +20,7 @@
                             <img class="media-object" src="https://placehold.it/50x50" alt="">
                         </span>
                         <div class="media-body">
-                            <h5 class="media-heading"><strong>John Smith</strong>
+                            <h5 class="media-heading"><strong>Administrator</strong>
                             </h5>
                             <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
                             <p>Lorem ipsum dolor sit amet, consectetur...</p>
@@ -91,16 +91,10 @@
         </ul>
     </li>
     <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Administrator <b class="caret"></b></a>
         <ul class="dropdown-menu">
             <li>
-                <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                <a href="/"><i class="fa fa-fw fa-gear"></i> Strona główna</a>
             </li>
             <li class="divider"></li>
             <li>
