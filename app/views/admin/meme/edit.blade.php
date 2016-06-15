@@ -3,7 +3,7 @@
 @section('content')
 Edit MEME:
 
-{{ Form::open(array('url' => '/a/meme/edit')) }}
+{{ Form::open(array('url' => '/a/meme/edit' . $meme->id)) }}
 Plik:
 <img class="" title="{{ $meme->name }}" src="{{ $image }}">
 <br>
