@@ -64,6 +64,24 @@ Route::get('/download/reports/{report}', function($report = null)
 
 });
 
+//Redirects
+
+Route::get('/konkursmemowy', function(){
+
+    Queue::push(function($job){
+        $mobileDetect = new Mobile_Detect();
+        PushBullet::type('windows')->note('ekosme.me - kliknięcie linku', json_encode([
+            'link' => 'konkurs memowy',
+            'ip' => Request::getClientIp(),
+            'useragent' => $mobileDetect->getUserAgent()
+        ]));
+        $job->delete();
+    });
+    
+    return Redirect::to('http://www.csw.art.pl/index.php?action=aktualnosci&s2=8&id=1441&lang=');
+    
+});
+
 //Static pages
 
 Route::get('/mustknow', function(){

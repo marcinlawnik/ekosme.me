@@ -99,6 +99,14 @@
                     </a>
                 </div>
             </div>
+            {{-- fourth row of buttons --}}
+            <div id="button_container" class="row row-centered">
+                <div class="col-sm-12 col-centered">
+                    <a href="{{ URL::to('konkursmemowy') }}">
+                        <button id="article" type="button" class="btn btn-lg btn-primary menu-button btn-block">Wyniki konkursu na mem artystyczny</button>
+                    </a>
+                </div>
+            </div>
         </div>
         <div id="stats_container">
             <p class="alert alert-info col-sm-12" style="margin-top: 2%">
