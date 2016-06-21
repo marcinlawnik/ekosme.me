@@ -29,7 +29,7 @@
     <div class="row">
         <div class="col-md-7">
             <a href="https://chrome.google.com/webstore/detail/chromedzienniksimpleskin/bohghidmmhgihlcndmhjkcicbdpjlbab">
-                <img class="img-responsive" src="../simple_skin.png" alt="">
+                <img class="img-responsive" src="../images/simple_skin.png" alt="">
             </a>
         </div>
         <div class="col-md-5">
@@ -50,7 +50,7 @@
     <div class="row">
         <div class="col-md-7">
             <a href="https://chrome.google.com/webstore/detail/chromedziennikunicornskin/bndheocniiokibdckkcmnegfgolkdlfb">
-                <img class="img-responsive" src="../unicorn_skin.png" alt="">
+                <img class="img-responsive" src="../images/unicorn_skin.png" alt="">
             </a>
         </div>
         <div class="col-md-5">
@@ -70,7 +70,7 @@
     <div class="row">
         <div class="col-md-7">
             <a href="#">
-                <img class="img-responsive" src="../question_mark.png" alt="">
+                <img class="img-responsive" src="../images/question_mark.png" alt="">
             </a>
         </div>
         <div class="col-md-5">
@@ -84,6 +84,6 @@
     <hr>
     <!-- Site footer -->
     <footer class="footer">
-        <p>&copy; Marcin Ławniczak 2015</p>
+        <p>&copy; Marcin Ławniczak 2015-2016</p>
     </footer>
 @endsection

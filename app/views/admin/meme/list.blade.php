@@ -19,7 +19,9 @@
 @foreach($memes as $meme)
   <tr>
     <td>
-        <a href="{{ $images[$meme->id] }}" data-lightbox="meme" data-title="{{ $meme->name }}"><img class="meme-thumbnail" title="{{ $meme->name }}" src="{{ $images[$meme->id] }}"></a>
+        <a href="/images/{{ $meme->filename }}" data-lightbox="meme" data-title="{{ $meme->name }}">
+            <img class="meme-thumbnail" title="{{ $meme->name }}" src="/images/{{ $meme->filename }}">
+        </a>
     </td>
     <td>{{ $meme->name }}</td>
     <td>{{ $meme->description }}</td>

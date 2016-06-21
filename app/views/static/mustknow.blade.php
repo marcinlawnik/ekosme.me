@@ -36,48 +36,48 @@
     <div class="row">
         <div class="col-md-12">
             <div class="row">
-                <a href="https://ekosme.me/images/mustknow1.png" data-toggle="lightbox" data-gallery="memes" class="col-sm-4">
-                    <img src="https://ekosme.me/images/mustknow1.png" class="img-responsive">
+                <a href="/images/mustknow1.png" data-toggle="lightbox" data-gallery="memes" class="col-sm-4">
+                    <img src="/images/mustknow1.png" class="img-responsive">
                 </a>
-                <a href="https://ekosme.me/images/mustknow2.png" data-toggle="lightbox" data-gallery="memes" class="col-sm-4">
-                    <img src="https://ekosme.me/images/mustknow2.png" class="img-responsive">
+                <a href="/images/mustknow2.png" data-toggle="lightbox" data-gallery="memes" class="col-sm-4">
+                    <img src="/images/mustknow2.png" class="img-responsive">
                 </a>
-                <a href="https://ekosme.me/images/mustknow3.png" data-toggle="lightbox" data-gallery="memes" class="col-sm-4">
-                    <img src="https://ekosme.me/images/mustknow3.png" class="img-responsive">
+                <a href="/images/mustknow3.png" data-toggle="lightbox" data-gallery="memes" class="col-sm-4">
+                    <img src="/images/mustknow3.png" class="img-responsive">
                 </a>
             </div>
             <br/>
             <div class="row">
-                <a href="https://ekosme.me/images/mustknow4.png" data-toggle="lightbox" data-gallery="memes" class="col-sm-4">
-                    <img src="https://ekosme.me/images/mustknow4.png" class="img-responsive">
+                <a href="/images/mustknow4.png" data-toggle="lightbox" data-gallery="memes" class="col-sm-4">
+                    <img src="/images/mustknow4.png" class="img-responsive">
                 </a>
-                <a href="https://ekosme.me/images/mustknow5.png" data-toggle="lightbox" data-gallery="memes" class="col-sm-4">
-                    <img src="https://ekosme.me/images/mustknow5.png" class="img-responsive">
+                <a href="/images/mustknow5.png" data-toggle="lightbox" data-gallery="memes" class="col-sm-4">
+                    <img src="/images/mustknow5.png" class="img-responsive">
                 </a>
-                <a href="https://ekosme.me/images/mustknow6.png" data-toggle="lightbox" data-gallery="memes" class="col-sm-4">
-                    <img src="https://ekosme.me/images/mustknow6.png" class="img-responsive">
-                </a>
-            </div>
-            <div class="row">
-                <a href="https://ekosme.me/images/mustknow7.png" data-toggle="lightbox" data-gallery="memes" class="col-sm-4">
-                    <img src="https://ekosme.me/images/mustknow7.png" class="img-responsive">
-                </a>
-                <a href="https://ekosme.me/images/mustknow8.png" data-toggle="lightbox" data-gallery="memes" class="col-sm-4">
-                    <img src="https://ekosme.me/images/mustknow8.png" class="img-responsive">
-                </a>
-                <a href="https://ekosme.me/images/mustknow9.png" data-toggle="lightbox" data-gallery="memes" class="col-sm-4">
-                    <img src="https://ekosme.me/images/mustknow9.png" class="img-responsive">
+                <a href="/images/mustknow6.png" data-toggle="lightbox" data-gallery="memes" class="col-sm-4">
+                    <img src="/images/mustknow6.png" class="img-responsive">
                 </a>
             </div>
             <div class="row">
-                <a href="https://ekosme.me/images/mustknow_placeholder.png" data-toggle="lightbox" data-gallery="memes" class="col-sm-4">
-                    <img src="https://ekosme.me/images/mustknow_placeholder.png" class="img-responsive">
+                <a href="/images/mustknow7.png" data-toggle="lightbox" data-gallery="memes" class="col-sm-4">
+                    <img src="/images/mustknow7.png" class="img-responsive">
                 </a>
-                <a href="https://ekosme.me/images/mustknow_placeholder.png" data-toggle="lightbox" data-gallery="memes" class="col-sm-4">
-                    <img src="https://ekosme.me/images/mustknow_placeholder.png" class="img-responsive">
+                <a href="/images/mustknow8.png" data-toggle="lightbox" data-gallery="memes" class="col-sm-4">
+                    <img src="/images/mustknow8.png" class="img-responsive">
                 </a>
-                <a href="https://ekosme.me/images/mustknow_placeholder.png" data-toggle="lightbox" data-gallery="memes" class="col-sm-4">
-                    <img src="https://ekosme.me/images/mustknow_placeholder.png" class="img-responsive">
+                <a href="/images/mustknow9.png" data-toggle="lightbox" data-gallery="memes" class="col-sm-4">
+                    <img src="/images/mustknow9.png" class="img-responsive">
+                </a>
+            </div>
+            <div class="row">
+                <a href="/images/mustknow_placeholder.png" data-toggle="lightbox" data-gallery="memes" class="col-sm-4">
+                    <img src="/images/mustknow_placeholder.png" class="img-responsive">
+                </a>
+                <a href="/images/mustknow_placeholder.png" data-toggle="lightbox" data-gallery="memes" class="col-sm-4">
+                    <img src="/images/mustknow_placeholder.png" class="img-responsive">
+                </a>
+                <a href="/images/mustknow_placeholder.png" data-toggle="lightbox" data-gallery="memes" class="col-sm-4">
+                    <img src="/images/mustknow_placeholder.png" class="img-responsive">
                 </a>
             </div>
         </div>

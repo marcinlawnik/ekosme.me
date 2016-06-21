@@ -40,7 +40,7 @@
             </div>
             <div id="content">
             @include('messages')
-            {{ HTML::image('logo_mini.png', 'logo', ['id' => 'logo']) }}
+            {{ HTML::image('/images/logo_mini.png', 'logo', ['id' => 'logo']) }}
                 {{ Form::open(array('url' => '/subscribe')) }}
                     <div class="input-group">
                         <span class="input-group-addon">

@@ -52,8 +52,6 @@ class AdminController extends \BaseController {
         $hashids = new Hashids\Hashids(Config::get('app.key'), 8);
 
         foreach($memes as $meme){
-            $images[$meme->id] = '/images/'.$meme->filename;
-
             $codeInfo[$meme->id] = [
                 //hash for the view function
                 'hash' => $hashids->encode($meme->id),
@@ -68,9 +66,10 @@ class AdminController extends \BaseController {
             ];
         }
 
-        return View::make('admin.meme.list')->withMemes($memes)->withImages($images)->withInfo($codeInfo);
+        return View::make('admin.meme.list')->withMemes($memes)->withInfo($codeInfo);
     }
 
+    //TODO: Fix this so it ises link, not generates image
     function getMemeEdit($id){
         $meme = Meme::find($id);
         $path = storage_path().'/memes/'.$meme->filename;

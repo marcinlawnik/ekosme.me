@@ -25,7 +25,13 @@
         <div class="jumbotron">
             <div class="page-header">
                 <h1>
-                    {{ $meme->name }} <small><small>{{ $meme->description }}@if(Route::is('v')), ID: {{ $meme->id }}@endif</small></small>
+                    {{ $meme->name }}
+                    <small>
+                        <small>
+                            {{ $meme->description }}
+                            @if(Route::is('v')), ID: {{ $meme->id }}@endif
+                        </small>
+                    </small>
                 </h1>
             </div>
             <div class="">

@@ -35,16 +35,19 @@ Route::post('/suggest', ['uses' => 'SuggestController@postIndex']);
 
 Route::get('images/{image}', function($image = null)
 {
-    $path = storage_path().'/memes/' . $image;
-    if (file_exists($path)) {
-        return Response::download($path);
-    }
+    $paths = [
+        '/images/',
+        '/memes/'
+    ];
 
-    $path = storage_path().'/images/' . $image;
-    if (file_exists($path)) {
-        return Response::download($path);
-    }
+    foreach ($paths as $path) {
 
+        $fullPath = storage_path(). $path . $image;
+        if (file_exists($fullPath)) {
+            return Response::download($fullPath);
+        }
+
+    }
 });
 
 //Download of reports

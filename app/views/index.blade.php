@@ -41,7 +41,7 @@
     <div class="col-sm-8 col-sm-offset-2">
         <div id="imaginary_container">
             @include('messages')
-            {{ HTML::image('logo_small.png', 'logo', ['id' => 'logo']) }}
+            {{ HTML::image('/images/logo_small.png', 'logo', ['id' => 'logo']) }}
             {{ Form::open(array('url' => '/r', 'method' => 'get')) }}
             <div class="input-group input-group-lg">
                 {{ Form::text('code', '', ['class'=>'form-control', 'placeholder' => 'Magiczne pole tekstowe']) }}
