@@ -33,3 +33,7 @@ DB transfer
     http://dubbs.github.io/blog/2013/09/05/mysql-import-slash-export-progress-bar/
 
 the mysql and mysqldump -h option allow to specify remote server
+
+Running php server
+
+    php -S localhost:8000 -t public public/index.php
