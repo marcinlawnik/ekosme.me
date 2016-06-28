@@ -1,22 +1,22 @@
 <?php
 
-class CodesController extends \BaseController {
-
-	public function process($code)
-	{
+class CodesController extends \BaseController
+{
+    public function process($code)
+    {
         $code = Code::where('code', '=', $code)->first();
-        if(is_null($code) || $code->exists == false || !is_null($code->vote)){
+        if (is_null($code) || $code->exists == false || !is_null($code->vote)) {
             return Redirect::to('/')
                 ->with('message', 'Jak miał to być kod do mema, to niestety nie działa lub został użyty,a jak wiadomość to została przekazana.');
         }
 
-        if(is_null($code) || $code->used == 1){
+        if (is_null($code) || $code->used == 1) {
             return Redirect::to('/vote/'.$code->code);
         } else {
 
             //Snapchatty functions
             //Refresh(disappear) after 30 seconds
-            header("Refresh: " . 30);
+            header('Refresh: '. 30);
 
             $code->used = 1;
             $code->used_time = Carbon::now();
@@ -38,7 +38,5 @@ class CodesController extends \BaseController {
                 ->withMeme($code->meme)
                 ->withImage($image);
         }
-
     }
-
 }

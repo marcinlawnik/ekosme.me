@@ -11,14 +11,14 @@
 |
 */
 
-ClassLoader::addDirectories(array(
+ClassLoader::addDirectories([
 
-	app_path().'/commands',
-	app_path().'/controllers',
-	app_path().'/models',
-	app_path().'/database/seeds',
+    app_path().'/commands',
+    app_path().'/controllers',
+    app_path().'/models',
+    app_path().'/database/seeds',
 
-));
+]);
 
 /*
 |--------------------------------------------------------------------------
@@ -48,11 +48,9 @@ Log::useDailyFiles(storage_path().'/logs/'.$logFile);
 |
 */
 
-App::error(function(Exception $exception, $code)
-{
-	Log::error($exception);
-    if(App::environment('production') && !Config::get('app.debug'))
-    {
+App::error(function (Exception $exception, $code) {
+    Log::error($exception);
+    if (App::environment('production') && !Config::get('app.debug')) {
         return Redirect::to('/')->with('error', 'Nie znaleziono!');
     }
 });
@@ -68,9 +66,8 @@ App::error(function(Exception $exception, $code)
 |
 */
 
-App::down(function()
-{
-	return Response::make("Przerwa techniczna!", 503);
+App::down(function () {
+    return Response::make('Przerwa techniczna!', 503);
 });
 
 /*
@@ -86,8 +83,8 @@ App::down(function()
 
 require app_path().'/filters.php';
 
-App::missing(function(){
-     if(App::environment('production') && !Config::get('app.debug')){
-         return Redirect::to('/')->with('error', 'Nie znaleziono!');
-     }
+App::missing(function () {
+    if (App::environment('production') && !Config::get('app.debug')) {
+        return Redirect::to('/')->with('error', 'Nie znaleziono!');
+    }
 });

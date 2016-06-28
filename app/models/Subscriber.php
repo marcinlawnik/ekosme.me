@@ -1,18 +1,19 @@
 <?php
 
 /**
- * Subscriber
+ * Subscriber.
  *
- * @property integer $id
+ * @property int $id
  * @property string $email
- * @property integer $level
+ * @property int $level
  * @property string $description
- * @property integer $active
- * @property integer $confirmed
+ * @property int $active
+ * @property int $confirmed
  * @property string $activation_code
  * @property string $confirmation_code
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
+ *
  * @method static \Illuminate\Database\Query\Builder|\Subscriber whereId($value)
  * @method static \Illuminate\Database\Query\Builder|\Subscriber whereEmail($value)
  * @method static \Illuminate\Database\Query\Builder|\Subscriber whereLevel($value)
@@ -24,6 +25,7 @@
  * @method static \Illuminate\Database\Query\Builder|\Subscriber whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\Subscriber whereUpdatedAt($value)
  * @method static \Subscriber confirmed()
+ *
  * @property-read \Illuminate\Database\Eloquent\Collection|\Code[] $codes
  * @property-read mixed $code_count
  */
@@ -33,9 +35,7 @@ class Subscriber extends \Eloquent
 
     public static function scopeConfirmed($query)
     {
-
         return $query->where('confirmed', '=', 1);
-
     }
 
     public function codes()
@@ -43,7 +43,7 @@ class Subscriber extends \Eloquent
         return $this->hasMany('Code');
     }
 
-    protected $appends = array('code_count');
+    protected $appends = ['code_count'];
 
     public function getCodeCountAttribute()
     {

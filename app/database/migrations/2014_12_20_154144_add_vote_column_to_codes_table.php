@@ -3,33 +3,29 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class AddVoteColumnToCodesTable extends Migration {
+class AddVoteColumnToCodesTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::table('codes', function (Blueprint $table) {
+            $table->integer('vote')->nullable()->after('used');
+        });
+    }
 
-	/**
-	 * Run the migrations.
-	 *
-	 * @return void
-	 */
-	public function up()
-	{
-		Schema::table('codes', function(Blueprint $table)
-		{
-			$table->integer('vote')->nullable()->after('used');
-		});
-	}
-
-
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down()
-	{
-		Schema::table('codes', function(Blueprint $table)
-		{
-			$table->dropColumn('vote');
-		});
-	}
-
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::table('codes', function (Blueprint $table) {
+            $table->dropColumn('vote');
+        });
+    }
 }

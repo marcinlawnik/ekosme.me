@@ -1,8 +1,8 @@
 <?php
 
-class AdminController extends \BaseController {
-
-    function getIndex()
+class AdminController extends \BaseController
+{
+    public function getIndex()
     {
         $meme = Meme::all()->last();
 
@@ -11,14 +11,15 @@ class AdminController extends \BaseController {
         return View::make('admin.index')->withMeme($meme)->withStats($stats);
     }
 
-    function getMemeAdd(){
+    public function getMemeAdd()
+    {
         return View::make('admin.meme.add');
     }
 
-    function postMemeAdd(){
+    public function postMemeAdd()
+    {
         //przyjmij plik
-        if (!Input::hasFile('meme'))
-        {
+        if (!Input::hasFile('meme')) {
             return Redirect::to('/a/meme/add')->with('error', 'Nie dodano pliku!');
         }
 
@@ -30,9 +31,9 @@ class AdminController extends \BaseController {
 
         //Add to database
         $meme = Meme::create([
-            'filename' => $filename,
-            'name' => Input::get('title'),
-            'description' => Input::get('description')
+            'filename'    => $filename,
+            'name'        => Input::get('title'),
+            'description' => Input::get('description'),
         ]);
 
         $hashids = new Hashids\Hashids(Config::get('app.key'), 8);
@@ -42,25 +43,26 @@ class AdminController extends \BaseController {
             ->with('message', 'Dodano! Mem numer '.$meme->id.' dostępny pod adresem <a href="'.URL::to('v/'.$id).'">'.URL::to('v/'.$id).'</a>');
     }
 
-    function getMemeList(){
+    public function getMemeList()
+    {
         $memes = Meme::all();
 
-        if($memes->isEmpty()){
+        if ($memes->isEmpty()) {
             return Redirect::to('a')->with('error', 'Nie ma jeszcze memów!');
         }
 
         $hashids = new Hashids\Hashids(Config::get('app.key'), 8);
 
-        foreach($memes as $meme){
+        foreach ($memes as $meme) {
             $codeInfo[$meme->id] = [
                 //hash for the view function
                 'hash' => $hashids->encode($meme->id),
                 //wszystkie kody
                 'code_amount' => $meme->codes()->count(),
                 //kody zużyte
-                'code_used' => $meme->codes()->where('used', '=','1')->count(),
+                'code_used' => $meme->codes()->where('used', '=', '1')->count(),
                 //kody niezużyte, wysłane
-                'code_sent' => $meme->codes()->where('used', '=','0')->where('subscriber_id', '!=', 'null')->count(),
+                'code_sent' => $meme->codes()->where('used', '=', '0')->where('subscriber_id', '!=', 'null')->count(),
                 //kody nieużyte, niewysłane
                 'code_unused' => $meme->codes()->where('used', '=', '0')->where('description')->count(),
             ];
@@ -70,7 +72,8 @@ class AdminController extends \BaseController {
     }
 
     //TODO: Fix this so it ises link, not generates image
-    function getMemeEdit($id){
+    public function getMemeEdit($id)
+    {
         $meme = Meme::find($id);
         $path = storage_path().'/memes/'.$meme->filename;
         $image = Image::make($path)->encode('data-url');
@@ -78,7 +81,8 @@ class AdminController extends \BaseController {
         return View::make('admin.meme.edit')->withMeme($meme)->withImage($image);
     }
 
-    function postMemeEdit($id){
+    public function postMemeEdit($id)
+    {
         $meme = Meme::find($id);
         $path = storage_path().'/memes/'.$meme->filename;
         $image = Image::make($path)->heighten('100')->encode('data-url');
@@ -86,8 +90,9 @@ class AdminController extends \BaseController {
         return View::make('admin.meme.edit')->withMeme($meme)->withImage($image)->with('message', 'Zapisano zmiany!');
     }
 
-    function getConfirmSubscribe($code){
-        if(Subscriber::where('activation_code', '=', $code)->exists() === false){
+    public function getConfirmSubscribe($code)
+    {
+        if (Subscriber::where('activation_code', '=', $code)->exists() === false) {
             //Throw error
             return View::make('subscribe')->with('error', 'Konto zostało już zatwierdzone!');
         }
@@ -98,10 +103,10 @@ class AdminController extends \BaseController {
 
         //Send email to subscriber that account was confirmed
         Queue::push('SendEmail', [
-            'view' => 'emails.confirmed',
+            'view'      => 'emails.confirmed',
             'recipient' => $subscriber->email,
-            'subject' => 'Potwierdzenie konta ekosme.me',
-            'data' => []
+            'subject'   => 'Potwierdzenie konta ekosme.me',
+            'data'      => [],
         ]);
 
         return View::make('subscribe')->with('message', 'Użytkownik potwierdzony!');
