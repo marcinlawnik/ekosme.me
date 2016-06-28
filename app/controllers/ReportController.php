@@ -2,16 +2,17 @@
 
 use CpChart\Factory\Factory;
 
-class ReportController extends \BaseController {
-
-    public function getIndex(){
-        
+class ReportController extends \BaseController
+{
+    public function getIndex()
+    {
         $subscribers = Subscriber::whereActive(1)->get();
+
         return View::make('admin.reports.index')->withSubscribers($subscribers);
-        
     }
 
-    public function getUser($subscriberId = '1'){
+    public function getUser($subscriberId = '1')
+    {
 
         //Get the necessary data
 
@@ -19,25 +20,25 @@ class ReportController extends \BaseController {
 
         $memes = Meme::where('id', '>', 44)->get();
 
-        foreach($memes as $meme){
+        foreach ($memes as $meme) {
             // Check if user received meme -> not -> break "didnt receive meme"
-            if($meme->codes()->where('subscriber_id', '=', $subscriber->id)->count() === 0 ){
+            if ($meme->codes()->where('subscriber_id', '=', $subscriber->id)->count() === 0) {
                 $stats[$meme->id] = [
-                    'meme_text' => 'Nie otrzymałeś/aś tego mema.'
+                    'meme_text' => 'Nie otrzymałeś/aś tego mema.',
                 ];
             }
             // Check if user voted on meme -> not -> break "didnt vote on meme"
-            elseif($meme->codes()->where('subscriber_id', '=', $subscriber->id)->whereNull('vote')->count() === 1){
+            elseif ($meme->codes()->where('subscriber_id', '=', $subscriber->id)->whereNull('vote')->count() === 1) {
                 $stats[$meme->id] = [
-                    'meme_text' => 'Nie głosowałeś/aś przy tym memie.'
+                    'meme_text' => 'Nie głosowałeś/aś przy tym memie.',
                 ];
             }
             // Generate stats, including:
             // Pie chart: yes vote, no vote, didnt vote
             // Include how user voted
-            else{
+            else {
                 $stats[$meme->id] = [
-                    'meme_text' => 0
+                    'meme_text' => 0,
                 ];
             }
         }
@@ -55,21 +56,20 @@ class ReportController extends \BaseController {
             ->with('subscriber', $subscriber)->render();
 
         return $view;
-
     }
 
-    public function getChart($memeid, $subscriberId){
-
+    public function getChart($memeid, $subscriberId)
+    {
         $subscriber = Subscriber::where('id', '=', $subscriberId)->first();
 
         $meme = Meme::where('id', '=', $memeid)->first();
 
         $stats = [
-            'votes_for' => $meme->codes()->where('vote', '=', '1')->count(),
-            'votes_against' => $meme->codes()->where('vote', '=', '0')->count(),
-            'votes_no_vote' => $meme->codes()->whereNull('vote')->count(),
+            'votes_for'       => $meme->codes()->where('vote', '=', '1')->count(),
+            'votes_against'   => $meme->codes()->where('vote', '=', '0')->count(),
+            'votes_no_vote'   => $meme->codes()->whereNull('vote')->count(),
             'like_percentage' => $meme->codes()->where('vote', '=', '1')->count() / $meme->codes()->whereNotNull('vote')->count(),
-            'user_vote' => $subscriber->codes()->where('meme_id', '=', $meme->id)->first()->vote
+            'user_vote'       => $subscriber->codes()->where('meme_id', '=', $meme->id)->first()->vote,
         ];
 
         try {
@@ -81,17 +81,17 @@ class ReportController extends \BaseController {
             $memeData = $factory->newData([
                 $stats['votes_for'],
                 $stats['votes_against'],
-                $stats['votes_no_vote']
-            ], "Głosy");
+                $stats['votes_no_vote'],
+            ], 'Głosy');
 
 
             $memeData->addPoints([
                 'Głosy "Spoko"',
                 'Głosy "Suchar"',
-                'Brak głosu'
-            ], "Opisy");
+                'Brak głosu',
+            ], 'Opisy');
 
-            $memeData->setAbscissa("Opisy");
+            $memeData->setAbscissa('Opisy');
 
             // create the image and set the data
             $myPicture = $factory->newImage(800, 450, $memeData);
@@ -100,81 +100,81 @@ class ReportController extends \BaseController {
 
             $myPicture->setFontProperties(
                 [
-                    "FontName" => "verdana.ttf",
-                    "FontSize" => 20
+                    'FontName' => 'verdana.ttf',
+                    'FontSize' => 20,
                 ]
             );
 
             $myPicture->drawText(400, 50, 'Mem: '.$meme->name, [
-                'R' => 0,
-                'G' => 0,
-                'B' => 0,
-                'Align' => TEXT_ALIGN_MIDDLEMIDDLE
+                'R'     => 0,
+                'G'     => 0,
+                'B'     => 0,
+                'Align' => TEXT_ALIGN_MIDDLEMIDDLE,
             ]);
 
             $myPicture->setFontProperties(
                 [
-                    "FontName" => "Forgotte.ttf",
-                    "FontSize" => 16
+                    'FontName' => 'Forgotte.ttf',
+                    'FontSize' => 16,
                 ]
             );
 
             //Draw border
-            $myPicture->drawRectangle(0, 0, 799, 449,[
+            $myPicture->drawRectangle(0, 0, 799, 449, [
                 'R' => 0,
                 'G' => 0,
-                'B' => 0
+                'B' => 0,
             ]);
 
 
             // creating a pie chart - notice that you specify the type of chart, not class name.
             // not all charts need to be created through this method (ex. the bar chart),
             // some are created via the pImage class (check the documentation before drawing).
-            $pieChart = $factory->newChart("pie", $myPicture, $memeData);
+            $pieChart = $factory->newChart('pie', $myPicture, $memeData);
 
             $pieChart->draw3DPie(400, 220, [
-                'Radius' => 200,
-                'DrawLabels' => TRUE,
-                'DataGapAngle' => 10,
+                'Radius'        => 200,
+                'DrawLabels'    => true,
+                'DataGapAngle'  => 10,
                 'DataGapRadius' => 6,
-                'Border' => TRUE,
-                'SecondPass' => TRUE,
-                'LabelStacked' => TRUE,
+                'Border'        => true,
+                'SecondPass'    => true,
+                'LabelStacked'  => true,
                 //Colors and opacity of legend
 //                'LabelR' => 255,
 //                'LabelG' => 0,
 //                'LabelB' => 0,
 //                'LabelAlpha' => 100,
                 //Values
-                'WriteValues' => PIE_VALUE_NATURAL,
-                'ValueSuffix' => ' os.',
+                'WriteValues'   => PIE_VALUE_NATURAL,
+                'ValueSuffix'   => ' os.',
                 'ValuePosition' => PIE_VALUE_INSIDE,
-                'ValuePadding' => 80,
-                'ValueR' => 0,
-                'ValueG' => 0,
-                'ValueB' => 255,
-                'ValueAlpha' => 100,
+                'ValuePadding'  => 80,
+                'ValueR'        => 0,
+                'ValueG'        => 0,
+                'ValueB'        => 255,
+                'ValueAlpha'    => 100,
 
             ]);
 
             //Add a writing on how user voted
 
-            $myPicture->setFontProperties(["FontName" => "Forgotte.ttf", "FontSize" => 24]);
+            $myPicture->setFontProperties(['FontName' => 'Forgotte.ttf', 'FontSize' => 24]);
 
             $myPicture->drawText(610, 380, 'Twój Głos: ', ['R' => 0, 'G' => 0, 'B' => 0, 'Align' => TEXT_ALIGN_MIDDLEMIDDLE]);
 
-            $myPicture->setFontProperties(["FontName" => "Forgotte.ttf", "FontSize" => 50]);
+            $myPicture->setFontProperties(['FontName' => 'Forgotte.ttf', 'FontSize' => 50]);
 
-            if($stats['user_vote'] == 1){
+            if ($stats['user_vote'] == 1) {
                 $myPicture->drawText(700, 380, 'TAK', ['R' => 0, 'G' => 255, 'B' => 0, 'Align' => TEXT_ALIGN_MIDDLEMIDDLE]);
-            } elseif($stats['user_vote'] == 0){
+            } elseif ($stats['user_vote'] == 0) {
                 $myPicture->drawText(700, 380, 'NIE', ['R' => 255, 'G' => 0, 'B' => 0, 'Align' => TEXT_ALIGN_MIDDLEMIDDLE]);
             }
 
             //Add info about approval percentage
-            $myPicture->setFontProperties(["FontName" => "Forgotte.ttf", "FontSize" => 24]);
+            $myPicture->setFontProperties(['FontName' => 'Forgotte.ttf', 'FontSize' => 24]);
 
-            $myPicture->drawText(400, 380, 'Procent "Spoko":  '.round($stats['like_percentage']*100, 2).'%', ['R' => 0, 'G' => 0, 'B' => 0, 'Align' => TEXT_ALIGN_MIDDLEMIDDLE]);
+            $myPicture->drawText(400, 380, 'Procent "Spoko":  '.round($stats['like_percentage'] * 100, 2).'%', ['R' => 0, 'G' => 0, 'B' => 0, 'Align' => TEXT_ALIGN_MIDDLEMIDDLE]);
 
             //Add Gromowładny
 
@@ -183,10 +183,8 @@ class ReportController extends \BaseController {
 
             // do the drawing
             $myPicture->Stroke();
-
         } catch (\Exception $ex) {
             echo 'There was an error: '.$ex->getMessage();
         }
     }
-
 }

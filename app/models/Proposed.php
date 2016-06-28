@@ -1,8 +1,8 @@
 <?php
 /**
- * Proposed
+ * Proposed.
  *
- * @property integer $id
+ * @property int $id
  * @property string $filename
  * @property string $name
  * @property string $email
@@ -11,6 +11,7 @@
  * @property string $ip
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
+ *
  * @method static \Illuminate\Database\Query\Builder|\Proposed whereId($value)
  * @method static \Illuminate\Database\Query\Builder|\Proposed whereFilename($value)
  * @method static \Illuminate\Database\Query\Builder|\Proposed whereName($value)
@@ -21,8 +22,8 @@
  * @method static \Illuminate\Database\Query\Builder|\Proposed whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\Proposed whereUpdatedAt($value)
  */
-class Proposed extends \Eloquent {
-
+class Proposed extends \Eloquent
+{
     protected $table = 'proposed';
 
     protected $fillable = [
@@ -31,6 +32,6 @@ class Proposed extends \Eloquent {
         'email',
         'useragent',
         'description',
-        'ip'
+        'ip',
     ];
 }

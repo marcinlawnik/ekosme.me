@@ -1,16 +1,18 @@
 <?php
 
-class Helper{
+class Helper
+{
     /**
      * Generate a random string.
      *
      * This function is taken from cartalyst/sentry
      *
      * @param int $length
-     * @return string
+     *
      * @throws RuntimeException
+     *
+     * @return string
      */
-
     public static function getRandomString($length = 42)
     {
         // We'll check if the user has OpenSSL installed with PHP. If they do
@@ -27,12 +29,11 @@ class Helper{
                 throw new \RuntimeException('Unable to generate random string.');
             }
 
-            return substr(str_replace(array('/', '+', '='), '', base64_encode($bytes)), 0, $length);
+            return substr(str_replace(['/', '+', '='], '', base64_encode($bytes)), 0, $length);
         }
 
         $pool = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
         return substr(str_shuffle(str_repeat($pool, 5)), 0, $length);
     }
-
 }

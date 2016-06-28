@@ -1,5 +1,5 @@
 <?php
 
-return array(
+return [
     'lock' => include('lock.php'),
-);
+];

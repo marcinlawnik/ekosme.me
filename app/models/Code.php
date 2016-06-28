@@ -1,20 +1,21 @@
 <?php
 
 /**
- * Code
+ * Code.
  *
- * @property integer $id
+ * @property int $id
  * @property string $code
- * @property integer $meme_id
- * @property boolean $used
+ * @property int $meme_id
+ * @property bool $used
  * @property string $description
  * @property string $used_time
  * @property string $used_ip
  * @property string $used_useragent
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
- * @property integer $subscriber_id
+ * @property int $subscriber_id
  * @property-read \Meme $meme
+ *
  * @method static \Illuminate\Database\Query\Builder|\Code whereId($value)
  * @method static \Illuminate\Database\Query\Builder|\Code whereCode($value)
  * @method static \Illuminate\Database\Query\Builder|\Code whereMemeId($value)
@@ -26,12 +27,16 @@
  * @method static \Illuminate\Database\Query\Builder|\Code whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\Code whereUpdatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\Code whereSubscriberId($value)
- * @property integer $vote
+ *
+ * @property int $vote
+ *
  * @method static \Illuminate\Database\Query\Builder|\Code whereVote($value)
+ *
  * @property-read \Subscriber $subscriber
  */
-class Code extends \Eloquent {
-	protected $fillable = [
+class Code extends \Eloquent
+{
+    protected $fillable = [
         'code',
         'meme_id',
         'used',
@@ -39,14 +44,16 @@ class Code extends \Eloquent {
         'used_time',
         'used_ip',
         'used_useragent',
-        'subscriber_id'
+        'subscriber_id',
     ];
 
-    public function meme() {
+    public function meme()
+    {
         return $this->belongsTo('Meme');
     }
 
-    public function subscriber() {
+    public function subscriber()
+    {
         return $this->belongsTo('Subscriber');
     }
 }
