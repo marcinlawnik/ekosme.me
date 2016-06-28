@@ -1,4 +1,6 @@
 # ekosme.me
+#####Badges
+[![StyleCI](https://styleci.io/repos/25037330/shield)](https://styleci.io/repos/25037330)
 
 A meme website with subscribers.
 This file, readme.md will be the docs for when I forget stuff.
