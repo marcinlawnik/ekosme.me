@@ -121,7 +121,9 @@ return [
         'Illuminate\Validation\ValidationServiceProvider',
         'Illuminate\View\ViewServiceProvider',
         'Illuminate\Workbench\WorkbenchServiceProvider',
-        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
+        //A hack to force this loading at the end to avoid errors
+        //See: https://github.com/barryvdh/laravel-ide-helper/issues/26
+        10000 => 'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
         'Way\Generators\GeneratorsServiceProvider',
         'Intervention\Image\ImageServiceProvider',
         'codenamegary\Lock\LockServiceProvider',
