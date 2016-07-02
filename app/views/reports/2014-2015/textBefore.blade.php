@@ -33,9 +33,13 @@
                     Znajdziesz tutaj wszystkie memy z tego roku szkolnego oraz statystykę "spoko" i "sucharów" (a także twój głos).
                 </p>
                 <p class="justified">
+                    Dodatkowo w tym raporcie masz także memy z poprzedniego roku szkolnego. Możesz więc zobaczyć co działo się w szkole, zanim do niej przybyłeś.
+                </p>
+                                <p class="justified">
                     Ekosme.me podczas wakacji nie będzie wysyłać memów. Będzie jednak otwarte na ich propozycje. Więc jeśli masz jakiś pomysł - wysyłaj śmiało.
                     Memy powrócą wraz z rozpoczęciem nowego roku szkolnego.
                 </p>
+
                 <p class="justified">
                     Nie pozostało mi nic innego, jak podziękować za darowiznę na utrzymanie tego serwisu, życzyć dobrze przeżytych wakacji oraz miłego oglądania.
                 </p>
