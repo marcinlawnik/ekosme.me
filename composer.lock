@@ -2750,16 +2750,16 @@
         },
         {
             "name": "szymach/c-pchart",
-            "version": "2.0.2",
+            "version": "2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/szymach/c-pchart.git",
-                "reference": "090c093e4d0d2689f3ecb214b9a69a8174b87e41"
+                "reference": "e234d6ca5d9bc9eb39301fca2953c7cf01e9f2a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/szymach/c-pchart/zipball/090c093e4d0d2689f3ecb214b9a69a8174b87e41",
-                "reference": "090c093e4d0d2689f3ecb214b9a69a8174b87e41",
+                "url": "https://api.github.com/repos/szymach/c-pchart/zipball/e234d6ca5d9bc9eb39301fca2953c7cf01e9f2a8",
+                "reference": "e234d6ca5d9bc9eb39301fca2953c7cf01e9f2a8",
                 "shasum": ""
             },
             "require": {
@@ -2813,7 +2813,7 @@
                 "pchart",
                 "statistics"
             ],
-            "time": "2016-02-17 20:53:48"
+            "time": "2016-04-16 16:30:22"
         },
         {
             "name": "way/generators",
