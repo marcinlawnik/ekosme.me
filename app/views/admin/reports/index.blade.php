@@ -8,7 +8,7 @@
                 <th>Subscriber #</th>
                 <th>Email</th>
                 <th>Join Date</th>
-                <th>Raport roczny {{ date(Y) }}</th>
+                <th>Raport roczny {{ DateHelper::getCurrentYear() }}</th>
                 <th>Raport całkowity (od początku)</th>
             </tr>
             </thead>
@@ -20,7 +20,7 @@
                     <td>{{ $subscriber->updated_at }}</td>
                     <td>
                         <a class="btn btn-default btn-info"
-                           href="{{ URL::to('a/reports/' . $subscriber->id) . '/' . date('Y') }}">
+                           href="{{ URL::to('a/reports/' . $subscriber->id) . '/' . DateHelper::getCurrentYear() }}">
                             Raport roczny
                         </a>
                     </td>
