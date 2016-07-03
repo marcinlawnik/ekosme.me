@@ -8,7 +8,9 @@ class ReportController extends \BaseController
     {
         $subscribers = Subscriber::whereActive(1)->get();
 
-        return View::make('admin.reports.index')->withSubscribers($subscribers);
+        return View::make('admin.reports.index')
+            ->withYear(date('Y'))
+            ->withSubscribers($subscribers);
     }
 
     public function getUser($subscriberId = '1', $type = 'full' )
@@ -23,7 +25,9 @@ class ReportController extends \BaseController
         // 2015-2016 >44
 
         if ($type === 'yearly'){
-            $memes = Meme::whereDate('created_at', '>', date('Y')-1 . '-08-20')
+
+            $lastYear = date('Y')-1;
+            $memes = Meme::whereDate('created_at', '>', $lastYear . '-08-20')
                 ->whereDate('created_at', '<', date('Y') . '-07-15')
                 ->whereNotIn('id', [1, 2, 9, 14])
                 ->get();
@@ -63,7 +67,8 @@ class ReportController extends \BaseController
         // Check if user voted on meme -> not -> break "didnt vote on meme"
 
 
-        $view = View::make('tools.report')
+        $view = View::make('reports.report')
+            ->with('type', $type)
             ->with('memes', $memes)
             ->with('stats', $stats)
             ->with('subscriber', $subscriber)->render();

@@ -64,7 +64,12 @@
 
 @section('content')
 
-    @include('reports.2014-2015.textBefore')
+    @if($type == 'yearly')
+        @include('reports.2015-2016.textBeforeYearly')
+    @endif
+    @if($type == 'full')
+        @include('reports.2015-2016.textBeforeFull')
+    @endif
 
     @foreach($memes as $meme)
         <div class="row">
@@ -81,7 +86,7 @@
                     <br>
                     <div class="">
                         @if( $stats[$meme->id]['meme_text'] === 0)
-                            <img id="meme" class="img-responsive img-thumbnail" title="Meme Stats" src="{{ 'charts/meme/'.$meme->id.'/subscriber/'.$subscriber->id }}">
+                            <img id="meme" class="img-responsive img-thumbnail" title="Meme Stats" src="{{ '../charts/meme/'.$meme->id.'/subscriber/'.$subscriber->id }}">
                         @else
                             <div class="meme_text">{{ $stats[$meme->id]['meme_text'] }}</div>
                         @endif
