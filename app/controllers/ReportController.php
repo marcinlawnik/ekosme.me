@@ -11,14 +11,27 @@ class ReportController extends \BaseController
         return View::make('admin.reports.index')->withSubscribers($subscribers);
     }
 
-    public function getUser($subscriberId = '1')
+    public function getUser($subscriberId = '1', $type = 'full' )
     {
 
-        //Get the necessary data
+
+        // Get the necessary data
 
         $subscriber = Subscriber::where('id', '=', $subscriberId)->first();
 
-        $memes = Meme::where('id', '>', 1)->get();
+        // 2014-2015 whereNotIn('id', [1, 2, 9, 14] <=44
+        // 2015-2016 >44
+
+        if ($type === 'yearly'){
+            $memes = Meme::whereDate('created_at', '>', date('Y')-1 . '-08-20')
+                ->whereDate('created_at', '<', date('Y') . '-07-15')
+                ->whereNotIn('id', [1, 2, 9, 14])
+                ->get();
+        }
+        else {
+            // If the type is "full" or not set, then get all applicable memes
+            $memes = Meme::whereNotIn('id', [1, 2, 9, 14])->get();
+        }
 
         foreach ($memes as $meme) {
             // Check if user received meme -> not -> break "didnt receive meme"

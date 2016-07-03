@@ -8,7 +8,8 @@
                 <th>Subscriber #</th>
                 <th>Email</th>
                 <th>Join Date</th>
-                <th>Raport</th>
+                <th>Raport roczny {{ date(Y) }}</th>
+                <th>Raport całkowity (od początku)</th>
             </tr>
             </thead>
             <tbody>
@@ -17,7 +18,18 @@
                     <td>{{ $subscriber->id }}</td>
                     <td>{{ $subscriber->email }}</td>
                     <td>{{ $subscriber->updated_at }}</td>
-                    <td><a class="btn btn-default btn-info" href="{{ URL::to('a/reports/' . $subscriber->id) }}">Raport</a></td>
+                    <td>
+                        <a class="btn btn-default btn-info"
+                           href="{{ URL::to('a/reports/' . $subscriber->id) . '/' . date('Y') }}">
+                            Raport roczny
+                        </a>
+                    </td>
+                    <td>
+                        <a class="btn btn-default btn-info"
+                           href="{{ URL::to('a/reports/' . $subscriber->id) . '/full'}}">
+                            Raport całkowity
+                        </a>
+                    </td>
                 </tr>
             @endforeach
             </tbody>
