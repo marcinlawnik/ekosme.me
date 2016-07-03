@@ -151,7 +151,7 @@ Route::get('/v/{hash}', ['as' => 'v', function ($hash) {
     $image = '/images/'.$meme->filename;
 
     return View::make('meme')->withMeme($meme)->withImage($image);
-}, ]);
+}]);
 
 
 //Subscriptions
