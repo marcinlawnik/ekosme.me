@@ -11,9 +11,6 @@
                 <p class="centered">
                     Dla: {{ $subscriber->email }}
                 </p>
-                <p class="centered">
-                    Ten raport zawiera wszystkie memy od początku istnienia serwisu.
-                </p>
             </div>
         </div>
     </div>
@@ -35,9 +32,7 @@
                     Może ten raport będzie dobrą podstawą do tego.
                     Znajdziesz tutaj wszystkie memy z tego roku szkolnego oraz statystykę "spoko" i "sucharów" (a także twój głos).
                 </p>
-                <p class="justified">
-                    Dodatkowo w tym raporcie masz także memy z poprzedniego roku szkolnego. Możesz więc zobaczyć co działo się w szkole, zanim do niej przybyłaś/eś.
-                </p>
+
                 <p class="justified">
                     Ekosme.me podczas wakacji nie będzie wysyłać memów. Będzie jednak otwarte na ich propozycje. Więc jeśli masz jakiś pomysł - wysyłaj śmiało.
                     Memy powrócą wraz z rozpoczęciem nowego roku szkolnego.
