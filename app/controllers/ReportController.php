@@ -13,7 +13,7 @@ class ReportController extends \BaseController
             ->withSubscribers($subscribers);
     }
 
-    public function getUser($subscriberId = '1', $type = 'full' )
+    public function getUser($subscriberId = '1', $type = 'full')
     {
 
 
@@ -24,15 +24,13 @@ class ReportController extends \BaseController
         // 2014-2015 whereNotIn('id', [1, 2, 9, 14] <=44
         // 2015-2016 >44
 
-        if ($type === 'yearly'){
-
-            $lastYear = date('Y')-1;
-            $memes = Meme::whereDate('created_at', '>', $lastYear . '-08-20')
-                ->whereDate('created_at', '<', date('Y') . '-07-15')
+        if ($type === 'yearly') {
+            $lastYear = date('Y') - 1;
+            $memes = Meme::whereDate('created_at', '>', $lastYear.'-08-20')
+                ->whereDate('created_at', '<', date('Y').'-07-15')
                 ->whereNotIn('id', [1, 2, 9, 14])
                 ->get();
-        }
-        else {
+        } else {
             // If the type is "full" or not set, then get all applicable memes
             $memes = Meme::whereNotIn('id', [1, 2, 9, 14])->get();
         }
