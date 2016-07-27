@@ -130,6 +130,7 @@ return [
         'Kmd\Logviewer\LogviewerServiceProvider',
         'Lahaxearnaud\LaravelPushbullet\LaravelPushbulletServiceProvider',
         BackupManager\Laravel\Laravel4ServiceProvider::class,
+        Jenssegers\Rollbar\RollbarServiceProvider::class,
 
     ],
 

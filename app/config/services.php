@@ -28,4 +28,9 @@ return [
         'secret' => '',
     ],
 
+    'rollbar' => [
+        'access_token' => $_ENV['rollbar.token'],
+        'level' => 'error',
+    ],
+
 ];

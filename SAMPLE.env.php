@@ -34,4 +34,5 @@ return [
     'dropbox.token'        => '',
     'dropbox.app'          => '',
     'dropbox.folder'       => 'ekosmeme',
+    'rollbar.token'        => '',
 ];

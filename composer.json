@@ -18,7 +18,8 @@
         "lahaxearnaud/laravel-pushbullet": "~0.1",
         "backup-manager/laravel": "^1.1",
         "league/flysystem-dropbox": "^1.0",
-        "defuse/php-encryption": "^2.0"
+        "defuse/php-encryption": "^2.0",
+        "jenssegers/rollbar": "^1.5"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "1.*",

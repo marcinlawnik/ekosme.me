@@ -329,5 +329,10 @@ Route::group(['prefix' => 'a', 'before' => 'l4-lock.auth'], function () {
         Route::get('env', function () {
             dd($_ENV);
         });
+
+        Route::get('error', function () {
+            throw new Exception('Test of Exceptions', '666');
+        });
+
     });
 });
