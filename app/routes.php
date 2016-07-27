@@ -108,7 +108,7 @@ Route::group(['prefix' => 'hs'], function () {
 });
 
 //Debug information
-Route::get('/system/commit', function (){
+Route::get('/system/commit', function () {
     GitHashHelper::currentDeployedHash();
 });
 
