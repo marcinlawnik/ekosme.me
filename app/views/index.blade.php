@@ -1,6 +1,7 @@
 @extends('main')
 
 @section('head')
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 <style>
 #imaginary_container
 {
@@ -31,6 +32,9 @@
     text-align:left;
     /* inline-block space fix */
     margin-right:-4px;
+}
+#commit {
+
 }
 </style>
 @endsection
@@ -116,6 +120,11 @@
                 Zagłosowało: <strong>{{ $stats['votes'] }}</strong> z <strong>{{ $stats['memes_opened'] }}</strong> ({{ $stats['voted_percentage'] }}%).
                 Podobało się: <strong>{{ $stats['votes_like'] }}</strong> ({{ $stats['votes_like_percentage'] }}%).
                 Nie podobało się: <strong>{{ $stats['votes_dislike'] }}</strong> ({{ $stats['votes_dislike_percentage'] }}%).
+            </p>
+        </div>
+        <div id="commit" class="">
+            <p class="alert alert-success col-sm-12">
+                Obecnnie zainstalowana wersja ekosme.me to <a href="https://github.com/marcinlawnik/ekosme.me/commit/{{ Artisan::call('getgithash'); }}"><span class="fa fa-github"></span> {{ Artisan::call('getgithash'); }}</a>
             </p>
         </div>
         <div id="ads_container" class="">

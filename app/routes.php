@@ -11,6 +11,8 @@
 |
 */
 
+//Index page
+
 Route::get('/', function () {
     $latestMeme = Meme::all()->last();
 
@@ -30,7 +32,6 @@ Route::get('/suggest', ['uses' => 'SuggestController@getIndex']);
 Route::post('/suggest', ['uses' => 'SuggestController@postIndex']);
 
 //Display of images on request
-
 
 Route::get('images/{image}', function ($image = null) {
     $paths = [
@@ -104,6 +105,11 @@ Route::group(['prefix' => 'hs'], function () {
     Route::get('contact', function () {
         return View::make('hs.contact');
     });
+});
+
+//Debug information
+Route::get('/system/commit', function (){
+    Artisan::call('getgithash');
 });
 
 //Codes
