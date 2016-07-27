@@ -39,14 +39,6 @@ class GetCurrentGitHashCommand extends Command {
 	 */
 	public function fire()
 	{
-        $process = new Process('git log -1 --pretty=format:%h ');
-        $process->run();
-
-        // executes after the command finishes
-        if (!$process->isSuccessful()) {
-            throw new ProcessFailedException($process);
-        }
-
-        echo $process->getOutput();
+        GitHashHelper::currentDeployedHash();
 	}
 }

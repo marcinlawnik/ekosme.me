@@ -109,7 +109,7 @@ Route::group(['prefix' => 'hs'], function () {
 
 //Debug information
 Route::get('/system/commit', function (){
-    Artisan::call('getgithash');
+    GitHashHelper::currentDeployedHash();
 });
 
 //Codes

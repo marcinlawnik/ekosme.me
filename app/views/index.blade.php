@@ -124,7 +124,10 @@
         </div>
         <div id="commit" class="">
             <p class="alert alert-success col-sm-12">
-                Obecnnie zainstalowana wersja ekosme.me to <a href="https://github.com/marcinlawnik/ekosme.me/commit/{{ Artisan::call('getgithash'); }}"><span class="fa fa-github"></span> {{ Artisan::call('getgithash'); }}</a>
+                Obecnnie zainstalowana wersja ekosme.me to
+                <a href="https://github.com/marcinlawnik/ekosme.me/commit/{{ GitHashHelper::currentDeployedHash() }}">
+                    <span class="fa fa-github"></span> {{ GitHashHelper::currentDeployedHash() }}
+                </a>
             </p>
         </div>
         <div id="ads_container" class="">
