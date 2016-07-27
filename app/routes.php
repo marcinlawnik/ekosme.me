@@ -333,6 +333,5 @@ Route::group(['prefix' => 'a', 'before' => 'l4-lock.auth'], function () {
         Route::get('error', function () {
             throw new Exception('Test of Exceptions', '666');
         });
-
     });
 });
