@@ -1,10 +1,12 @@
 <?php
 
-use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
+use Symfony\Component\Process\Process;
 
-class GitHashHelper {
-    public static function currentDeployedHash() {
+class GitHashHelper
+{
+    public static function currentDeployedHash()
+    {
         $process = new Process('git log -1 --pretty=format:%h');
         $process->run();
 
