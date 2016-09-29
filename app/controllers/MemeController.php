@@ -42,7 +42,8 @@ class MemeController extends \BaseController
             ]);
         }
 
-        PushBullet::all()->note('Mem wysłany', $meme->name);
+        //TODO: Fix PushBullet
+        //PushBullet::all()->note('Mem wysłany', $meme->name);
 
         return Redirect::to('/a')->with('message', 'Mem wysłany');
     }

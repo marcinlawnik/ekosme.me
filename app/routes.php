@@ -51,11 +51,12 @@ Route::get('images/{image}', function ($image = null) {
 
 Route::get('/download/reports/{report}', function ($report = null) {
     $mobileDetect = new Mobile_Detect();
-    PushBullet::type('windows')->note('ekosme.me - download pliku', json_encode([
+    //TODO: Fix PushBullet
+    /*PushBullet::type('windows')->note('ekosme.me - download pliku', json_encode([
         'filename'  => $report,
         'ip'        => Request::getClientIp(),
         'useragent' => $mobileDetect->getUserAgent(),
-    ]));
+    ]));*/
     $path = storage_path().'/reports/'.$report;
     if (file_exists($path)) {
         return Response::download($path);
@@ -66,11 +67,12 @@ Route::get('/download/reports/{report}', function ($report = null) {
 
 Route::get('/konkursmemowy', function () {
     $mobileDetect = new Mobile_Detect();
-    PushBullet::type('windows')->note('ekosme.me - kliknięcie linku', json_encode([
+    //TODO: Fix PushBullet
+    /* PushBullet::type('windows')->note('ekosme.me - kliknięcie linku', json_encode([
         'link'      => 'konkurs memowy',
         'ip'        => Request::getClientIp(),
         'useragent' => $mobileDetect->getUserAgent(),
-    ]));
+    ])); */
 
     return Redirect::to('http://www.csw.art.pl/index.php?action=aktualnosci&s2=8&id=1441&lang=');
 });
@@ -118,11 +120,13 @@ Route::get('/r', function () {
         return Redirect::to('/')->with('error', 'Puste pole z kodem');
     }
     $mobileDetect = new Mobile_Detect();
-    PushBullet::type('windows')->note('ekosme.me - tekst ze strony głównej', json_encode([
+    //TODO: Fix PushBullet
+    /* PushBullet::type('windows')->note('ekosme.me - tekst ze strony głównej', json_encode([
             'text'      => Input::get('code'),
             'ip'        => Request::getClientIp(),
             'useragent' => $mobileDetect->getUserAgent(),
         ]));
+    */
     $code = Input::get('code');
 
     return Redirect::to('/c/'.$code);
@@ -178,7 +182,9 @@ Route::post('subscribe', function () {
     ];
     $validator = Validator::make($data, $rules);
     if ($validator->fails()) {
-        PushBullet::type('windows')->note('Błąd subskrypcji', json_encode($data));
+        //TODO: Fix PushBullet
+
+//        PushBullet::type('windows')->note('Błąd subskrypcji', json_encode($data));
 
         return View::make('subscribe')->with('error', 'Adres E-mail jest nieprawidłowy!');
     }
@@ -187,7 +193,8 @@ Route::post('subscribe', function () {
     $explodedEmail = explode('@', $email);
     $domain = $explodedEmail[1];
     if ($domain !== 'ekos.edu.pl') {
-        PushBullet::type('windows')->note('Błąd subskrypcji', json_encode($data));
+        //TODO: Fix PushBullet
+//        PushBullet::type('windows')->note('Błąd subskrypcji', json_encode($data));
         //Not an EKOS E-mail
         return View::make('subscribe')->with('error', 'To nie jest e-mail ucznia EKOSu!');
     }
@@ -220,7 +227,9 @@ Route::post('subscribe', function () {
         ],
     ]);
 
-    PushBullet::type('windows')->note('Nowa subskrybcja', $subscriber->email);
+    //TODO: Fix PushBullet
+
+//    PushBullet::type('windows')->note('Nowa subskrybcja', $subscriber->email);
 
     //Return success view
     return View::make('subscribe')->with('message', 'Dodano! Potwierdź adres e-mail, aby zacząć otrzymywać memy!');
@@ -304,14 +313,16 @@ Route::group(['prefix' => 'a', 'before' => 'l4-lock.auth'], function () {
 
     Route::group(['prefix' => 'test'], function () {
         Route::get('push', function () {
-            PushBullet::all()->note('ekosme.me PushBullet test', 'Testing...');
+            //TODO: Fix PushBullet
+//            PushBullet::all()->note('ekosme.me PushBullet test', 'Testing...');
 
             return Redirect::to('/')->with('message', 'Testowa wiadomość wysłana');
         });
 
         Route::get('queue', function () {
             Queue::push(function ($job) {
-                PushBullet::all()->note('ekosme.me PushBullet queue test', 'Testing the queue...');
+                //TODO: Fix PushBullet
+//                PushBullet::all()->note('ekosme.me PushBullet queue test', 'Testing the queue...');
                 $job->delete();
             });
 
