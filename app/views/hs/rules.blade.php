@@ -17,33 +17,25 @@
     <div class="container">
         <img src="https://upload.wikimedia.org/wikipedia/en/1/1c/Hearthstone_Logo.png">
         <div class="title">Zasady turnieju</div>
+        <h4>Ogólne</h4>
+            <ul>
+                <li>Turniej organizuje Kuba Marszałkiewicz.</li>
+                <li>Wszystkie wątpliwości rozstrzygane są niepodważalną decyzją organizatora.</li>
+                <li>Nie wolno używać programów wspomagajcych dających nieuczciwą przewagę.</li>
+                <li>W turnieju mogą brać udział tylko uczniowie EKOSu.</li>
+                <li>Terminy meczy ustala organizator, ale, w przypadku braku czasu, termin meczu może ulec zmianie na pasujący obydwu graczom.</li>
+                <li>Organizatorzy zastrzegają sobie prawo do modyfikowania zasad podczas trwania turnieju.</li>
+            </ul>
         <h4>Interakcja</h4>
             <ul>
                 <li>Zabrania się spamowania emotikonami w grze.</li>
                 <li>Zabrania się także demotowywania, obrażania lub jakiejkolwiek formy negatywnego kontaktu (poprzez czat i inne komunikatory).</li>
                 <li>Osoba oglądająca mecz nie może wysyłać jakichkolwiek informacji lub wiadomości do żadnego z graczy.</li>
             </ul>
-        <h4>Ogólne</h4>
-            <ul>
-                <li>Turniej organizują: Marcin Ławniczak, Kuba Marszałkiewicz, Michał Roszak.</li>
-                <li>Wszystkie wątpliwości rozstrzygane są niepodważalną decyzją organizatora.</li>
-                <li>Nie wolno używać programów wspomagajcych dających nieuczciwą przewagę.</li>
-                <li>W turnieju mogą brać udział tylko uczniowie EKOSu.</li>
-                <li>Terminy meczy ustala organizator, ale, w przypadku braku czasu, termin meczu może ulec zmianie na pasujący obydwu graczom.</li>
-                <li>Organizatorzy zastrzegają sobie prawo do modyfikowania zasad podczas trwania turnieju.</li>
-                <li>Organizator może brać udział w turnieju, ale na czas uczestnictwa traci swoje przywileje i jest postrzegany jak każdy inny gracz.</li>
-            </ul>
         <h4>Talie</h4>
             <ul>
                 <li>Każdy gracz w turnieju musi mieć 5 talii przygotowanych przed meczem dla różnych bohaterów.</li>
-                <li>Każda talia może zawierać maksymalnie:
-                <br/>
-                <ul>
-                    <li>3 karty legendarne,</li>
-                    <li>10 kart epickich,</li>
-                    <li>15 kart rzadkich,</li>
-                    <li>30 kart podstawowych.</li>
-                </ul>
+                <li>Talia może się składać z dowolnych kart, dostępnych w trybie standard.</li>
                 <li>Talie można modyfikować pomiędzy meczami.</li>
             </ul>
         <h4>Rozgrywka</h4>
@@ -54,7 +46,7 @@
                 <li>Sędziami są gracze bioracy udział w pojedynku i każda osoba (nawet spoza turnieju) obserwująca dany mecz turniejowy.</li>
                 <ul>
                     <li>Obserwujący i gracz może wysłać screenshota lub film do organizatora, gdy któryś z graczy łamie zasady.</li>
-                    <li>Obserwujący i gracz musi wysłać screenshota lub film z wynikiem meczu (ekran wygranej/przegranej).</li>
+                    <li>Obserwujący i gracz musi wysłać screenshota lub film do organizatora z wynikiem meczu (ekran wygranej/przegranej).</li>
                     <li>Najlepiej, aby pojedynek oglądały dwie osoby: jedna od jednego gracza, a druga od drugiego. Nie jest to jednak wymagane.</li>
                 </ul>
                 <li>Wolno tylko raz zagrać jednym bohaterem z jednym graczem.</li>
