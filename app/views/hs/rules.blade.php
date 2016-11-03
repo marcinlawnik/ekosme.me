@@ -41,6 +41,7 @@
         <h4>Rozgrywka</h4>
             <ul>
                 <li>Mecze rozgrywane są między ludźmi.</li>
+                <li>Mecze rozgrywane są w trybie STANDARD.</li>
                 <li>Mecze można rozgrywać na dowolnym urządzeniu obsugującym klienta gry <a class="link" href="https://eu.battle.net/account/download/?show=hearthstone&style=hearthstone">Hearthstone: Heroes of Warcraft</a>.</li>
                 <li>Jeżeli podczas meczu jeden z graczy zostanie rozłączony i nie będzie możliwy jego powrót, to mecz zostanie rozegrany ponownie w innym terminie, przy czym nie będą możliwe zmiany w wybranych bohaterach i przygotowanych taliach.</li>
                 <li>Sędziami są gracze bioracy udział w pojedynku i każda osoba (nawet spoza turnieju) obserwująca dany mecz turniejowy.</li>
