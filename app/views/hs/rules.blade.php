@@ -15,7 +15,7 @@
     @include('hs.nav')
     @include('messages')
     <div class="container">
-        <img src="https://upload.wikimedia.org/wikipedia/en/1/1c/Hearthstone_Logo.png">
+        <img src="https://eu.battle.net/hearthstone/static/images/logos/logo.png">
         <div class="title">Zasady turnieju</div>
         <h4>Ogólne</h4>
             <ul>
