@@ -15,7 +15,6 @@
  * @property \Carbon\Carbon $updated_at
  * @property int $subscriber_id
  * @property-read \Meme $meme
- *
  * @method static \Illuminate\Database\Query\Builder|\Code whereId($value)
  * @method static \Illuminate\Database\Query\Builder|\Code whereCode($value)
  * @method static \Illuminate\Database\Query\Builder|\Code whereMemeId($value)
@@ -27,11 +26,8 @@
  * @method static \Illuminate\Database\Query\Builder|\Code whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\Code whereUpdatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\Code whereSubscriberId($value)
- *
  * @property int $vote
- *
  * @method static \Illuminate\Database\Query\Builder|\Code whereVote($value)
- *
  * @property-read \Subscriber $subscriber
  */
 class Code extends \Eloquent

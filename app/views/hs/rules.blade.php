@@ -54,8 +54,8 @@
                 <li>Z tym samym graczem można grać tym samym bohaterem (tą samą talią) jeśli przegrałeś z tym graczem tym bohaterem (tą talią).</li>
                 <li>Przed meczem każdy z graczy przedstawia do jakich bohaterów posiada talię, a gracz przeciwny wybiera dwóch bohaterów, których przeciwnik nie będzie mógł użyć w pojedynku. (nie dotyczy finałów)</li>
                 <li>Nie można oskarżyć przeciwnika o oszukiwanie, bez niepodważalnych dowodów (screenshot lub film).</li>
-                <li>Wszystkie mecze (oprócz finałów) są rozgrywane w formacie BO3.</li>
-                <li>Mecz finałowy rozgrywany jest w formacie BO5.</li>
+                <li>Wszystkie mecze (oprócz finałów) są rozgrywane w formacie BO5.</li>
+                <li>Mecz finałowy rozgrywany jest w formacie BO7 (banowana 1 talia).</li>
             </ul>
         </div>
         @include('hs.footer')
