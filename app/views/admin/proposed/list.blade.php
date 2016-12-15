@@ -14,7 +14,7 @@
             <tr>
                 <td>
                     <a href="/images/{{ $proposition->filename }}" data-lightbox="meme">
-                        <img class="meme-thumbnail" title="{{ $meme->filename }}" src="/images/{{ $proposition->filename }}">
+                        <img class="meme-thumbnail" title="{{ $proposition->filename }}" src="/images/{{ $proposition->filename }}">
                     </a>
                 </td>
                 <td>{{ $proposition->filename }}</td>
