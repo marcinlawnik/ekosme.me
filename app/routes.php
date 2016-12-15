@@ -37,6 +37,7 @@ Route::get('images/{image}', function ($image = null) {
     $paths = [
         '/images/',
         '/memes/',
+        '/proposed/',
     ];
 
     foreach ($paths as $path) {
@@ -266,6 +267,17 @@ Route::get('subscribe/confirm/{code}', function ($code) {
 //Admin pages
 
 Route::group(['prefix' => 'a', 'before' => 'l4-lock.auth'], function () {
+
+    Route::get('/proposed', function () {
+        $proposed = Proposed::all();
+
+        if ($proposed->isEmpty()) {
+            return Redirect::to('a')->with('error', 'Nie ma jeszcze proponowanych!');
+        }
+
+        return View::make('admin.proposed.list')->withProposed($proposed);
+    });
+
     Route::get('/', ['uses' => 'AdminController@getIndex']);
 
     Route::get('resend', ['uses' => 'ResendController@getIndex']);

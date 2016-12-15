@@ -35,6 +35,9 @@
         <li class="">
             <a href="{{ URL::to('a/reports') }}"><i class="fa fa-fw fa-dashboard"></i> Raporty</a>
         </li>
+        <li class="">
+            <a href="{{ URL::to('a/proposed') }}"><i class="fa fa-fw fa-dashboard"></i> Zaproponowane memy</a>
+        </li>
     </ul>
 </div>
 <!-- /.navbar-collapse -->
