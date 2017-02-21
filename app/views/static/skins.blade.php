@@ -84,6 +84,6 @@
     <hr>
     <!-- Site footer -->
     <footer class="footer">
-        <p>&copy; Marcin Ławniczak 2015-2016</p>
+        <p>&copy; Marcin Ławniczak 2015-2017</p>
     </footer>
 @endsection
