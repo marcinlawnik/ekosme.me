@@ -16,7 +16,6 @@ class ReportController extends \BaseController
     public function getUser($subscriberId = '1', $type = 'full')
     {
 
-
         // Get the necessary data
 
         $subscriber = Subscriber::where('id', '=', $subscriberId)->first();
@@ -58,12 +57,10 @@ class ReportController extends \BaseController
             }
         }
 
-
         //for each meme:
         // Print meme
         // Check if user received meme -> not -> break "didnt receive meme"
         // Check if user voted on meme -> not -> break "didnt vote on meme"
-
 
         $view = View::make('reports.report')
             ->with('type', $type)
@@ -99,7 +96,6 @@ class ReportController extends \BaseController
                 $stats['votes_against'],
                 $stats['votes_no_vote'],
             ], 'Głosy');
-
 
             $memeData->addPoints([
                 'Głosy "Spoko"',
@@ -141,7 +137,6 @@ class ReportController extends \BaseController
                 'G' => 0,
                 'B' => 0,
             ]);
-
 
             // creating a pie chart - notice that you specify the type of chart, not class name.
             // not all charts need to be created through this method (ex. the bar chart),
@@ -195,7 +190,6 @@ class ReportController extends \BaseController
             //Add Gromowładny
 
             $myPicture->drawFromPNG(1, 270, storage_path().'/images/logo_mini.png');
-
 
             // do the drawing
             $myPicture->Stroke();

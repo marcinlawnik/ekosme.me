@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'debug' =>  (isset($_ENV['app.debug']))? $_ENV['app.debug'] : false,
+    'debug' => (isset($_ENV['app.debug'])) ? $_ENV['app.debug'] : false,
 
     /*
     |--------------------------------------------------------------------------
@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'url' => (isset($_ENV['app.url']))? $_ENV['app.url']: 'http://localhost/',
+    'url' => (isset($_ENV['app.url'])) ? $_ENV['app.url'] : 'http://localhost/',
 
     /*
     |--------------------------------------------------------------------------
@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'timezone' => (isset($_ENV['app.timezone']))? $_ENV['app.timezone'] : 'Europe/Warsaw',
+    'timezone' => (isset($_ENV['app.timezone'])) ? $_ENV['app.timezone'] : 'Europe/Warsaw',
 
     /*
     |--------------------------------------------------------------------------
