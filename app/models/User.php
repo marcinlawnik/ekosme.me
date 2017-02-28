@@ -7,7 +7,6 @@ use Illuminate\Auth\UserTrait;
 
 /**
  * User.
- *
  */
 class User extends Eloquent implements UserInterface, RemindableInterface
 {

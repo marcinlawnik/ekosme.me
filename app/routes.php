@@ -164,7 +164,6 @@ Route::get('/v/{hash}', ['as' => 'v', function ($hash) {
     return View::make('meme')->withMeme($meme)->withImage($image);
 }]);
 
-
 //Subscriptions
 
 Route::get('subscribe', function () {
@@ -263,11 +262,9 @@ Route::get('subscribe/confirm/{code}', function ($code) {
     return View::make('subscribe')->with('message', 'E-mail potwierdzony! Wyślemy wiadomość, gdy administrator potwierdzi twoje konto!');
 });
 
-
 //Admin pages
 
 Route::group(['prefix' => 'a', 'before' => 'l4-lock.auth'], function () {
-
     Route::get('/proposed', function () {
         $proposed = Proposed::all();
 

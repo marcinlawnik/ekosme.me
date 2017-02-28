@@ -26,7 +26,6 @@ class CodesController extends \BaseController
             $code->used_useragent = $mobileDetect->getUserAgent();
             $code->save();
 
-
             $path = storage_path().'/memes/'.$code->meme->filename;
             // Get the image
             $image = Image::make($path)->widen(600, function ($constraint) {

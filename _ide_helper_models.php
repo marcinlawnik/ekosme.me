@@ -6,6 +6,7 @@
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  */
+
 namespace {
     /**
      * Code.

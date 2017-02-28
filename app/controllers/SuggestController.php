@@ -46,8 +46,6 @@ class SuggestController extends \BaseController
             }
         }
 
-
-
         $filename = Helper::getRandomString().'.'.Input::file('meme')->getClientOriginalExtension();
         Input::file('meme')->move(storage_path().'/proposed/', $filename);
 
