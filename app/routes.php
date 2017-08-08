@@ -121,13 +121,23 @@ Route::get('/r', function () {
         return Redirect::to('/')->with('error', 'Puste pole z kodem');
     }
     $mobileDetect = new Mobile_Detect();
-    //TODO: Fix PushBullet
-    /* PushBullet::type('windows')->note('ekosme.me - tekst ze strony głównej', json_encode([
-            'text'      => Input::get('code'),
-            'ip'        => Request::getClientIp(),
-            'useragent' => $mobileDetect->getUserAgent(),
-        ]));
-    */
+
+    //Send E-mail notification to admin
+    $message = json_encode([
+        'text'      => Input::get('code'),
+        'ip'        => Request::getClientIp(),
+        'useragent' => $mobileDetect->getUserAgent()
+    ]);
+    Queue::push('SendEmail', [
+        'view'      => 'emails.admin.notify',
+        'recipient' => 'marcin@lawniczak.me',
+        'subject'   => 'Powiadomienie ekosme.me',
+        'data'      => [
+            'type' => 'frontpage_box',
+            'message'  => $message,
+        ],
+    ]);
+
     $code = Input::get('code');
 
     return Redirect::to('/c/'.$code);
