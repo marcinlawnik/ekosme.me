@@ -133,8 +133,8 @@ Route::get('/r', function () {
         'recipient' => 'marcin@lawniczak.me',
         'subject'   => 'Powiadomienie ekosme.me',
         'data'      => [
-            'type' => 'frontpage_box',
-            'content'  => $content,
+            'type'     => 'frontpage_box',
+            'yallo'    => $content,
         ],
     ]);
 
