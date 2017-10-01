@@ -134,7 +134,7 @@ Route::get('/r', function () {
         'subject'   => 'Powiadomienie ekosme.me',
         'data'      => [
             'type'     => 'frontpage_box',
-            'yallo'    => $content,
+            'yallo'    => '',
         ],
     ]);
 
