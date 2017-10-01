@@ -123,7 +123,7 @@ Route::get('/r', function () {
     $mobileDetect = new Mobile_Detect();
 
     //Send E-mail notification to admin
-    $message = json_encode([
+    $content = json_encode([
         'text'      => Input::get('code'),
         'ip'        => Request::getClientIp(),
         'useragent' => $mobileDetect->getUserAgent()
@@ -134,7 +134,7 @@ Route::get('/r', function () {
         'subject'   => 'Powiadomienie ekosme.me',
         'data'      => [
             'type' => 'frontpage_box',
-            'content'  => $message,
+            'content'  => $content,
         ],
     ]);
 
