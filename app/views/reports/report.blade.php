@@ -65,10 +65,10 @@
 @section('content')
 
     @if($type == 'yearly')
-        @include('reports.2015-2016.textBeforeYearly')
+        @include('reports.2016-2017.textBeforeYearly')
     @endif
     @if($type == 'full')
-        @include('reports.2015-2016.textBeforeFull')
+        @include('reports.2016-2017.textBeforeFull')
     @endif
 
     @foreach($memes as $meme)
