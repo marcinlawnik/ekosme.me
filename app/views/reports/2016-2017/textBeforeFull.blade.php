@@ -7,7 +7,7 @@
                 <img src="/images/logo.png" class="logo">
                 <h1 class="logo_text">ekosme.me</h1>
                 <br>
-                <p class="title">Raport Końcoworoczny 2016/2017</p>
+                <p class="title">Raport Końcoworoczny 2017/2018</p>
                 <p class="centered">
                     Dla: {{ $subscriber->email }}
                 </p>
@@ -31,22 +31,16 @@
             </div>
             <div class="">
                 <p class="justified">
-                    Rok szkolny 2015/16 już się skończył. Nareszcie nastały wakacje. Warto sobie w tym czasie powspominać co się w tym roku działo.
-                    Może ten raport będzie dobrą podstawą do tego.
-                    Znajdziesz tutaj wszystkie memy z tego roku szkolnego oraz statystykę "spoko" i "sucharów" (a także twój głos).
+                    Oto twój raport za wsparcie ekosme.me.<br/>
+                    Znajdziesz tutaj wszystkie memy od początku istnienia serwisu oraz statystykę "spoko" i "sucharów" (a także twój głos).
                 </p>
 
                 <p class="justified">
-                    Dodatkowo w tym raporcie masz także memy z poprzedniego roku szkolnego. Możesz więc zobaczyć co działo się w szkole, zanim do niej przybyłaś/eś.
+                    Dziękuję Ci bardzo za wsparcie strony i mam nadzieję, że dalej będzie ona przynosić uśmiech na Twojej twarzy.
                 </p>
 
                 <p class="justified">
-                    Ekosme.me podczas wakacji nie będzie wysyłać memów. Będzie jednak otwarte na ich propozycje. Więc jeśli masz jakiś pomysł - wysyłaj śmiało.
-                    Memy powrócą wraz z rozpoczęciem nowego roku szkolnego.
-                </p>
-
-                <p class="justified">
-                    Nie pozostało mi nic innego, jak podziękować za darowiznę na utrzymanie tego serwisu, życzyć dobrze przeżytych wakacji oraz miłego oglądania.
+                    Miłego oglądania!
                 </p>
                 <br>
                 <p class="signature">
